@@ -1756,6 +1756,9 @@ img {
   min-height: 151px;
   background: #03B6E7;
 }
+.industary-button-wrapper .button-full {
+  min-width: 137px;
+}
 
 .title-text-industary {
   display: flex;
@@ -1801,7 +1804,7 @@ img {
 .button-full {
   display: inline-block;
   padding: 14px;
-  min-width: 137px;
+  min-width: 132px;
   text-transform: uppercase;
   text-align: center;
   border-radius: 40px;
@@ -1886,6 +1889,7 @@ img {
   background: #E7EFF1;
   padding-top: 90px;
   padding-bottom: 58px;
+  margin-bottom: 93px;
 }
 .step img {
   margin-bottom: 26px;
@@ -1919,6 +1923,176 @@ img {
   margin-bottom: 30px;
 }
 
+.projects {
+  margin-bottom: 93px;
+}
+.projects .title {
+  margin-bottom: 30px;
+}
+.projects .button-full {
+  min-width: 163px;
+}
+
+.project-foto {
+  position: relative;
+  margin-bottom: 30px;
+}
+.project-foto img {
+  width: 100%;
+}
+.project-foto .info {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  padding: 6px;
+  min-width: 109px;
+  border: 1px solid #FFAC56;
+  border-radius: 20px;
+  background: transparent;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.project-foto::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 28px solid transparent;
+  border-bottom: 28px solid #03B6E7;
+  border-left: 28px solid #03B6E7;
+}
+.project-foto::after {
+  content: "+";
+  position: absolute;
+  bottom: -5px;
+  left: 8px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.project-foto:hover .project-text-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-text-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background: #FFAC56;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.project-text-hover h6 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.project-text-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 28px solid transparent;
+  border-bottom: 28px solid rgba(0, 0, 0, 0.1);
+  border-left: 28px solid rgba(0, 0, 0, 0.1);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.testimonials {
+  background: #03B6E7;
+  padding-top: 92px;
+  padding-bottom: 65px;
+}
+.testimonials p {
+  margin-bottom: 29px;
+  line-height: 2;
+  max-width: 908px;
+  letter-spacing: 0.6px;
+}
+.testimonials .title {
+  margin-bottom: 44px;
+}
+.testimonials .row {
+  margin-bottom: 58px;
+}
+.testimonials .row img {
+  margin-top: 8px;
+}
+.testimonials .line {
+  height: 2px;
+  width: 17px;
+  background: #fff;
+}
+
+.testimonials-clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  margin-right: 95px;
+  margin-bottom: 30px;
+}
+.client h6 {
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.client p {
+  margin-bottom: 0;
+}
+
+.client-foto {
+  margin-right: 30px;
+}
+
+.carousel {
+  display: flex;
+}
+.carousel span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+.carousel span:hover {
+  border-color: #15D32F;
+}
+.carousel .active {
+  border-color: #15D32F;
+}
+.carousel span:not(:last-child) {
+  margin-right: 5px;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -1944,6 +2118,16 @@ img {
 
   .step {
     padding-top: 130px;
+    margin-bottom: 50px;
+  }
+
+  .projects {
+    margin-bottom: 50px;
+  }
+
+  .testimonials {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 450px) {

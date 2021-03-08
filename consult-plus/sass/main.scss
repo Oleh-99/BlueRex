@@ -246,6 +246,10 @@ img {
 	justify-content: center;
 	min-height: 151px;
 	background: #03B6E7;
+
+	.button-full {
+		min-width: 137px;
+	}
 }
 
 .title-text-industary {
@@ -299,7 +303,7 @@ img {
 .button-full {
 	display: inline-block;
     padding: 14px;
-    min-width: 137px;
+	min-width: 132px;
     text-transform: uppercase;
     text-align: center;
     border-radius: 40px;
@@ -401,6 +405,7 @@ img {
 	background: #E7EFF1;
 	padding-top: 90px;
 	padding-bottom: 58px;
+	margin-bottom: 93px;
 
 	img {
 		margin-bottom: 26px;
@@ -444,6 +449,195 @@ img {
 	}
 }
 
+// ------------------------------------------------------------------------------------------------
+// PROJECT
+// ------------------------------------------------------------------------------------------------
+
+.projects {
+	margin-bottom: 93px;
+	
+	.title {
+		margin-bottom: 30px;
+	}
+
+	.button-full{
+		min-width: 163px;
+	}
+}
+
+.project-foto {
+	position: relative;
+	margin-bottom: 30px;
+
+	img {
+		width: 100%;
+	}
+
+	.info {
+		@include block-absolute(22px, none, none, 20px);
+		padding: 6px;
+		min-width: 109px;
+		border: 1px solid #FFAC56;
+		border-radius: 20px;
+		background: transparent;
+		font-size: 12px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&::before {
+		content: ''; 
+		@include block-absolute(none, none, 0, 0);
+		border: 28px solid transparent;
+		border-bottom: 28px solid #03B6E7;;
+		border-left: 28px solid #03B6E7;
+	}
+
+	&::after {
+		content: '+';
+		@include block-absolute(none, none, -5px, 8px);
+		font-size: 30px;
+		font-weight: 700;
+		color: #fff;
+	}
+
+	&:hover {
+		.project-text-hover {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.project-text-hover {
+	@include block-absolute(0, 0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+	background: #FFAC56;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+
+	h6 {
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&::before {
+		content: ''; 
+		@include block-absolute(none, none, 0, 0);
+		border: 28px solid transparent;
+		border-bottom: 28px solid rgba($color: #000, $alpha: 0.1);;
+		border-left: 28px solid rgba($color: #000, $alpha: 0.1);
+	}
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+
+// ------------------------------------------------------------------------------------------------
+// TESTIMONIALS
+// ------------------------------------------------------------------------------------------------
+
+.testimonials {
+	background: #03B6E7;
+	padding-top: 92px;
+	padding-bottom: 65px;
+
+	p {
+		margin-bottom: 29px;
+		line-height: 2;
+		max-width: 908px;
+		letter-spacing: 0.6px;
+	}
+
+	.title {
+		margin-bottom: 44px;
+	}
+
+	.row {
+		margin-bottom: 58px;
+
+		img {
+			margin-top: 8px;
+		}
+	}
+
+	.line {
+		height: 2px;
+		width: 17px;
+		background: #fff;
+	}
+}
+
+.testimonials-clients {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.clients-wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.client {
+	display: flex;
+	align-items: center;
+	margin-right: 95px;
+	margin-bottom: 30px;
+
+	h6 {
+		margin-bottom: 0;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.client-foto {
+	margin-right: 30px;
+}
+
+.carousel {
+	display: flex;
+	
+	span {
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		transition: border-color 0.3s ease;
+		cursor: pointer;
+
+		&:hover {
+			border-color: #15D32F;
+		}
+	}
+
+	.active {
+		border-color: #15D32F;
+	}
+
+	span:not(:last-child) {
+		margin-right: 5px;
+	}
+}
+
 
 
 
@@ -475,6 +669,7 @@ img {
 		display: block;
 	}
 
+
 	//**** BANNER ****//
 
 	.banner {
@@ -482,10 +677,29 @@ img {
 		margin-bottom: 50px;
 	}
 
+
+	//**** SPEP ****//
+
 	.step {
 		padding-top: 130px;
+		margin-bottom: 50px;
+	}
+
+	//**** PROJECTS ****//
+
+	.projects {
+		margin-bottom: 50px;
+	}
+
+	//**** TESTIMONIALS ****//
+	
+	.testimonials {
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 }
+
+
 @media(max-width: 450px) {
 	.badge {
 		display: none;
