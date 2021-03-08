@@ -1,0 +1,71 @@
+@import '_reset.scss';
+@import '_bootstrap-grid.scss';
+
+// ------------------------------------------------------------------------------------------------
+// Variables
+// ------------------------------------------------------------------------------------------------
+
+$font-primary: 'Montserrat', sans-serif;
+$font-text-sub: 'Palatino Linotype', sans-serif;
+$font-text-footer: 'Poppins', sans-serif;
+$color-base: #252525;
+$colol-title: #31411c;
+
+
+// ------------------------------------------------------------------------------------------------
+// B A S E
+// ------------------------------------------------------------------------------------------------
+
+body {
+	font-family: $font-primary;
+	line-height: 1.4;
+	font-size: 14px;
+	overflow-x: hidden;
+	font-weight: 400;
+	color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 20px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $color-base;
+	text-decoration: none;
+	color: inherit;
+	transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+//////////////////////////
+
+// ------------------------------------------------------------------------------------------------
+// M I X I N S
+// ------------------------------------------------------------------------------------------------
+
+@mixin block-absolute ($top, $right, $bottom, $left) {
+	position: absolute;
+	@if $top != none {top: $top;} 
+	@if $right != none {right: $right;}
+	@if $bottom != none {bottom: $bottom;}
+	@if $left != none {left: $left;}
+}
+
+@mixin background ($url) {
+	background-image: $url;
+	background-size: cover;
+	background-position: center;
+}
