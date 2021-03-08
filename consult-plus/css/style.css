@@ -1654,7 +1654,7 @@ img {
 
 .logo-header {
   flex-shrink: 0;
-  margin: 0 15px;
+  margin-right: 15px;
 }
 
 .header-menu {
@@ -1667,6 +1667,9 @@ img {
   padding: 10px;
   margin: 0 8px;
   color: #4e4e4e;
+}
+.header-menu li:last-child a {
+  margin-right: -7px;
 }
 .header-menu li:hover a {
   color: #ffac55;
@@ -1689,12 +1692,12 @@ img {
   background-size: cover;
   background-position: center;
   padding-top: 176px;
+  margin-bottom: 95px;
   position: relative;
 }
 
 .industary {
   max-width: 458px;
-  margin-left: 15px;
   text-transform: uppercase;
 }
 
@@ -1731,6 +1734,8 @@ img {
   padding-left: 39px;
   padding-right: 27px;
   padding-bottom: 32px;
+  border-bottom: 1px solid #00a6d3;
+  border-right: 1px solid #00a6d3;
   background: #03B6E7;
   transition: background 0.3s ease;
 }
@@ -1794,21 +1799,129 @@ img {
 }
 
 .button-full {
+  display: inline-block;
   padding: 14px;
   min-width: 137px;
   text-transform: uppercase;
   text-align: center;
   border-radius: 40px;
   background: #16d428;
+  color: #fff;
   transition: background 0.3s ease;
 }
 .button-full:hover {
   background: #10911d;
 }
 
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.sub-title {
+  text-transform: uppercase;
+  letter-spacing: -0.6px;
+}
+
+.about {
+  margin-bottom: 67px;
+}
+
+.about-text {
+  margin-top: 5px;
+  margin-right: 21px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+.about-text .title {
+  margin-bottom: 25px;
+}
+.about-text p {
+  margin-bottom: 39px;
+  line-height: 2;
+}
+
+.about-foto {
+  position: relative;
+}
+.about-foto > img {
+  width: 100%;
+}
+
+.badge {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -100px);
+  height: 280px;
+  max-width: 235px;
+  width: 100%;
+  padding: 17px;
+  border: 6px solid #fff;
+  box-shadow: 0 9px 16px rgba(154, 154, 154, 0.3);
+  background: #03B6E7;
+}
+
+.badge-content {
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.badge-content img {
+  margin-bottom: 30px;
+}
+.badge-content .number {
+  font-size: 75px;
+}
+.badge-content .text {
+  font-size: 10px;
+}
+
+.step {
+  background: #E7EFF1;
+  padding-top: 90px;
+  padding-bottom: 58px;
+}
+.step img {
+  margin-bottom: 26px;
+}
+.step h6 {
+  margin-bottom: 17px;
+}
+.step h6 a {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.step h6 a:hover {
+  opacity: 0.6;
+}
+.step p {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+.step .title {
+  margin-bottom: 18px;
+}
+.step .number {
+  margin-bottom: 11px;
+  font-size: 20px;
+  color: #16d428;
+  line-height: 1;
+}
+.step .row > div {
+  margin-bottom: 30px;
+}
+
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 @media (max-width: 993px) {
@@ -1825,6 +1938,20 @@ img {
   }
 
   .banner {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .step {
+    padding-top: 130px;
+  }
+}
+@media (max-width: 450px) {
+  .badge {
+    display: none;
+  }
+
+  .step {
     padding-top: 50px;
   }
 }
