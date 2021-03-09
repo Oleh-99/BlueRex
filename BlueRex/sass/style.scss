@@ -43,7 +43,7 @@ a {
 	color: $color-base;
 	text-decoration: none;
 	color: inherit;
-	transition: color 0.3s ease, opacity 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 img {
@@ -96,7 +96,11 @@ img {
 			padding: 10px;
 			margin: 0 10px;
 			font-weight: 600;
-			font-size: 18px
+			font-size: 18px;
+
+			&:hover {
+				color: #F42267;
+			}
 		}
 	}
 }
@@ -176,7 +180,6 @@ img {
 	text-align: center;
 	background: #f42267;
 	color: inherit;
-	transition: background 0.3s ease color 0.3s ease;
 
 	&:hover {
 		background: #742b2b;
@@ -192,6 +195,13 @@ img {
 	border-radius: 10px;
 	box-shadow: 0 10px 0 #ff5990;
 	color: #fff;
+
+	&:hover{
+		margin-top: 20px;
+		margin-bottom: 0;
+		box-shadow: 0 0 0;
+		background: #f42267;
+	}
 }
 
 //**** title text ****//
@@ -356,7 +366,7 @@ img {
 // ------------------------------------------------------------------------------------------------
 
 .services {
-	margin-bottom: 122px;
+	margin-bottom: 92px;
 	color: #484848;
 	
 	p {
@@ -367,11 +377,21 @@ img {
 		margin-bottom: 53px;
 		font-size: 18px;
 	}
+
+	.row {
+		> div {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .services-video {
 	display: flex;
     align-items: center;
+
+	img {
+		width: 100%;
+	}
 }
 
 .graphic-design {
@@ -575,6 +595,14 @@ img {
 		background: #4b2d7f;
 		box-shadow: 0 10px 0 #a47ee8;
 		flex-shrink: 0;
+		transition: all 0.3s ease;
+
+		&:hover{
+			margin-top: 20px;
+			margin-bottom: 0;
+			background: #4b2d7f;
+			box-shadow: 0 0 0 #a47ee8;
+		}
 	}
 }
 
@@ -593,6 +621,10 @@ img {
 		padding: 5px;
     	margin: 0 29px;
 		font-size: 27px;
+
+		&:hover{
+			opacity: 0.6;
+		}
 	}
 }
 
@@ -612,12 +644,7 @@ img {
 		line-height: 1;
 	}
 
-	a {
-		display: inline-block;
-		padding: 3px;
-		font-weight: 600;
-		color: #171717;
-	}
+	
 
 	.row .row {
 		> div {
@@ -628,11 +655,23 @@ img {
 
 .footer-company {
 	margin-bottom: 55px;
+
+	a {
+		display: inline-block;
+		padding: 3px;
+		font-weight: 600;
+		color: #171717;
+
+		&:hover{
+			opacity: 0.6;
+		}
+	}
 }
 
 .footer-inner {
 	margin-bottom: 52px;
 }
+
 
 // ------------------------------------------
 // C O P Y R I N G
@@ -722,4 +761,9 @@ img {
 	.achievement-content {
 		padding: 50px 0;
 	}
+
+	.work .row {
+		margin-bottom: 0;
+	}
+
 }
