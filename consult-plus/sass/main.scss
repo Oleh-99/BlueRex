@@ -80,7 +80,7 @@ img {
 .color-shema-while {
 	color: #fff;
 
-	h1,h2,h3,h4,h5,h6 {
+	h1,h2,h3,h4,h5,h6, input{
 		color: #fff;
 	}
 
@@ -176,7 +176,8 @@ img {
 // ------------------------------------------------------------------------------------------------
 
 .banner {
-	@include background(url(../img/banner.png));
+	background: url(../img/banner.png);
+	background-size: cover;
 	padding-top: 176px;
 	margin-bottom: 95px;
 	position: relative;
@@ -187,6 +188,22 @@ img {
 .industary {
 	max-width: 458px;
 	text-transform: uppercase;
+
+	.row {
+		> div:nth-child(even) {
+			border-bottom: 1px solid #00a6d3;
+			border-right: 1px solid #00a6d3;
+		}
+
+		> div:nth-child(odd) {
+			border-bottom: 1px solid #00a6d3;
+		}
+
+		> div:last-child,
+		> div:nth-last-child(2) {
+			border-bottom: none;
+		}
+	}
 }
 
 .industary-flex {
@@ -225,8 +242,7 @@ img {
 	padding-left: 39px;
 	padding-right: 27px;
 	padding-bottom: 32px;
-	border-bottom: 1px solid #00a6d3;
-	border-right: 1px solid #00a6d3;
+	
 	background: #03B6E7;
 
 	img {
@@ -246,12 +262,8 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 151px;
+	min-height: 149px;
 	background: #03B6E7;
-
-	.button-full {
-		min-width: 137px;
-	}
 }
 
 .title-text-industary {
@@ -308,9 +320,27 @@ img {
 	min-width: 132px;
 	text-transform: uppercase;
 	text-align: center;
+	font-size: 13px;
+	flex-shrink: 0;
 	border-radius: 40px;
 	background: #16d428;
 	color: #fff;
+	transition: all 0.3s ease;
+
+
+	&.btn-large {
+		padding: 19px;
+		min-width: 154px;
+		letter-spacing: 1px;
+	}
+
+	&.btn-medium-large {
+		min-width: 148px;
+	}
+
+	&.btn-max-large {
+		min-width: 163px;
+	}
 
 	&:hover {
 		background: #10911d;
@@ -339,6 +369,10 @@ img {
 
 .about {
 	margin-bottom: 67px;
+
+	.title {
+		letter-spacing: -2.5px;
+	}
 }
 
 .about-text {
@@ -458,14 +492,10 @@ img {
 // ------------------------------------------------------------------------------------------------
 
 .projects {
-	margin-bottom: 93px;
+	margin-bottom: 94px;
 	
 	.title {
 		margin-bottom: 30px;
-	}
-
-	.button-full{
-		min-width: 163px;
 	}
 }
 
@@ -497,6 +527,7 @@ img {
 		border-left: 28px solid #03B6E7;
 		transition: border-color 0.3s ease;
 		z-index: 1;
+		cursor: pointer;
 	}
 
 	&::after {
@@ -506,6 +537,7 @@ img {
 		font-weight: 700;
 		color: #fff;
 		z-index: 1;
+		cursor: pointer;
 	}
 
 	&:hover {
@@ -544,7 +576,7 @@ img {
 .button-wrapper {
 	display: flex;
 	justify-content: center;
-	margin-top: 15px;
+	margin-top: 14px;
 }
 
 
@@ -555,7 +587,7 @@ img {
 .testimonials {
 	background: #03B6E7;
 	padding-top: 92px;
-	padding-bottom: 78px;
+    padding-bottom: 80px;
 
 	p {
 		margin-bottom: 29px;
@@ -601,6 +633,8 @@ img {
 	margin-right: 95px;
 	margin-bottom: 15px;
 	margin-top: 15px;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
 
 	h6 {
 		margin-bottom: 0;
@@ -610,6 +644,10 @@ img {
 	
 	p {
 		margin-bottom: 0;
+	}
+
+	&:hover {
+		opacity: 1;
 	}
 }
 
@@ -718,6 +756,10 @@ img {
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: -1.2px;
+
+			&:hover {
+				opacity: 0.6;
+			}
 		}
 	}
 
@@ -755,8 +797,124 @@ img {
 // CONTACT
 // ------------------------------------------------------------------------------------------------
 
+.contact {
+	margin-bottom: 63px;
+
+	.title {
+		margin-bottom: 29px;
+	}
+
+}
+
+.contact-infobox {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 34px;
+	padding-right: 20px;
+	margin-bottom: 30px;
+	border: 1px solid #E1EAEC;
+
+	h6 {
+		margin-bottom: 0;
+		margin-top: 2px;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: -1.3px;
+	}
+
+	.info {
+		font-size: 18px;
+		font-family: $font-text;
+	}
+}
+
+.contact-foto {
+	margin-right: 40px;
+	flex-shrink: 0;
+}
+
+// ------------------------------------------------------------------------------------------------
+// FOOTER-MAIN
+// ------------------------------------------------------------------------------------------------
+
+.footer-main {
+	background-color: #262829;
+	padding-top: 88px;
+
+	h6 {
+		margin-bottom: 22px;
+		font-weight: 700;
+		font-size: 20px;
+		opacity: 0.865;
+		text-transform: uppercase;
+		letter-spacing: -1.2px;
+	}
+
+	a {
+		display: inline-block;
+		padding: 7px 0;
+		line-height: 1.2;
+		letter-spacing: -0.5px;
+		text-transform: uppercase;
+		opacity: 0.65;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+		max-width: 514px;
+		overflow: hidden;
+		border-radius: 26px;
+		background-color: rgba($color: #000000, $alpha: 0.1);
+	}
+
+	input[type=email] {
+		min-width: 100px;
+		padding: 18px;
+		padding-left: 34px;
+		flex-grow: 1;
+		font-family: inherit;
+		background: transparent;
+		border: none;
+		outline: none;
+
+		&::placeholder {
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 0.2px;
+		}
+	}
 
 
+	.row {
+		> div {
+			margin-bottom: 30px;
+		}
+	}
+}
+.footer-main-inner {
+	margin-bottom: 54px;
+
+	p {
+		margin-bottom: 37px;
+		max-width: 408px;
+		line-height: 1.8;
+		letter-spacing: 0.7px;
+		opacity: 0.5;
+	}
+}
+
+.copyring {
+	padding-top: 20px;
+    padding-bottom: 55px;
+    letter-spacing: 0.6px;
+	border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+}
 
 
 
@@ -790,8 +948,27 @@ img {
 	//**** BANNER ****//
 
 	.banner {
-		padding-top: 50px;
+		padding-top: 15px;
 		margin-bottom: 50px;
+	}
+
+	.industary-title {
+
+		h4{
+			font-size: 24px;
+		}
+
+		p {
+			letter-spacing: 0;
+		}
+	}
+
+	.industary {
+		.row {
+			> div:nth-last-child(2){
+				border-bottom: 1px solid #00a6d3;
+			}
+		}
 	}
 
 
@@ -831,6 +1008,26 @@ img {
 		margin-top: 50px;
 	}
 
+	//**** contact ****//
+
+	.contact {
+		margin-bottom: 15px
+	}
+
+	//**** footer-main ****//
+
+	.footer-main {
+		padding-top: 50px;
+	}
+
+	.footer-main-inner {
+		margin-bottom: 20px;
+	}
+
+	.copyring {
+		padding: 20px 0;
+	}
+
 }
 
 
@@ -849,5 +1046,13 @@ img {
 
 	.client {
 		margin-right: 15px;
+	}
+
+	.blog-menu {
+		justify-content: center;
+	}
+
+	.button-full.btn-large {
+		min-width: 110px;
 	}
 }

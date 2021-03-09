@@ -1622,7 +1622,7 @@ img {
 .color-shema-while {
   color: #fff;
 }
-.color-shema-while h1, .color-shema-while h2, .color-shema-while h3, .color-shema-while h4, .color-shema-while h5, .color-shema-while h6 {
+.color-shema-while h1, .color-shema-while h2, .color-shema-while h3, .color-shema-while h4, .color-shema-while h5, .color-shema-while h6, .color-shema-while input {
   color: #fff;
 }
 .color-shema-while p, .color-shema-while ul, .color-shema-while span {
@@ -1691,9 +1691,8 @@ img {
 }
 
 .banner {
-  background-image: url(../img/banner.png);
+  background: url(../img/banner.png);
   background-size: cover;
-  background-position: center;
   padding-top: 176px;
   margin-bottom: 95px;
   position: relative;
@@ -1702,6 +1701,17 @@ img {
 .industary {
   max-width: 458px;
   text-transform: uppercase;
+}
+.industary .row > div:nth-child(even) {
+  border-bottom: 1px solid #00a6d3;
+  border-right: 1px solid #00a6d3;
+}
+.industary .row > div:nth-child(odd) {
+  border-bottom: 1px solid #00a6d3;
+}
+.industary .row > div:last-child,
+.industary .row > div:nth-last-child(2) {
+  border-bottom: none;
 }
 
 .industary-flex {
@@ -1737,8 +1747,6 @@ img {
   padding-left: 39px;
   padding-right: 27px;
   padding-bottom: 32px;
-  border-bottom: 1px solid #00a6d3;
-  border-right: 1px solid #00a6d3;
   background: #03B6E7;
 }
 .industary-link img {
@@ -1755,11 +1763,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 151px;
+  min-height: 149px;
   background: #03B6E7;
-}
-.industary-button-wrapper .button-full {
-  min-width: 137px;
 }
 
 .title-text-industary {
@@ -1809,9 +1814,23 @@ img {
   min-width: 132px;
   text-transform: uppercase;
   text-align: center;
+  font-size: 13px;
+  flex-shrink: 0;
   border-radius: 40px;
   background: #16d428;
   color: #fff;
+  transition: all 0.3s ease;
+}
+.button-full.btn-large {
+  padding: 19px;
+  min-width: 154px;
+  letter-spacing: 1px;
+}
+.button-full.btn-medium-large {
+  min-width: 148px;
+}
+.button-full.btn-max-large {
+  min-width: 163px;
 }
 .button-full:hover {
   background: #10911d;
@@ -1832,6 +1851,9 @@ img {
 
 .about {
   margin-bottom: 67px;
+}
+.about .title {
+  letter-spacing: -2.5px;
 }
 
 .about-text {
@@ -1926,13 +1948,10 @@ img {
 }
 
 .projects {
-  margin-bottom: 93px;
+  margin-bottom: 94px;
 }
 .projects .title {
   margin-bottom: 30px;
-}
-.projects .button-full {
-  min-width: 163px;
 }
 
 .project-foto {
@@ -1965,6 +1984,7 @@ img {
   border-left: 28px solid #03B6E7;
   transition: border-color 0.3s ease;
   z-index: 1;
+  cursor: pointer;
 }
 .project-foto::after {
   content: "+";
@@ -1975,6 +1995,7 @@ img {
   font-weight: 700;
   color: #fff;
   z-index: 1;
+  cursor: pointer;
 }
 .project-foto:hover .project-text-hover {
   opacity: 1;
@@ -2011,13 +2032,13 @@ img {
 .button-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 .testimonials {
   background: #03B6E7;
   padding-top: 92px;
-  padding-bottom: 78px;
+  padding-bottom: 80px;
 }
 .testimonials p {
   margin-bottom: 29px;
@@ -2058,6 +2079,8 @@ img {
   margin-right: 95px;
   margin-bottom: 15px;
   margin-top: 15px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 .client h6 {
   margin-bottom: 0;
@@ -2066,6 +2089,9 @@ img {
 }
 .client p {
   margin-bottom: 0;
+}
+.client:hover {
+  opacity: 1;
 }
 
 .client-foto {
@@ -2160,6 +2186,9 @@ img {
   text-transform: uppercase;
   letter-spacing: -1.2px;
 }
+.blog-text h6 a:hover {
+  opacity: 0.6;
+}
 .blog-text p {
   line-height: 2;
   letter-spacing: 0.7px;
@@ -2184,6 +2213,107 @@ img {
   background-size: cover;
 }
 
+.contact {
+  margin-bottom: 63px;
+}
+.contact .title {
+  margin-bottom: 29px;
+}
+
+.contact-infobox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 34px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #E1EAEC;
+}
+.contact-infobox h6 {
+  margin-bottom: 0;
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1.3px;
+}
+.contact-infobox .info {
+  font-size: 18px;
+  font-family: "Domine", serif;
+}
+
+.contact-foto {
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+.footer-main {
+  background-color: #262829;
+  padding-top: 88px;
+}
+.footer-main h6 {
+  margin-bottom: 22px;
+  font-weight: 700;
+  font-size: 20px;
+  opacity: 0.865;
+  text-transform: uppercase;
+  letter-spacing: -1.2px;
+}
+.footer-main a {
+  display: inline-block;
+  padding: 7px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+.footer-main a:hover {
+  opacity: 1;
+}
+.footer-main form {
+  display: flex;
+  align-items: center;
+  max-width: 514px;
+  overflow: hidden;
+  border-radius: 26px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.footer-main input[type=email] {
+  min-width: 100px;
+  padding: 18px;
+  padding-left: 34px;
+  flex-grow: 1;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.footer-main input[type=email]::placeholder {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+.footer-main .row > div {
+  margin-bottom: 30px;
+}
+
+.footer-main-inner {
+  margin-bottom: 54px;
+}
+.footer-main-inner p {
+  margin-bottom: 37px;
+  max-width: 408px;
+  line-height: 1.8;
+  letter-spacing: 0.7px;
+  opacity: 0.5;
+}
+
+.copyring {
+  padding-top: 20px;
+  padding-bottom: 55px;
+  letter-spacing: 0.6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -2203,8 +2333,19 @@ img {
   }
 
   .banner {
-    padding-top: 50px;
+    padding-top: 15px;
     margin-bottom: 50px;
+  }
+
+  .industary-title h4 {
+    font-size: 24px;
+  }
+  .industary-title p {
+    letter-spacing: 0;
+  }
+
+  .industary .row > div:nth-last-child(2) {
+    border-bottom: 1px solid #00a6d3;
   }
 
   .step {
@@ -2234,6 +2375,22 @@ img {
     padding: 15px;
     margin-top: 50px;
   }
+
+  .contact {
+    margin-bottom: 15px;
+  }
+
+  .footer-main {
+    padding-top: 50px;
+  }
+
+  .footer-main-inner {
+    margin-bottom: 20px;
+  }
+
+  .copyring {
+    padding: 20px 0;
+  }
 }
 @media (max-width: 450px) {
   .badge {
@@ -2250,6 +2407,14 @@ img {
 
   .client {
     margin-right: 15px;
+  }
+
+  .blog-menu {
+    justify-content: center;
+  }
+
+  .button-full.btn-large {
+    min-width: 110px;
   }
 }
 
