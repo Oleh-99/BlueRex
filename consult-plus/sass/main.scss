@@ -41,7 +41,7 @@ p {
 a {
 	text-decoration: none;
 	color: inherit;
-	transition: color 0.3s ease, opacity 0.3s ease;
+	transition: color 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
 img {
@@ -102,7 +102,7 @@ img {
 	font-size: 12px;
 
 	> div {
-		padding: 12px 0;
+		height: 40px;
 	}
 
 	> div:not(:last-child) {
@@ -131,6 +131,7 @@ img {
 	display: flex;
 	align-items: center;
 	text-transform: uppercase;
+	margin-right: -7px;
 
 	li {
 		a {
@@ -138,12 +139,6 @@ img {
 			padding: 10px;
 			margin: 0 8px;
 			color: #4e4e4e;
-		}
-
-		&:last-child {
-			a {
-				margin-right: -7px;
-			}
 		}
 
 		&:hover {
@@ -225,7 +220,6 @@ img {
 	border-bottom: 1px solid #00a6d3;
 	border-right: 1px solid #00a6d3;
 	background: #03B6E7;
-	transition: background 0.3s ease;
 
 	img {
 		margin-bottom: 6px;
@@ -309,7 +303,6 @@ img {
     border-radius: 40px;
     background: #16d428;
 	color: #fff;
-	transition: background 0.3s ease;
 
 	&:hover {
 		background: #10911d;
@@ -359,15 +352,16 @@ img {
 .about-foto{
 	position: relative;
 
-	>img {
+	> img {
 		width: 100%;
 	}
 }
 
 .badge {
-	@include block-absolute(100%, 50%, none, none);
-	transform: translate(50%, -100px);
-    height: 280px;
+	position: relative;
+	margin: 0 auto;
+    margin-top: -100px;
+    margin-bottom: -153px;
     max-width: 235px;
 	width: 100%;
 	padding: 17px;
@@ -393,6 +387,7 @@ img {
 	}
 
 	.text {
+		margin-bottom: 29px;
 		font-size: 10px;
 	}
 }
@@ -491,6 +486,8 @@ img {
 		border: 28px solid transparent;
 		border-bottom: 28px solid #03B6E7;;
 		border-left: 28px solid #03B6E7;
+		transition: border-color 0.3s ease;
+		z-index: 1;
 	}
 
 	&::after {
@@ -499,12 +496,18 @@ img {
 		font-size: 30px;
 		font-weight: 700;
 		color: #fff;
+		z-index: 1;
 	}
 
 	&:hover {
 		.project-text-hover {
 			opacity: 1;
 			visibility: visible;
+		}
+
+		&:before {
+			border-bottom-color: rgba($color: #000, $alpha: 0.1);
+			border-left-color: rgba($color: #000, $alpha: 0.1);
 		}
 	}
 }
@@ -528,13 +531,13 @@ img {
 		text-transform: uppercase;
 	}
 
-	&::before {
-		content: ''; 
-		@include block-absolute(none, none, 0, 0);
-		border: 28px solid transparent;
-		border-bottom: 28px solid rgba($color: #000, $alpha: 0.1);;
-		border-left: 28px solid rgba($color: #000, $alpha: 0.1);
-	}
+	// &::before {
+	// 	content: ''; 
+	// 	@include block-absolute(none, none, 0, 0);
+	// 	border: 28px solid transparent;
+	// 	border-bottom: 28px solid rgba($color: #000, $alpha: 0.1);;
+	// 	border-left: 28px solid rgba($color: #000, $alpha: 0.1);
+	// }
 }
 
 .button-wrapper {
