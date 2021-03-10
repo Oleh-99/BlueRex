@@ -338,6 +338,10 @@ img {
 		padding: 14px 28px;
 	}
 
+	&.btn-industries {
+		padding: 14px 35px;
+	}
+	
 	&.btn-extra {
 		padding: 14px 39px;
 	}
@@ -558,7 +562,7 @@ img {
 // ------------------------------------------------------------------------------------------------
 
 .projects {
-	margin-bottom: 94px;
+	padding-bottom: 94px;
 
 	.row {
 		margin-bottom: 7px;
@@ -646,6 +650,19 @@ img {
 .button-wrapper {
 	display: flex;
 	justify-content: center;
+}
+
+
+// ------------------------------------------------------------------------------------------------
+// PROGECTS-INDUSTARY
+// ------------------------------------------------------------------------------------------------
+.projects-industary {
+	padding-top: 91px;
+	background: #E7EFF1;
+
+	.row {
+		margin-bottom: 16px;
+	}
 }
 
 
@@ -1150,6 +1167,51 @@ img {
 	color: #dc4b3f;
 }
 
+// ------------------------------------------------------------------------------------------------
+// INDUSTRIES
+// ------------------------------------------------------------------------------------------------
+.industries {
+	margin-bottom: 94px;
+
+	h6 {
+		margin-bottom: 8px;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	p {
+		line-height: 2;
+		letter-spacing: 1px;
+	}
+
+	.title {
+		margin-bottom: 32px;
+	}
+
+	.row {
+		margin-bottom: 20px;
+
+		> div {
+			margin-bottom: 77px;
+		}
+	}
+}
+
+.industry {
+	display: flex;
+	align-items: center;
+}
+
+.industries-icon {
+	margin-right: 53px;
+    padding: 37px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	border: 1px solid rgba($color: #000000, $alpha: 0.1);
+	background: #fff;
+}
+
 
 // ------------------------------------------------------------------------------------------------
 // MEDIA
@@ -1227,7 +1289,11 @@ img {
 	//**** PROJECTS ****//
 
 	.projects {
-		margin-bottom: 50px;
+		padding-bottom: 50px;
+	}
+
+	.projects-industary {
+		padding-top: 50px;
 	}
 
 	//**** TESTIMONIALS ****//
@@ -1276,10 +1342,22 @@ img {
 	//**** vision-mission management ****//
 	.vision-mission,
 	.vision-mission .button-wrapper,
-	.management {
+	.management,
+	.industries {
 		margin-bottom: 50px;
 	}
 
+	//**** industries  ****//
+
+	.industries {
+		.row {
+			margin-bottom: 0 ;
+			> div {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	
 }
 
 @media(max-width: 785px){
@@ -1319,5 +1397,13 @@ img {
 		flex-shrink: 0;
 		margin-right: 10px; 
 		margin-bottom: 10px;
+	}
+
+	.industry {
+		flex-wrap: wrap;
+	}
+
+	.industries-icon {
+		margin-bottom: 15px;
 	}
 }

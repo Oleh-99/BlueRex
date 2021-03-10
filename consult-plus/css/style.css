@@ -1831,6 +1831,9 @@ img {
 .button-full.btn-max {
   padding: 14px 28px;
 }
+.button-full.btn-industries {
+  padding: 14px 35px;
+}
 .button-full.btn-extra {
   padding: 14px 39px;
 }
@@ -2000,7 +2003,7 @@ img {
 }
 
 .projects {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 .projects .row {
   margin-bottom: 7px;
@@ -2087,6 +2090,14 @@ img {
 .button-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.projects-industary {
+  padding-top: 91px;
+  background: #E7EFF1;
+}
+.projects-industary .row {
+  margin-bottom: 16px;
 }
 
 .testimonials {
@@ -2503,6 +2514,43 @@ img {
   color: #dc4b3f;
 }
 
+.industries {
+  margin-bottom: 94px;
+}
+.industries h6 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.industries p {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+.industries .title {
+  margin-bottom: 32px;
+}
+.industries .row {
+  margin-bottom: 20px;
+}
+.industries .row > div {
+  margin-bottom: 77px;
+}
+
+.industry {
+  display: flex;
+  align-items: center;
+}
+
+.industries-icon {
+  margin-right: 53px;
+  padding: 37px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -2552,7 +2600,11 @@ img {
   }
 
   .projects {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
+
+  .projects-industary {
+    padding-top: 50px;
   }
 
   .testimonials {
@@ -2592,8 +2644,16 @@ img {
 
   .vision-mission,
 .vision-mission .button-wrapper,
-.management {
+.management,
+.industries {
     margin-bottom: 50px;
+  }
+
+  .industries .row {
+    margin-bottom: 0;
+  }
+  .industries .row > div {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 785px) {
@@ -2631,6 +2691,14 @@ img {
     flex-shrink: 0;
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+
+  .industry {
+    flex-wrap: wrap;
+  }
+
+  .industries-icon {
+    margin-bottom: 15px;
   }
 }
 
