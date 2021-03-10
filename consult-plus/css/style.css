@@ -1831,7 +1831,7 @@ img {
 .button-full.btn-max {
   padding: 14px 28px;
 }
-.button-full.btn-industries {
+.button-full.btn-icon-infobox-wrapper {
   padding: 14px 35px;
 }
 .button-full.btn-extra {
@@ -2514,41 +2514,95 @@ img {
   color: #dc4b3f;
 }
 
-.industries {
+.icon-infobox-wrapper {
   margin-bottom: 94px;
 }
-.industries h6 {
+.icon-infobox-wrapper h6 {
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.industries p {
+.icon-infobox-wrapper h6 a:hover {
+  opacity: 0.6;
+}
+.icon-infobox-wrapper p {
   line-height: 2;
   letter-spacing: 1px;
 }
-.industries .title {
+.icon-infobox-wrapper .title {
   margin-bottom: 32px;
 }
-.industries .row {
+.icon-infobox-wrapper .row {
   margin-bottom: 20px;
 }
-.industries .row > div {
+.icon-infobox-wrapper .row > div {
   margin-bottom: 77px;
 }
 
-.industry {
+.icon-infobox {
   display: flex;
   align-items: center;
 }
 
-.industries-icon {
+.icon-infobox-icon {
   margin-right: 53px;
   padding: 37px;
   flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
+}
+
+.services .icon-infobox {
+  display: block;
+}
+.services .icon-infobox h6 {
+  letter-spacing: -1px;
+}
+.services .icon-infobox-icon {
+  margin-bottom: 19px;
+  border: none;
+  padding: 0;
+}
+.services .title {
+  margin-bottom: 10px;
+}
+.services .row {
+  margin-bottom: 0;
+}
+.services .row > div {
+  margin-bottom: 58px;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.services-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services-filter select {
+  margin-bottom: 10px;
+  padding: 12px;
+  min-width: 262px;
+  color: #9AA9AC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-family: inherit;
+  outline: none;
+}
+
+.filter-text {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #343a3b;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
@@ -2645,14 +2699,14 @@ img {
   .vision-mission,
 .vision-mission .button-wrapper,
 .management,
-.industries {
+.icon-infobox-wrapper {
     margin-bottom: 50px;
   }
 
-  .industries .row {
+  .icon-infobox-wrapper .row {
     margin-bottom: 0;
   }
-  .industries .row > div {
+  .icon-infobox-wrapper .row > div {
     margin-bottom: 30px;
   }
 }
@@ -2693,12 +2747,16 @@ img {
     margin-bottom: 10px;
   }
 
-  .industry {
+  .icon-infobox {
     flex-wrap: wrap;
   }
 
-  .industries-icon {
+  .icon-infobox-icon {
     margin-bottom: 15px;
+  }
+
+  .services-filter select {
+    min-width: auto;
   }
 }
 

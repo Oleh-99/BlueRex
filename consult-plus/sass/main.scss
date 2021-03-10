@@ -338,7 +338,7 @@ img {
 		padding: 14px 28px;
 	}
 
-	&.btn-industries {
+	&.btn-icon-infobox-wrapper {
 		padding: 14px 35px;
 	}
 	
@@ -1168,9 +1168,9 @@ img {
 }
 
 // ------------------------------------------------------------------------------------------------
-// INDUSTRIES
+// icon-infobox-wrapper
 // ------------------------------------------------------------------------------------------------
-.industries {
+.icon-infobox-wrapper {
 	margin-bottom: 94px;
 
 	h6 {
@@ -1178,6 +1178,10 @@ img {
 		font-size: 18px;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		a:hover {
+			opacity: 0.6;
+		}
 	}
 
 	p {
@@ -1198,18 +1202,82 @@ img {
 	}
 }
 
-.industry {
+.icon-infobox {
 	display: flex;
 	align-items: center;
 }
 
-.industries-icon {
+.icon-infobox-icon {
 	margin-right: 53px;
     padding: 37px;
 	flex-shrink: 0;
 	border-radius: 50%;
 	border: 1px solid rgba($color: #000000, $alpha: 0.1);
 	background: #fff;
+}
+
+// ------------------------------------------------------------------------------------------------
+// SERVICES
+// ------------------------------------------------------------------------------------------------
+.services {
+
+	.icon-infobox {
+		display: block;
+
+		h6 {
+			letter-spacing: -1px;
+		}
+	}
+
+	.icon-infobox-icon {
+		margin-bottom: 19px;
+		border: none;
+		padding: 0;
+	}
+
+	.title {
+		margin-bottom: 10px;
+	}
+	
+
+	.row {
+		margin-bottom: 0;
+
+		> div {
+			margin-bottom: 58px;
+		}
+	}
+}
+
+.services-header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 22px;
+}
+
+.services-filter {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	select {
+		margin-bottom: 10px;
+		padding: 12px;
+		min-width: 262px;
+		color: #9AA9AC;
+		border: 1px solid rgba($color: #000000, $alpha: 0.1);
+		text-transform: uppercase;
+		font-family: inherit;
+		outline: none;
+	}
+}
+
+.filter-text {
+	margin-bottom: 10px;
+	margin-right: 10px;
+	color: $color-title;
+	text-transform: uppercase;
 }
 
 
@@ -1343,13 +1411,13 @@ img {
 	.vision-mission,
 	.vision-mission .button-wrapper,
 	.management,
-	.industries {
+	.icon-infobox-wrapper {
 		margin-bottom: 50px;
 	}
 
-	//**** industries  ****//
+	//**** icon-infobox-wrapper  ****//
 
-	.industries {
+	.icon-infobox-wrapper {
 		.row {
 			margin-bottom: 0 ;
 			> div {
@@ -1399,11 +1467,18 @@ img {
 		margin-bottom: 10px;
 	}
 
-	.industry {
+	.icon-infobox {
 		flex-wrap: wrap;
 	}
 
-	.industries-icon {
+	.icon-infobox-icon {
 		margin-bottom: 15px;
+	}
+
+	.services-filter {
+	
+		select {
+			min-width: auto;
+		}
 	}
 }
