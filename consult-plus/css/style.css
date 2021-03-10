@@ -2605,6 +2605,23 @@ img {
   text-transform: uppercase;
 }
 
+.contact-us form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-us input {
+  width: 45%;
+  padding: 10px;
+  margin-right: 30px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contact-us input:last-child {
+  width: 100%;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
