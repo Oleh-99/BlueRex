@@ -1619,13 +1619,13 @@ img {
   vertical-align: middle;
 }
 
-.color-shema-while {
+.color-shema-white {
   color: #fff;
 }
-.color-shema-while h1, .color-shema-while h2, .color-shema-while h3, .color-shema-while h4, .color-shema-while h5, .color-shema-while h6, .color-shema-while input {
+.color-shema-white h1, .color-shema-white h2, .color-shema-white h3, .color-shema-white h4, .color-shema-white h5, .color-shema-white h6, .color-shema-white input {
   color: #fff;
 }
-.color-shema-while p, .color-shema-while ul, .color-shema-while span {
+.color-shema-white p, .color-shema-white ul, .color-shema-white span {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1709,8 +1709,7 @@ img {
 .industary .row > div:nth-child(odd) {
   border-bottom: 1px solid #00a6d3;
 }
-.industary .row > div:last-child,
-.industary .row > div:nth-last-child(2) {
+.industary .row > div:last-child, .industary .row > div:nth-last-child(2) {
   border-bottom: none;
 }
 
@@ -1732,6 +1731,7 @@ img {
   letter-spacing: -0.5px;
 }
 .industary-title p {
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   margin-bottom: 0;
   letter-spacing: 2px;
@@ -1739,6 +1739,7 @@ img {
 }
 
 .industary-link {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1810,8 +1811,7 @@ img {
 
 .button-full {
   display: inline-block;
-  padding: 14px;
-  min-width: 132px;
+  padding: 14px 25px;
   text-transform: uppercase;
   text-align: center;
   font-size: 13px;
@@ -1822,25 +1822,28 @@ img {
   transition: all 0.3s ease;
 }
 .button-full.btn-large {
-  padding: 19px;
-  min-width: 154px;
+  padding: 19px 35px;
   letter-spacing: 1px;
 }
-.button-full.btn-medium-large {
-  min-width: 148px;
+.button-full.btn-medium {
+  padding: 17px 36px;
 }
-.button-full.btn-max-large {
-  min-width: 163px;
+.button-full.btn-max {
+  padding: 14px 28px;
+}
+.button-full.btn-extra {
+  padding: 14px 39px;
 }
 .button-full:hover {
   background: #10911d;
 }
 
 .title {
+  margin-right: 15px;
+  margin-top: -3px;
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;
   letter-spacing: -2px;
 }
 
@@ -1849,10 +1852,19 @@ img {
   letter-spacing: -0.6px;
 }
 
+.link-full-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .about {
   margin-bottom: 67px;
 }
 .about .title {
+  margin-right: 0;
   letter-spacing: -2.5px;
 }
 
@@ -1863,7 +1875,7 @@ img {
   text-align: right;
 }
 .about-text .title {
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 .about-text p {
   margin-bottom: 39px;
@@ -1888,12 +1900,17 @@ img {
   border: 6px solid #fff;
   box-shadow: 0 9px 16px rgba(154, 154, 154, 0.3);
   background: #03B6E7;
+  text-transform: uppercase;
+}
+.badge .text {
+  margin-bottom: 29px;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .badge-content {
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  text-transform: uppercase;
   text-align: center;
   line-height: 1;
 }
@@ -1903,55 +1920,93 @@ img {
 .badge-content .number {
   font-size: 75px;
 }
-.badge-content .text {
-  margin-bottom: 29px;
-  font-size: 10px;
+
+.about-page p {
+  line-height: 2;
   letter-spacing: 1px;
 }
+.about-page .badge {
+  margin: 0;
+  margin-bottom: -125px;
+}
+.about-page .badge-content {
+  height: auto;
+}
+.about-page .row > div {
+  margin-bottom: 30px;
+}
 
-.step {
+.about-page-text {
+  margin-top: 80px;
+}
+
+.badge-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badge-client {
+  padding: 10px;
+  padding-top: 36px;
+  text-align: center;
+}
+.badge-client .number-client {
+  font-size: 48px;
+}
+.badge-client .text {
+  margin-top: -8px;
+}
+
+.infobox {
   background: #E7EFF1;
   padding-top: 90px;
   padding-bottom: 58px;
   margin-bottom: 93px;
 }
-.step img {
+.infobox img {
   margin-bottom: 26px;
 }
-.step h6 {
+.infobox h6 {
   margin-bottom: 17px;
 }
-.step h6 a {
+.infobox h6 a {
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-.step h6 a:hover {
+.infobox h6 a:hover {
   opacity: 0.6;
 }
-.step p {
+.infobox p {
   line-height: 2;
   letter-spacing: 1px;
 }
-.step .title {
-  margin-bottom: 18px;
+.infobox .title {
+  margin-bottom: 9px;
 }
-.step .number {
+.infobox .number {
   margin-bottom: 11px;
   font-size: 20px;
   color: #16d428;
   line-height: 1;
 }
-.step .row > div {
+.infobox .row > div {
   margin-bottom: 30px;
+}
+
+.core .title {
+  margin-bottom: 23px;
 }
 
 .projects {
   margin-bottom: 94px;
 }
+.projects .row {
+  margin-bottom: 7px;
+}
 .projects .title {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 
 .project-foto {
@@ -2032,13 +2087,12 @@ img {
 .button-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 14px;
 }
 
 .testimonials {
   background: #03B6E7;
   padding-top: 92px;
-  padding-bottom: 80px;
+  padding-bottom: 77px;
 }
 .testimonials p {
   margin-bottom: 29px;
@@ -2047,7 +2101,7 @@ img {
   letter-spacing: 0.6px;
 }
 .testimonials .title {
-  margin-bottom: 44px;
+  margin-bottom: 39px;
 }
 .testimonials .row {
   margin-bottom: 43px;
@@ -2090,7 +2144,7 @@ img {
 .client p {
   margin-bottom: 0;
 }
-.client:hover {
+.client:hover, .client.active {
   opacity: 1;
 }
 
@@ -2144,7 +2198,7 @@ img {
 
 .blog-header {
   display: flex;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 }
 .blog-header .title {
   letter-spacing: -2.5px;
@@ -2217,7 +2271,7 @@ img {
   margin-bottom: 63px;
 }
 .contact .title {
-  margin-bottom: 29px;
+  margin-bottom: 18px;
 }
 
 .contact-infobox {
@@ -2314,6 +2368,141 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.main-title {
+  background-image: url(../img/main-title.png);
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 103px;
+  margin-bottom: 89px;
+}
+.main-title h1 {
+  position: relative;
+  margin-left: 18px;
+  letter-spacing: -1px;
+  font-size: 36px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.title-wrapper {
+  position: relative;
+}
+
+.title-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #FFAC55;
+  z-index: 0;
+}
+
+.vision-mission {
+  margin-bottom: 90px;
+}
+.vision-mission p {
+  line-height: 2;
+  letter-spacing: 0.7px;
+}
+.vision-mission .row {
+  margin-bottom: 34px;
+}
+.vision-mission .row > div {
+  margin-bottom: 30px;
+}
+.vision-mission .button-wrapper {
+  margin-bottom: 93px;
+}
+
+.vision-foto {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.vision-foto img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.vision-foto:hover img {
+  transform: scale(1.1);
+}
+
+.vision-mission-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.management {
+  margin-bottom: 93px;
+}
+.management h6 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.management h6:hover a {
+  opacity: 0.6;
+}
+.management p {
+  line-height: 2;
+  margin-bottom: 41px;
+}
+.management .profession {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.management .title {
+  margin-bottom: 36px;
+}
+.management .row {
+  margin-bottom: 25px;
+}
+.management .row > div {
+  margin-bottom: 30px;
+}
+
+.manager {
+  display: flex;
+}
+
+.manager-foto {
+  width: 114px;
+  flex-shrink: 0;
+  margin-right: 23px;
+  margin-bottom: 10px;
+}
+
+.manager-text {
+  padding: 4px;
+}
+
+.manager-link {
+  margin-top: 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.manager-link a {
+  display: inline-block;
+  margin-right: 11px;
+  letter-spacing: -0.5px;
+}
+.manager-link a:hover {
+  opacity: 0.6;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.twitter {
+  color: #50abf1;
+}
+
+.google {
+  color: #dc4b3f;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -2348,7 +2537,16 @@ img {
     border-bottom: 1px solid #00a6d3;
   }
 
-  .step {
+  .main-title {
+    margin-bottom: 50px;
+    padding: 60px 0;
+  }
+
+  .about-page-text {
+    margin-top: 0;
+  }
+
+  .infobox {
     padding-top: 130px;
     margin-bottom: 50px;
   }
@@ -2391,13 +2589,24 @@ img {
   .copyring {
     padding: 20px 0;
   }
+
+  .vision-mission,
+.vision-mission .button-wrapper,
+.management {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 785px) {
+  .badge-wrapper {
+    justify-content: center;
+  }
 }
 @media (max-width: 450px) {
   .badge {
     display: none;
   }
 
-  .step {
+  .infobox {
     padding-top: 50px;
   }
 
@@ -2414,7 +2623,14 @@ img {
   }
 
   .button-full.btn-large {
-    min-width: 110px;
+    padding: 19px;
+  }
+
+  .manager-foto {
+    width: 60px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }
 

@@ -72,7 +72,7 @@ img {
 // COLOR SHEMA 
 // ------------------------------------------------------------------------------------------------
 
-.color-shema-while {
+.color-shema-white {
 	color: #fff;
 
 	h1,h2,h3,h4,h5,h6, input{
@@ -153,7 +153,6 @@ img {
 			}
 		}
 	}
-
 }
 
 .burger-menu {
@@ -185,18 +184,22 @@ img {
 	text-transform: uppercase;
 
 	.row {
-		> div:nth-child(even) {
-			border-bottom: 1px solid #00a6d3;
-			border-right: 1px solid #00a6d3;
-		}
 
-		> div:nth-child(odd) {
-			border-bottom: 1px solid #00a6d3;
-		}
+		> div {
 
-		> div:last-child,
-		> div:nth-last-child(2) {
-			border-bottom: none;
+			&:nth-child(even) {
+				border-bottom: 1px solid #00a6d3;
+				border-right: 1px solid #00a6d3;
+			}
+
+			&:nth-child(odd) {
+				border-bottom: 1px solid #00a6d3;
+			}
+
+			&:last-child,
+			&:nth-last-child(2) {
+				border-bottom: none;
+			}
 		}
 	}
 }
@@ -220,15 +223,16 @@ img {
 	}
 	
 	p {
+		font-family: $font-primary;
 		color: #fff;
 		margin-bottom: 0;
 		letter-spacing: 2px;
 		text-transform: none;
 	}
-
 }
 
 .industary-link {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -237,7 +241,6 @@ img {
 	padding-left: 39px;
 	padding-right: 27px;
 	padding-bottom: 32px;
-	
 	background: #03B6E7;
 
 	img {
@@ -311,8 +314,7 @@ img {
 
 .button-full {
 	display: inline-block;
-	padding: 14px;
-	min-width: 132px;
+	padding: 14px 25px;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 13px;
@@ -324,17 +326,20 @@ img {
 
 
 	&.btn-large {
-		padding: 19px;
-		min-width: 154px;
+		padding: 19px 35px;
 		letter-spacing: 1px;
 	}
 
-	&.btn-medium-large {
-		min-width: 148px;
+	&.btn-medium {
+		padding: 17px 36px;
 	}
 
-	&.btn-max-large {
-		min-width: 163px;
+	&.btn-max {
+		padding: 14px 28px;
+	}
+
+	&.btn-extra {
+		padding: 14px 39px;
 	}
 
 	&:hover {
@@ -345,10 +350,11 @@ img {
 //**** title ****//
 
 .title {
+	margin-right: 15px;
+	margin-top: -3px;
 	font-size: 32px;
 	font-weight: 700;
 	text-transform: uppercase;
-	line-height: 1;
 	letter-spacing: -2px;
 
 }
@@ -356,6 +362,10 @@ img {
 .sub-title {
 	text-transform: uppercase;
 	letter-spacing: -0.6px;
+}
+
+.link-full-block {
+	@include block-absolute(0, 0, 0, 0);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -366,6 +376,7 @@ img {
 	margin-bottom: 67px;
 
 	.title {
+		margin-right: 0;
 		letter-spacing: -2.5px;
 	}
 }
@@ -377,7 +388,7 @@ img {
 	text-align: right;
 
 	.title {
-		margin-bottom: 25px;
+		margin-bottom: 17px;
 	}
 
 	p {
@@ -405,13 +416,19 @@ img {
 	border: 6px solid #fff;
 	box-shadow: 0 9px 16px rgba(154, 154, 154, 0.3);
 	background: #03B6E7;
+	text-transform: uppercase;
+
+	.text {
+		margin-bottom: 29px;
+		font-size: 10px;
+		letter-spacing: 1px;
+	}
 
 }
 
 .badge-content {
 	height: 100%;
 	border: 1px solid rgba($color: #fff, $alpha: 0.3);
-	text-transform: uppercase;
 	text-align: center;
 	line-height: 1;
 
@@ -422,11 +439,56 @@ img {
 	.number {
 		font-size: 75px;
 	}
+}
+
+
+// ------------------------------------------------------------------------------------------------
+// ABOUT-PAGE
+// ------------------------------------------------------------------------------------------------
+.about-page {
+
+	p {
+		line-height: 2;
+		letter-spacing: 1px;
+	}
+
+	.badge {
+		margin: 0;
+		margin-bottom: -125px;
+	}
+
+	.badge-content {
+		height: auto;
+	}
+
+	.row {
+		> div {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.about-page-text {
+	margin-top: 80px;
+}
+
+.badge-wrapper {
+	display: flex;
+    justify-content: flex-end;
+}
+
+
+.badge-client {
+	padding: 10px;
+	padding-top: 36px;
+    text-align: center;
+
+	.number-client {
+		font-size: 48px;
+	}
 
 	.text {
-		margin-bottom: 29px;
-		font-size: 10px;
-		letter-spacing: 1px;
+		margin-top: -8px;
 	}
 }
 
@@ -434,7 +496,7 @@ img {
 // STEP
 // ------------------------------------------------------------------------------------------------
 
-.step {
+.infobox {
 	background: #E7EFF1;
 	padding-top: 90px;
 	padding-bottom: 58px;
@@ -465,7 +527,7 @@ img {
 	}
 
 	.title {
-		margin-bottom: 18px;
+		margin-bottom: 9px;
 	}
 
 	.number {
@@ -483,14 +545,27 @@ img {
 }
 
 // ------------------------------------------------------------------------------------------------
+// CORE
+// ------------------------------------------------------------------------------------------------
+.core {
+	.title {
+		margin-bottom: 23px;
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
 // PROJECT
 // ------------------------------------------------------------------------------------------------
 
 .projects {
 	margin-bottom: 94px;
+
+	.row {
+		margin-bottom: 7px;
+	}
 	
 	.title {
-		margin-bottom: 30px;
+		margin-bottom: 21px;
 	}
 }
 
@@ -571,7 +646,6 @@ img {
 .button-wrapper {
 	display: flex;
 	justify-content: center;
-	margin-top: 14px;
 }
 
 
@@ -582,7 +656,7 @@ img {
 .testimonials {
 	background: #03B6E7;
 	padding-top: 92px;
-    padding-bottom: 80px;
+	padding-bottom: 77px;
 
 	p {
 		margin-bottom: 29px;
@@ -592,7 +666,7 @@ img {
 	}
 
 	.title {
-		margin-bottom: 44px;
+		margin-bottom: 39px;
 	}
 
 	.row {
@@ -641,7 +715,8 @@ img {
 		margin-bottom: 0;
 	}
 
-	&:hover {
+	&:hover,
+	&.active {
 		opacity: 1;
 	}
 }
@@ -704,7 +779,7 @@ img {
 
 .blog-header {
 	display: flex;
-	margin-bottom: 23px;
+	margin-bottom: 15px;
 
 	.title {
 		letter-spacing: -2.5px;
@@ -796,7 +871,7 @@ img {
 	margin-bottom: 63px;
 
 	.title {
-		margin-bottom: 29px;
+		margin-bottom: 18px;
 	}
 
 }
@@ -892,6 +967,7 @@ img {
 		}
 	}
 }
+
 .footer-main-inner {
 	margin-bottom: 54px;
 
@@ -911,6 +987,168 @@ img {
 	border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
 }
 
+// ------------------------------------------------------------------------------------------------
+// MAIN-TITLE pages
+// ------------------------------------------------------------------------------------------------
+
+.main-title {
+	@include background(url(../img/main-title.png));
+	padding: 120px 0 103px;
+	margin-bottom: 89px;
+
+	h1 {
+		position: relative;
+		margin-left: 18px;
+		letter-spacing: -1px;
+		font-size: 36px;
+		font-family: $font-primary-2;
+		text-transform: uppercase;
+	}
+}
+
+.title-wrapper {
+	position: relative;
+}
+
+.title-circle {
+	@include block-absolute(0, none, none, 0);
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	background-color: #FFAC55;
+	z-index: 0;
+}
+
+// ------------------------------------------------------------------------------------------------
+// VISION-MISSION
+// ------------------------------------------------------------------------------------------------
+
+.vision-mission {
+	margin-bottom: 90px;
+
+	p {
+		line-height: 2;
+		letter-spacing: 0.7px;
+	}
+
+	.row {
+		margin-bottom: 34px;
+
+		> div {
+			margin-bottom: 30px;
+		}
+	}
+
+	.button-wrapper {
+		margin-bottom: 93px;
+	}
+}
+
+.vision-foto {
+	overflow: hidden;
+	margin-bottom: 40px;
+
+	img {
+		width: 100%;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.vision-mission-border {
+	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+// ------------------------------------------------------------------------------------------------
+// MANAGEMENT
+// ------------------------------------------------------------------------------------------------
+.management {
+	margin-bottom: 93px;
+
+	h6 {
+		margin-bottom: 2px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&:hover {
+			a {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	p {
+		line-height: 2;
+		margin-bottom: 41px;
+	}
+
+	.profession {
+		margin-bottom: 16px;
+		text-transform: uppercase;
+		opacity: 0.6;
+	}
+	
+	.title {
+		margin-bottom: 36px;
+	}
+
+	.row {
+		margin-bottom: 25px;
+
+		> div {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.manager {
+	display: flex;
+}
+
+.manager-foto {
+	width: 114px;
+	flex-shrink: 0;
+	margin-right: 23px;
+	margin-bottom: 10px;
+}
+
+.manager-text {
+	padding: 4px;
+}
+
+.manager-link {
+	margin-top: 12px;
+	text-transform: uppercase;
+	font-size: 12px;
+
+	a {
+		display: inline-block;
+		margin-right: 11px;
+		letter-spacing: -0.5px;
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.twitter {
+	color: #50abf1;
+}
+
+.google {
+	color: #dc4b3f;
+}
 
 
 // ------------------------------------------------------------------------------------------------
@@ -966,10 +1204,22 @@ img {
 		}
 	}
 
+	//**** MAIN TITLE ****//
+
+	.main-title {
+		margin-bottom: 50px;
+		padding: 60px 0;
+	}
+
+	//**** ABOUT ****//
+
+	.about-page-text {
+		margin-top: 0;
+	}
 
 	//**** SPEP ****//
 
-	.step {
+	.infobox {
 		padding-top: 130px;
 		margin-bottom: 50px;
 	}
@@ -1023,6 +1273,19 @@ img {
 		padding: 20px 0;
 	}
 
+	//**** vision-mission management ****//
+	.vision-mission,
+	.vision-mission .button-wrapper,
+	.management {
+		margin-bottom: 50px;
+	}
+
+}
+
+@media(max-width: 785px){
+	.badge-wrapper {
+		justify-content: center;
+	}
 }
 
 
@@ -1031,7 +1294,7 @@ img {
 		display: none;
 	}
 
-	.step {
+	.infobox {
 		padding-top: 50px;
 	}
 
@@ -1048,6 +1311,13 @@ img {
 	}
 
 	.button-full.btn-large {
-		min-width: 110px;
+		padding: 19px;
+	}
+
+	.manager-foto {
+		width: 60px;
+		flex-shrink: 0;
+		margin-right: 10px; 
+		margin-bottom: 10px;
 	}
 }
