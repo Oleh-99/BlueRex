@@ -227,7 +227,7 @@ img {
 		color: #fff;
 		margin-bottom: 0;
 		letter-spacing: 2px;
-		text-transform: none;
+		text-transform: uppercase;
 	}
 }
 
@@ -242,6 +242,7 @@ img {
 	padding-right: 27px;
 	padding-bottom: 32px;
 	background: #03B6E7;
+	transition: background 0.3s ease;
 
 	img {
 		margin-bottom: 6px;
@@ -354,7 +355,6 @@ img {
 //**** title ****//
 
 .title {
-	margin-right: 15px;
 	margin-top: -3px;
 	font-size: 32px;
 	font-weight: 700;
@@ -380,11 +380,9 @@ img {
 	margin-bottom: 67px;
 
 	.title {
-		margin-right: 0;
 		letter-spacing: -2.5px;
 	}
 }
-
 .about-text {
 	margin-top: 5px;
 	margin-right: 21px;
@@ -800,6 +798,7 @@ img {
 
 	.title {
 		letter-spacing: -2.5px;
+		margin-right: 15px;
 	}
 }
 
