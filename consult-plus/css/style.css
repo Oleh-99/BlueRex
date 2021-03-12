@@ -2079,7 +2079,7 @@ textarea {
   text-transform: uppercase;
 }
 .project-foto .info.info-main {
-  border: 1px solid;
+  border: 1px solid #FFAC56;
   background: transparent;
 }
 .project-foto.project-foto-main::before {
@@ -2482,7 +2482,7 @@ textarea {
   transform: scale(1.1);
 }
 
-.vision-mission-border {
+.border-full {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -2770,6 +2770,42 @@ textarea {
   margin-bottom: 38px;
 }
 
+.error-404 {
+  margin-bottom: 93px;
+  text-align: center;
+}
+.error-404 img {
+  flex-shrink: 1;
+}
+
+.error-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-numbers {
+  flex-shrink: 1;
+  font-size: 200px;
+  color: #1c1c1c;
+}
+
+.error-sub-title {
+  text-transform: uppercase;
+}
+
+.error-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #343a3b;
+  text-transform: uppercase;
+}
+
+.error-text {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -2941,6 +2977,14 @@ textarea {
 
   .services-filter select {
     min-width: auto;
+  }
+
+  .error-numbers {
+    font-size: 100px;
+  }
+
+  .error-404 img {
+    width: 100px;
   }
 }
 
