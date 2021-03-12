@@ -1659,20 +1659,25 @@ textarea {
   font-family: inherit;
   font-size: 12px;
   color: inherit;
-  text-transform: uppercase;
   background: transparent;
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+input::placeholder {
+  text-transform: uppercase;
+}
+
 select {
   padding: 8px 0;
+  text-transform: uppercase;
 }
 
 textarea {
   overflow: hidden;
   min-height: 192px;
+  text-transform: uppercase;
 }
 
 .color-shema-white {
