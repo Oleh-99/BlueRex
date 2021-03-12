@@ -2425,7 +2425,8 @@ textarea {
   padding: 120px 0 103px;
   margin-bottom: 89px;
 }
-.main-title h1 {
+
+.title-main {
   position: relative;
   margin-left: 18px;
   letter-spacing: -1px;
@@ -2565,17 +2566,18 @@ textarea {
   display: flex;
   align-items: center;
 }
-.industries .icon-infobox .icon-infobox-icon {
-  margin-right: 53px;
-}
 .industries .icon-infobox:hover .icon-infobox-icon {
   box-shadow: 0 0 65px rgba(210, 222, 225, 0.44);
+}
+.industries .icon-infobox-icon {
+  margin-right: 53px;
 }
 .industries .icon-infobox-icon {
   transition: box-shadow 0.3s ease;
 }
 
 .icon-infobox-icon {
+  display: inline-block;
   padding: 37px;
   flex-shrink: 0;
   border-radius: 50%;

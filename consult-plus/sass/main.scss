@@ -529,14 +529,14 @@ textarea {
 
 .badge-wrapper {
 	display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 
 .badge-client {
 	padding: 10px;
 	padding-top: 36px;
-    text-align: center;
+	text-align: center;
 
 	.number-client {
 		font-size: 48px;
@@ -1006,8 +1006,8 @@ textarea {
 
 .copyring {
 	padding-top: 20px;
-    padding-bottom: 55px;
-    letter-spacing: 0.6px;
+	padding-bottom: 55px;
+	letter-spacing: 0.6px;
 	border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
 }
 
@@ -1064,14 +1064,14 @@ textarea {
 	@include background(url(../img/main-title.png));
 	padding: 120px 0 103px;
 	margin-bottom: 89px;
+}
 
-	h1 {
-		position: relative;
-		margin-left: 18px;
-		letter-spacing: -1px;
-		font-family: $font-primary-2;
-		font-weight: 300;
-	}
+.title-main {
+	position: relative;
+	margin-left: 18px;
+	letter-spacing: -1px;
+	font-family: $font-primary-2;
+	font-weight: 300;
 }
 
 .title-wrapper {
@@ -1237,16 +1237,17 @@ textarea {
 		display: flex;
 		align-items: center;
 
-		.icon-infobox-icon {	
-			margin-right: 53px;
-		}
-
 		&:hover {
 			.icon-infobox-icon {
 				box-shadow: 0 0 65px rgba(210, 222, 225, 0.44);
 			}
 		}
 	}
+
+	.icon-infobox-icon {	
+		margin-right: 53px;
+	}
+
 	.icon-infobox-icon {
 		transition: box-shadow 0.3s ease;
 	}
@@ -1255,7 +1256,8 @@ textarea {
 
 
 .icon-infobox-icon {
-    padding: 37px;
+	display: inline-block;
+	padding: 37px;
 	flex-shrink: 0;
 	border-radius: 50%;
 	border: 1px solid rgba($color: #000000, $alpha: 0.1);
