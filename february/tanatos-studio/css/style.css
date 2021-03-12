@@ -1,0 +1,411 @@
+@import url('reset.css');
+@import url('grid.css');
+
+ body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+ }
+
+ h1,h2,h3,h4,h5,h6{
+     margin-bottom: 20px;
+ }
+
+ header {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    color: #ffffff;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+.burger {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.slider{
+    background: url(../img/slider-back.png);
+    background-size: cover;
+    position: relative;
+    padding: 280px 0;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.slider::after,
+.newsletter::after,
+.clients::after,
+.contact::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(66, 72, 77, 0.7)
+}
+
+.container{
+    z-index: 1;
+    position: relative;
+}
+
+.slider h1{
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.slider p{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.btn-emply{
+    background: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    min-width: 211px;
+    padding: 20px 20px;
+    margin: 10px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.services{
+    background: #ffffff;
+    margin-bottom: 60px;
+}
+
+.services-block{
+    padding: 50px;
+    text-align: center;
+}
+
+.services-block h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.services-block p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.services-block i{
+    min-width: 70px;
+    display: block;
+    min-height: 70px;
+    line-height: 80px;
+    font-size: 60px;
+    color: #f7610f;
+    border-radius: 50%;
+    border: 1px solid #a8a5a5;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.newsletter{
+    background: url(../img/Newsletter-back.png);
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.email{
+    width: 568px;
+    max-width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: none;
+}
+
+.btn-full{
+    background: #f7610f;
+    color: #ffffff;
+    font-size: 16px;
+    min-width: 270px;
+    padding: 20px;
+    margin: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.works{
+    background: #ffffff;
+    text-align: center;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.title-text{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 100px;
+}
+
+.foto{
+    min-height: 360px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.works-foto-1{
+    background: url(../img/works1.png);
+    background-size: cover;
+}
+
+.works-foto-2{
+    background: url(../img/works2.png);
+    background-size: cover;
+}
+
+.works-foto-3{
+    background: url(../img/works3.png);
+    background-size: cover;
+}
+
+.works-foto-4{
+    background: url(../img/works4.png);
+    background-size: cover;
+}
+
+.works-foto-5{
+    background: url(../img/works5.png);
+    background-size: cover;
+}
+
+.works-foto-6{
+    background: url(../img/works6.png);
+    background-size: cover;
+}
+
+.works button{
+    color:black;
+    margin: 80px 0;
+}
+
+.clients{
+    background: url(../img/clients-back.png);
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.clients-text{
+    font-size: 25px;
+    font-style:italic;
+    margin: 50px 0;
+}
+
+.clients-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.arrow {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    border: solid #939596;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 27px;
+  }
+  
+.right {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  }
+  
+.left {
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+  }
+
+.team{
+    background: #ffffff;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+
+.fa-facebook{
+    color: #205b9f;
+}
+
+.fa-twitter{
+    color: #00ace3;
+}
+
+.fa-google-plus{
+    color: #ff3921;
+}
+
+.team-icon{
+    margin: 10px;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.team-icon:hover{
+    filter: none;
+}
+
+.team-icon-foto4{
+    background: url(../img/team4.png);
+}
+
+.team-icon-foto3{
+    background: url(../img/team3.png);
+}
+
+.team-icon-foto2{
+    background: url(../img/team2.png);
+}
+
+.team-icon-foto1{
+    background: url(../img/team1.png);
+
+}
+
+.icon-foto{
+    background-size: cover;
+    min-height: 280px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.team-icon:hover .icon-foto{
+    margin-top: -20px;
+}
+
+.team-icon h3{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.icon{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.icon i{
+    margin-left: 10px;
+}
+
+.contact{
+    background: url(../img/contact-back.png);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 100px 0 140px;
+    color: #ffffff;
+}
+
+
+.subject{
+    width: 400px;
+    max-width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    border: none;
+}
+
+.messange{
+    width: 836px;
+    max-width: 84%;
+    height: 200px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    max-width: 75%;
+    margin: 0 12%;
+}
+
+.buttons i{
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.grow{
+    flex-grow: 1;
+}
+
+
+
+footer{
+    background: #3b434c;
+    padding: 40px 0;
+    color: #ffffff;
+}
+
+footer>div{
+    display: flex;
+}
+
+footer>div>p:first-child{
+    flex-grow: 1;
+}
+
+@media (max-width: 900px){
+    .col-3,
+    .col-4{
+        width: 50%;
+    }
+    .buttons{
+        display: block;
+    }
+}
+
+@media (max-width: 400px){
+    .col-3,
+    .col-4{
+        width: 100%;
+    }
+    *{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

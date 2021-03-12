@@ -73,6 +73,10 @@ body {
   td a, th a {
     padding: 10px;
   }
+
+  .test {
+    font-weight: 700;
+  }
   
   @media (max-width: 600px) {
     

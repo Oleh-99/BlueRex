@@ -1,0 +1,315 @@
+@import 'fonts.css';
+
+body{
+    background: #ffffff;
+    font-family: 'Roboto Light';
+}
+
+ul, li {
+    display: contents;
+    padding: 0;
+    margin: 0;
+}
+
+li a{
+    padding: 0 10px;
+}
+
+hr {
+    border: none; 
+    background-color: #4a24a8; 
+    height: 3px; 
+    width: 80px;
+    margin-bottom: 75px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.menu-bar{
+    padding: 30px 0;
+   /* color: #ced0cf;*/
+}
+
+.menu_item{
+    margin-left: 15px;
+}
+
+.menu_item a{
+    font-size: 15px;
+    color: #cecfcf;
+}
+
+.menu_item a:hover {
+    text-decoration: none;
+    color: #868686;
+}
+
+.button_search{
+    width: 133px;
+    height: 45px;
+    background: #2e8df7;
+    color: #ffffff;
+    border-radius: 47px;
+    font-family: 'Roboto Bold';
+    font-size: 16px;
+}
+
+.top{
+    text-align: center;
+    color: #ffffff;
+    margin-top: -170px;
+    padding: 270px;
+    background-image: url(../img/top.png);
+    background-size: cover;
+}
+
+.top_title{
+    font-size: 90px;
+    
+}
+
+.top_text{
+    font-size: 18px;
+    color: #cecfcf;
+}
+
+.button {
+    width: 158px;
+    height: 47px;
+    margin: 0 15px;
+    color: #ffffff;
+    border-radius: 47px;
+    font-family: 'Roboto Bold';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.button_emply{
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #cecfcf;
+}
+
+.button_emply:hover{
+    background: #2e8df7;
+    border: 2px solid #2e8df7;
+    transition: 0.3s;
+}
+
+.button_full{
+    font-size: 16px;
+    background: #2e8df7;
+    border: 2px solid #2e8df7;
+}
+
+.button_full:hover{
+    box-shadow: 0px 30px 25px -1px rgba(76, 169, 255, 0.2);
+    transition: 0.3s;
+}
+
+.about{
+    color: #40485a;
+    padding: 100px 0px;
+}
+
+.about_title{
+    font-size: 48px;
+}
+
+.about_line{
+    margin-left: 0;
+}
+
+.about_text{
+    font-size: 18px;
+    margin-bottom: 110px;
+}
+
+.about_foto{
+    padding: 0;
+}
+
+.about img{
+    width: 100%;
+    height: auto;
+}
+
+.about ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.what_we_do{
+    text-align: center;
+    color: #868686;
+    padding: 80px 0;
+}
+
+.do_logo_s1{
+    background: url(../img/S3-1-off.png);
+    display: block;
+    height: 164px;
+    width: 204px;
+    margin: 0 auto;
+}
+
+.do_logo_s2{
+    background: url(../img/S3-2-off.png);
+    display: block;
+    height: 164px;
+    width: 204px;
+    margin: 0 auto;
+}
+
+.do_logo_s3{
+    background: url(../img/S3-3-off.png);
+    display: block;
+    height: 164px;
+    width: 204px;
+    margin: 0 auto;
+}
+
+.design {
+    padding-top: 40px;
+    transition: 0.3s;
+}
+.development{
+    padding-top: 40px;
+    transition: 0.3s;
+}
+.promote{
+    padding-top: 40px;
+    transition: 0.3s;
+}
+.design:hover  {
+    padding-top: 20px;
+    box-shadow: 0px 15px 30px -1px rgba(34, 60, 80, 0.2);
+}
+
+.development:hover{
+    padding-top: 20px;
+    box-shadow: 0px 15px 30px -1px rgba(34, 60, 80, 0.2);
+}
+
+.promote:hover{
+    padding-top: 20px;
+    box-shadow: 0px 15px 30px -1px rgba(34, 60, 80, 0.2);
+}
+
+.design:hover .do_logo_s1{
+    background: url(../img/S3-1-on.png)
+}
+
+.development:hover .do_logo_s2{
+    background: url(../img/S3-2-on.png)
+}
+
+.promote:hover .do_logo_s3{
+    background: url(../img/S3-3-on.png)
+}
+
+.do_title{
+    font-family: 'Roboto Bold';
+    font-size: 18px;
+    padding: 40px 0px 20px;
+    text-transform:uppercase;
+}
+
+.what_we_do_text{
+    font-size: 48px;
+}
+
+.show_more{
+    padding-top: 60px;
+    font-family: 'Roboto Medium';
+    font-size: 18px;
+}
+
+.portfolio{
+    background: #4826a6;
+    color: #ffffff;
+    font-family: 'Roboto Regular';
+}
+
+.portfolio_title{
+    font-size: 62px;
+    padding: 140px 0 30px 0;
+}
+
+.portfolio_text{
+    font-size: 18px;
+    padding-bottom: 70px;
+}
+
+.portfolio-foto-1{
+    padding-top: 90px;
+}
+
+.portfolio-foto-2{
+    padding: 110px 0 85px 0;
+}
+
+.works{
+    border-top: 1px solid rgb(249 249 249 / 33%);
+}
+
+.works_hover{
+    padding: 50px 0;
+}
+
+.works_hover:hover{
+    padding: 47px 0;
+    border-top: 3px solid white;
+}
+
+.twitter{
+    padding: 50px 0 110px;
+}
+
+.twitter_text{
+    font-size: 24px;
+    text-align: center;
+    padding: 80px 60px 0;
+}
+
+.twitter_block{
+    margin-top: 40px;
+}
+
+.twitter_block:hover{
+    box-shadow: 0px 15px 30px -1px rgba(34, 60, 80, 0.2);
+    transition: 0.3s;
+}
+
+.profile{
+    display: flex;
+    font-size: 18px;
+    padding: 50px 0;
+    justify-content: center;
+}
+
+.profile_text{
+    margin: 5px 5px 0;
+}
+
+footer{
+    background: #4826a6;
+    color: #ffffff;
+    font-family: 'Roboto Regular';
+}
+
+.footer_logo{
+    padding: 100px 15px 30px;
+}
+
+.footer_text{
+    padding-bottom: 100px;
+    font-size: 18px;
+}
+
+.copyring{
+    padding-top: 20px;
+    border-top: 1px solid rgb(249 249 249 / 33%);
+    font-size: 14px;
+    text-transform: uppercase;  
+}

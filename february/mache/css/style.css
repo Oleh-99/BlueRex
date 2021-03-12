@@ -1,0 +1,590 @@
+
+@import url('grid.css');
+@import url('reset.css');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 15px;
+    overflow-x: hidden;
+ }
+
+ h1,h2,h3,h4,h5,h6{
+     margin-bottom: 20px;
+     font-weight: 600;
+ }
+
+p{
+     margin-bottom: 20px;
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ ul, li {
+    display: contents;
+    padding: 0;
+    margin: 0;
+}
+
+li a{
+    padding: 0 10px;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+li a:hover{
+    color: #c8184f;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header > div{
+    display: flex;
+    padding: 20px 0;
+}
+
+.btn-burg{
+    display: none;
+}
+
+
+.foto-header{
+    flex-grow: 1;
+    max-height: 100px;
+}
+
+nav{
+    margin: auto 20px;
+}
+
+.main{
+    background: url(../img/main-back.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 240px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main span, .join span{
+    font-weight: 900;
+}
+
+.main h1{
+    font-size: 46px;
+    color: #ffffff;
+}
+
+.main p{
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.buttons-full{
+    background: #ed145b;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 50px;
+    min-width: 200px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-while{
+    background: #ffffff;
+    color: #ed145b;
+}
+
+.about{
+    background: #f4f4f4;
+    padding: 100px 0;
+    margin-bottom: 100px;
+    color: #5a5a5a;
+}
+
+.about a{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ed145b;
+}
+
+.about a>img{
+    padding-left: 10px;
+    max-width: 60px;
+}
+
+.mac{
+    max-width: 100%;
+    position: absolute;
+    margin-top: -20px
+}
+
+.title{
+    font-size: 38px;
+    font-style: italic;
+}
+
+.title::after,
+.main h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    max-width: 10vw;
+    background-color: #ed145b;
+    margin: 40px auto;
+}
+
+.about .title::after,
+.download .title::after{
+    margin-left: 0;
+}
+
+.title-text{
+    max-width: 700px;
+    margin: 0 auto 90px;
+}
+.about .title-text{
+    margin-bottom: 40px;
+}
+
+.services{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.services img{
+    border-radius: 50%;
+    border: 1px solid #a8a5a5;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.services h5{
+    color: #ee3168;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.quotes{
+    background: url(../img/main-back.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #cfcfcf;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    font-style: italic;
+}
+
+.quotes>div{
+    position: relative;
+}
+
+.quotes p{
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.quote{
+    color: #ed145b;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.fa-quote-right{
+    margin-bottom: 0;
+}
+
+.arrow {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    border: solid #a5a5a5;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 27px;
+  }
+  
+.right {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 40%;
+    right: 0%;
+  }
+  
+.left {
+    transform: rotate(135deg);
+    position: absolute;
+    top: 40%;
+    left: 0%;
+  }
+
+.check{
+    background: #f4f4f4;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 145px;
+
+}
+
+.check button{
+    min-width: 77%;
+}
+
+.buy-card-up{
+    position: relative;
+    background: #5a5a5a;
+    color: #ffffff;
+    padding: 30px;
+    min-height: 150px;
+    transition: 0.3s;
+}
+
+.buy-card-up p{
+    font-size: 16px;
+    font-weight: 700;
+}
+.buy-card-up span{
+    font-size: 50px;
+}
+.buy-card-down{
+    background: #ffffff;
+    padding: 60px 20px 40px;
+    margin-bottom: 30px;
+}
+
+.buy-card-down p:last-child{
+    margin-bottom: 40px;
+}
+
+.check .col-3:hover .buy-card-up{
+    background: #ed145b;
+}
+
+.info-buy{
+    position: absolute;
+    background: #f4f4f4;
+    color: #5a5a5a;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 50px;
+    min-width: 77%;
+    bottom: 0;
+    left: 0;
+    transform: translate(15%, 50% );
+}
+
+.info-buy p{
+    margin: 0;
+}
+
+.info{
+    margin-bottom: 55px;
+}
+
+.info .col-4{
+    display: flex;
+    margin-bottom: 85px;
+}
+
+.info .col-4 img{
+    max-height: 70px;
+    margin-right: 25px;
+}
+
+.join{
+    background: #ed145b;
+    padding: 80px 0;
+    color: #ffffff;
+    margin-bottom: 150px;
+}
+
+.join>div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.join h3{
+    font-size: 38px;
+    margin: 0;
+}
+
+.news{
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+.news-block{
+    background: #f4f4f4;
+    text-align: left;
+}
+
+.news-block img{
+    width: 100%;
+    height: auto;
+}
+
+.news-foto{
+    position: relative;
+    max-height: 250px;
+}
+
+.news-foto>img{
+    max-height: 250px;
+}
+
+.search-icon{
+    position: absolute;
+    opacity: 0;
+    transform: translate(158px, 100px); 
+    transition: all 0.3s ease;   
+    z-index: 1;
+}
+
+
+.news-foto::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(231, 46, 106, 0.9);
+    transition: all 0.3s ease;
+}
+
+.news-block:hover .news-foto::after,
+.news-block:hover .search-icon{
+    opacity: 1;
+}
+
+
+.news-block h5, 
+.news-block p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.news-block h5{
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.news-block p{
+    padding-bottom: 25px;
+}
+
+.news .row{
+    margin-bottom: 100px;
+}
+
+.show-more-href{
+    display: block;
+    max-width: 130px;
+    margin: 0 auto;
+    color: #ed145b;
+    font-weight: 600;
+}
+
+.show-more-href img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.additional{
+    background: url(../img/main-back.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    color: #ffff;
+    line-height: 1.8;
+}
+
+.additional .title-text{
+    line-height: 2.5;
+    font-weight: 400;
+}
+
+.download{
+    background: #f4f4f4;
+    padding: 75px 0;
+}
+
+.download img{
+    margin-left: -70px;
+    max-width: 110%;
+}
+
+footer{
+    background: #2b2b2b;
+    padding: 65px 0;
+    color: #ffffff;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 1150px){
+   
+    .about .col-5,
+    .about .col-7{
+        width: 100%;
+    }
+    .about a{
+        justify-content: center;
+    }
+    .about .title::after{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about{
+        text-align: center;
+        padding: 50px 0;
+        margin-bottom: 50px;
+    }
+    .about .title::after{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mac{
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .arrow{
+        display: none;
+    }
+    .join>div{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px){
+    h1, h2, .title{
+        font-size: 30px;
+    }
+    h3, .join h3{
+        font-size: 24px;
+    }
+    .title-text,
+    .main p, p, h5, h6{
+        font-size: 12px;
+    }
+    .main p{
+        margin-bottom: 20px;
+    }
+    .title::after, .main h1::after {
+        margin: 20px auto;
+    }
+    .title-text{
+        margin-bottom: 40px;
+    }
+    .main{
+        padding: 100px 0;
+    }
+    .join, footer{
+        padding: 30px 0;
+    }
+    .buttons-full, .info-buy{
+        padding: 10px;
+    }
+    .check,
+    .quotes,
+    .additional,
+    .download{
+        padding: 50px 0;
+    }
+    .services,
+    .check,
+    .join{
+        margin-bottom: 50px;
+    }
+    .btn-burg{
+        display: block;
+    }
+    ul, li{
+        display: none;
+    }
+    .info .col-4{
+        margin-bottom: 40px;
+    }
+    .buttons-full{
+        font-size: 12px;
+        min-width: 130px;
+    }
+
+    .about a, 
+    .download .buttons-full{
+        justify-content: center;
+    }
+
+    .about .title::after, .download .title::after{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .download .title{
+        text-align: center;
+    }
+
+    .download img{
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+    .news .row {
+        margin-bottom: 50px;
+    }
+
+
+    .title{
+        margin: 0 auto;
+    }
+    .arrow{
+        display: none;
+    }
+
+    .download-block{
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

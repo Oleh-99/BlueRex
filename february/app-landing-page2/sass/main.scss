@@ -1,0 +1,1064 @@
+
+@import '_reset.scss';
+@import '_bootstrap-grid.scss';
+
+////////////////////////
+//Variables
+///////////////////////
+$font-stack: 'Raleway', sans-serif;
+$font-primary: 'Poppins', sans-serif;
+$color-base: #575757;
+$color-base2: #00cff1;
+$color-link: #282828;
+$color-hover: #24c657;
+///////////////////////
+
+///////////////////////
+//base
+//////////////////////
+body{
+	font-family: $font-stack;
+	line-height: 1.8;
+	font-size: 14px;
+	overflow-x: hidden;
+	font-weight: 400;
+	color: $color-base;
+}
+h1,h2,h3,h4,h5,h6{
+	margin-bottom: 20px;
+	font-family: $font-primary;
+	line-height: 1.4;
+	transition: color 0.3s ease;
+}
+
+p{
+	margin-bottom: 20px;
+	
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+a{
+	color: $color-link;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	transition: transform 0.3s ease;
+}
+//////////////////////////
+
+
+//////////////////////////
+//Mixins
+/////////////////////////
+@mixin block-absolute ($top, $right, $bottom, $left) {
+	position: absolute;
+	@if $top != none {top: $top;} 
+	@if $right != none {right: $right;}
+	@if $bottom != none {bottom: $bottom;}
+	@if $left != none {left: $left;}
+}
+
+@mixin background ($url) {
+	background: $url;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin flex-center-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+////////////////////////
+//header
+///////////////////////
+
+header{
+	@include block-absolute (0, 0, none, 0);
+	text-transform: uppercase;
+	margin-top: 60px;
+	color: #fff;
+	font-family: $font-primary;
+	z-index: 1;
+	
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo{
+		background-image: url(../img/logo.png);
+		background-repeat: no-repeat;
+    	background-position: center;
+		background-size: cover;
+		width: 140px;
+		height: 30px;
+		position: relative;
+		transition: background-image 0.3s ease;
+		
+		&:hover{
+			background-image: url(../img/logo-hover.png);
+		}
+		a{
+			@include block-absolute (0, 0, 0, 0);
+		}
+	}
+	.drop-menu{
+		top: 100%;
+		position: absolute;
+		margin-top: 10px;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		transition: transform 0.3s ease;
+		background: #fff;
+		width: 100%;
+		border-radius: 5px;
+
+		li{
+			margin: 10px 0;
+			text-align: center;
+		}
+
+		a{
+			font-weight: 500;
+			padding: 5px;
+			color: $color-hover;
+		}
+	}
+
+	i{
+		transition: transform 0.5s ease;
+	}
+
+	.menu>li{
+		display: inline-block;
+		position: relative;
+
+		&:hover i{
+			transform: rotate(180deg);
+		}
+
+
+		&:hover .drop-menu{
+			transform: scaleY(1);
+		}
+	}
+
+	
+
+	
+
+	a{
+		font-family: $font-primary;
+		font-size: 16px;
+		color: #fff;
+		padding: 10px;
+		margin: 0 5px;
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $color-hover;
+		}
+	}
+
+	button{
+		background: transparent;
+		padding: 20px;
+		color: #fff;
+		border: 1px solid #fff;
+		border-radius: 50px;
+		min-width: 170px;
+		font-family: inherit;
+		font-size: 16px;
+		transition: background 0.3s ease, border-color 0.3s ease;
+		cursor: pointer;
+
+		&:hover{
+			background: $color-hover;
+			border-color: transparent;
+		}
+	}
+	.btn-burger{
+		display: none;
+		min-width: 70px;
+	}
+}
+
+.button-full{
+	display: inline-flex;
+	align-items: center;
+	background: transparent;
+	background-image: url(../img/Apple.png);
+	background-repeat: no-repeat;
+    background-position-x: 12%;
+    background-position-y: center;
+	font-size: 16px;
+	color: #fff;
+	padding: 10px 20px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	text-transform: uppercase;
+	margin-right: 30px;
+	transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+	line-height: 1;
+	font-weight: 600;
+	font-family: $font-primary;
+	margin-bottom: 10px;
+	min-width: 181px;
+
+	.buttom-text{
+		margin-left: 33px;
+	}
+
+	p{
+		text-align: left;
+	}
+	img{
+		margin-right: 10px;
+	}
+	.size{
+		font-size: 8px;
+		font-weight:400;
+	}
+
+	&:hover{
+		background-color: $color-hover;
+		border-color: transparent;
+	}
+}
+
+.button-full-play{
+	background-image: url(../img/Play-store.png);
+}
+
+
+/////////////////////////// 
+//TOP
+//////////////////////////
+
+.top{
+	position: relative;
+	@include background (url(../img/top-back.png));
+	padding: 300px 0 150px;
+	font-family: $font-primary;
+	color: #fff;
+	
+	.top-content{
+		padding: 20px 0;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h1{
+		font-size: 48px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	.top-text{
+		margin-bottom: 60px;
+	}
+
+	.weight{
+		font-weight: 700;
+	}
+
+}
+
+.color-span{
+	color: $color-base2;
+}
+
+////////////////////////////
+//quick
+//////////////////////////// 
+
+.quick{
+	background: #fbfbfb;
+	padding: 130px;
+	margin-bottom: 130px 0;
+	text-align: center;
+
+	.quick-wrapper {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: #ffffff;
+		margin: 0 auto 70px;
+		position: relative;
+		box-shadow: 0px 0px 13px 1px rgba(34, 60, 80, 0.2);
+	}
+
+	.quick-foto{
+		background: $color-hover;
+		padding: 20px;
+		border-radius: 50px;
+		width: 90px;
+		top: 50%;
+    	right: 50%;
+    	transform: translate(50%, -50%);
+		position: absolute;
+		z-index: 1;
+
+		&::before{
+			content: " ";
+			padding: 58px;
+			background:transparent;
+			border-radius: 50%;
+			border: 1px solid #f0f0f0;
+			@include block-absolute (50%, 50%, none, none);
+			transform: translate(50%, -50%);
+		}
+	}
+
+	.quick-foto-color-blue{
+		background: $color-base2;
+	}
+
+	.quick-foto-color-pink{
+		background: #ff45c4;
+	}
+
+	.quick-foto-color-orange{
+		background: #ff9d46;
+	}
+
+	.col-sm-12{
+		padding: 15px;
+	}
+
+	h6{
+		font-weight: 600;
+		font-size: 18px;
+	}
+}
+
+.title{
+	font-weight: 700;
+	font-size: 36px;
+	color: $color-link;
+}
+.title-text{
+	max-width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+}
+
+//////////////////////// 
+//core
+///////////////////////
+
+.core{
+	margin-bottom: 130px;
+
+	.row>.col-sm-12:first-child{
+		margin-bottom: 20px;
+	}
+
+	.text-core{
+		margin-bottom: 70px;
+	}
+
+	.col-sm-12 .col-sm-12{
+		position: relative;
+		margin-bottom: 70px;
+
+		a{
+			@include block-absolute (0, 0, 0, 0);
+			z-index: 1;
+		}
+		
+		img{
+			margin-bottom: 40px;
+		}
+	}
+
+	h5{
+		font-weight: 700;
+		font-size: 18px;
+	}
+}
+
+.overview{
+	margin-bottom: 130px;
+
+	.title-text{
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 50px;
+	}
+
+
+	.button-full{
+		background-image: url(../img/Apple-black.png);
+		color: $color-link;
+		border-color: $color-link;
+
+		&:hover{
+			background-image: url(../img/Apple.png);
+			color: #fff;
+			border-color: transparent;
+		}
+	}
+
+	.button-full-play{
+		background-image: url(../img/Play-store-black.png);
+
+		&:hover{
+			background-image: url(../img/Play-store.png);
+		}
+	}
+	.col-md-12:first-child{
+		@include flex-center-content;
+	}
+}
+
+.overview-video{
+	position: relative;
+	margin-right: calc(((1140px - 30px) / 2) - 50vw);
+		
+	a{
+		@include block-absolute (0, 0, 0, 0);
+		z-index: 2;
+	}
+
+	&>img{
+		width:100%
+	}
+
+	.video-play{
+		@include block-absolute (50%, 50%, none, none);
+		transform: translate(50%, -50%);
+		background: transparent;
+    	padding: 20px;
+		border-radius: 50%;
+		z-index: 1;
+		transition: background 0.3s ease;
+		
+		img{
+			z-index: 2;
+		}
+
+	}
+	&:hover .video-play{
+		background: rgba(0, 207, 241, 0.2);
+	}
+}
+
+///////////////////
+//awesome
+////////////////////
+
+.awesome{
+	text-align: center;
+	margin-bottom: 140px;
+
+	.awesome-inner{
+		position: relative;
+		margin-bottom: 20px;
+		border: 1px solid #f3f3f3;
+		transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+		&>img{
+			width: 100%;
+		}
+		&:hover{
+			box-shadow: 0px 17px 23px -7px rgba(34, 60, 80, 0.2);
+			border-color: transparent;
+		}
+
+		&:hover  .awesome-foto{
+			opacity: 0.9;
+		}
+	}
+
+	a{
+		@include block-absolute (0, 0, 0, 0);
+		z-index: 1;
+	}
+
+	.awesome-foto{
+		@include block-absolute (30px, 30px, 30px, 30px);
+		background: $color-base2;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+
+		img{
+			@include block-absolute (none, 50%, 50%, none);
+			transform: translate(50%, 50%);
+		}
+	}
+}
+
+.line{
+	display: inline-flex;
+	margin: 40px auto 0;
+
+	span{
+		margin: 0 5px;
+		background: #ebe9ff;
+		width: 40px;
+		height: 7px;
+		border-radius: 4px;
+		transition: all 0.3s ease 0.1s;
+
+		&:hover{
+			width: 60px;
+			background: $color-base2;
+		}
+	}
+	
+}
+
+/////////////////// 
+//achievement
+///////////////////
+
+.achievement{
+	@include background (url(../img/achievement-back.png));
+	padding: 90px;
+	margin-bottom: 140px;
+	text-align: center;
+	color: #fff;
+	font-family: $font-primary;
+	line-height: 1;
+
+	.achievement-inner{
+		position: relative;
+		margin: 60px 0;
+
+		&::after{
+			content: " ";
+			@include block-absolute (-40px, 25px, -40px, 25px);
+			background: transparent;
+			border: 2px dashed #fefffe;
+			border-radius: 15px;
+			transform: rotate(-30deg);
+		}
+
+	}
+
+
+	img{
+		margin-bottom: 20px;
+	}
+
+	span{
+		display: block;
+		font-size: 48px;
+		font-weight: 700;
+	}
+	p{
+		font-size: 24px;
+	}
+}
+
+/////////////////// 
+//client
+///////////////////
+
+.client{
+	text-align: center;
+	margin-bottom: 140px;
+
+	.client-inner{
+		padding: 20px;
+		border: 1px solid #ececec;
+		margin-bottom: 20px;
+		transition: box-shadow 0.3s ease,  border-color 0.3s ease ;
+
+		img{
+			margin-bottom: 30px;
+		}
+		h5{
+			color: $color-base2;
+			font-weight: 700;
+			font-size: 24px;
+			margin-bottom: 0;
+			transition: color 0.3s ease;
+		}
+		.comp {
+			font-size: 18px;
+			margin-bottom: 40px;
+			display: block;
+		}
+		p{
+			font-size: 18px;
+			font-weight: 500;
+			font-style: italic;
+		}
+
+		.star-clint{
+			color: #eec400;
+		}
+
+
+		&:hover{
+			box-shadow: 0px 17px 23px -7px rgba(34, 60, 80, 0.2);
+			border-color: transparent;
+		}
+		&:hover h5{
+			color: $color-hover;
+		}
+	}
+}
+
+
+//////////////////// 
+//pricing
+////////////////////
+.pricing{
+	text-align: center;
+	margin-bottom: 90px;
+
+	.btn-pricing{
+		display: inline-flex;
+		border-radius: 50px;
+    	overflow: hidden;
+		box-shadow: 0px 17px 23px -15px rgb(34 60 80 / 20%);
+		margin-bottom: 70px;
+	}
+
+	.btn-pricing button{
+		font-size: 24px;
+		min-width: 180px;
+		padding: 20px;
+		background: transparent;
+		transition: background 0.3s ease, color 0.3s ease;
+		color:$color-base;
+		font-family: $font-primary;
+
+		&:hover{
+			background: $color-hover;
+			color: #fff;
+		}
+	} 
+
+	
+	.btn-pricing button:first-child{
+		background: $color-hover;
+		color: #fff;
+
+		&:hover{
+			background: transparent;
+			color: $color-base;
+		}
+	}
+	
+
+	.pricing-inner{
+		padding: 70px 30px;
+		border: 1px solid #ececec;
+		position: relative;
+		margin-bottom: 40px;
+
+		h6{
+			font-size: 24px;
+			font-weight: 700;
+		}
+
+		.number{
+			font-size: 60px;
+			color: $color-base2;
+			font-family: $font-primary;
+		}
+
+		span{
+			font-family: $font-primary;
+			font-size: 18px;
+			display: block;
+			margin-bottom: 50px;
+		}
+
+		li{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		button{
+			position: absolute;
+			bottom: 0;
+			right: 50%;
+			padding: 20px;
+			color: #fff;
+			background: $color-base2;
+			width: 60%;
+			max-width: 170px;
+			max-height: 100px;
+			font-size: 16px;
+			font-weight: 500;
+			font-family: $font-primary;
+			text-transform: uppercase;
+			border-radius: 50px;
+			transform: translate(50%, 50%);
+			cursor: pointer;
+			transition:  background 0.3s ease;
+
+			&:hover{
+				background: $color-hover;
+			}
+			
+		}
+	}
+}
+
+///////////////////////////////
+//download
+//////////////////////////////
+.download{
+	@include background (url(../img/download.png));
+	padding: 150px 0;
+	margin-bottom: 140px;
+	overflow: hidden;
+	color:#fff;
+
+	h2{
+		color: inherit;
+	}
+
+	.title-text{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.button-full{
+
+		&:hover{
+			background-image: url(../img/Apple-green.png);
+			background-color: #fff;
+			color: $color-hover;
+		}
+	}
+
+	.button-full-play{
+
+		&:hover{
+			background-image: url(../img/Play-store-green.png);
+		}
+	}
+}
+
+.downloader-foto{
+	position: absolute;
+    top: -80px;
+}
+
+//////////////////////
+//news
+/////////////////////
+.news{
+	margin-bottom: 130px;
+
+	h2, .title-text{
+		text-align: center;
+	}
+}
+
+.news-inner{
+	margin-bottom: 20px;
+	border: 1px solid #ececec;
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+	img{
+		width: 100%;
+	}
+
+	&:hover{
+		h6, a{
+			color: $color-base2;
+		}
+		border-color: transparent;
+		box-shadow: 0px 17px 23px -7px rgba(34, 60, 80, 0.2);
+	}
+}
+
+.news-inner-text{
+	padding: 40px 30px;
+
+	h6{
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	.posted{
+		margin-bottom: 30px;
+		font-family: $font-primary;
+
+		span{
+			font-weight: 700;
+		}
+	}
+
+	p{
+		margin-bottom: 10px;
+	}
+
+	a{
+		font-family: $font-primary;
+		font-weight: 700;
+		font-size: 16px;
+	}
+}
+
+
+///////////////////////////////
+//footer
+///////////////////////////////
+footer{
+	background: #fbfbfb;
+	padding-top: 130px;
+	position: relative;
+	
+
+	.circle{
+		position: absolute;
+		right: 0;
+		top: -130px;
+		transform: translate(0, -50%);
+	}
+
+	.logo-img{
+    	margin-bottom: 60px;
+	}
+
+	.logo-text{
+		max-width: 330px;
+		margin-bottom: 35px
+	}
+
+	h5, h6{
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	h5{
+		margin-bottom: 50px;
+	}
+
+	li{
+		margin-bottom: 20px;
+
+		&:hover a{
+			color: #a1a1a1;
+		}
+	}
+
+	input[type="submit"]{
+		background-color: $color-hover;
+		background-image: url(../img/button-icon-input.png);
+		background-repeat: no-repeat; 
+		background-position-x: 40%;
+		background-position-y: center;
+		outline: none; 
+		border: none;
+		min-width: 30%;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	
+		&:hover{
+   			background-color: #1a833b;
+		}
+	}
+
+	input[type="email"] {
+		border: none; 
+		outline: none; 
+		-webkit-appearance: none; 
+		min-width: 72%;
+		vertical-align: middle; 
+		padding: 25px 30px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+	}
+
+	form{
+		display: flex;
+		border: 1px solid #d8d8d8;
+		border-radius: 50px;
+		max-width: 370px;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+
+	.row{
+		margin-bottom: 110px;
+	}
+
+	.row>div{
+		margin-bottom: 20px;
+	}
+}
+
+.follow{
+    font-size: 20px;
+    color: #fff;
+    display: inline-flex;
+
+    a{
+		height: 36px;
+		width: 36px;
+		padding: 5px;
+		border-radius: 50%;
+		text-align: center;
+		margin: 0 5px;
+		color: #fff;
+		position: relative;
+
+		i{
+			position: absolute;
+			left: 0;
+			bottom: 8px;
+			right: 0;
+		}
+	}
+}
+
+.facebook{
+    background: #3b5998;
+    transition: all 0.3s ease;
+}
+
+.twitter{
+    background: #55acee;
+    transition: all 0.3s ease;
+}
+
+.instagram{
+    background: #6a453b;
+    transition: all 0.3s ease;
+}
+
+.linked{
+    background: #007ab9;
+    transition: all 0.3s ease;
+}
+
+.facebook:hover{
+    background: #fff;
+    color: #3b5998;
+}
+
+.twitter:hover{
+    background: #fff;
+    color: #55acee;
+}
+
+.instagram:hover{
+    background: #fff;
+    color: #6a453b;
+}
+
+.linked:hover{
+    background: #fff;
+    color: #007ab9;
+}
+
+
+.copyring{
+	background: $color-hover;
+	padding: 30px 0;
+	color: #fff;
+	text-align: center;
+	font-family: $font-primary;
+	font-size: 16px;
+	text-transform: uppercase;
+
+	span{
+		font-weight: 700;
+	}
+}
+
+
+
+@media (max-width: 1024px){
+	header{
+		ul, .header-btn{
+			display: none;
+		}
+		.btn-burger{
+			display: block;
+		}
+	}
+	.overview .overview-video{
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 994px){
+	.downloader-foto {
+		position: relative;
+		top: 0;
+	}
+}
+
+@media (max-width: 768px){
+	
+
+	.top{
+		padding: 200px 0 50px;
+
+		h1{
+			font-size: 36px;
+		}
+	}
+
+	.title{
+		font-size: 28px;
+	}
+
+	.quick, 
+	.download{
+		padding: 60px 0;
+	}
+
+	.quick, 
+	.core, 
+	.overview, 
+	.awesome, 
+	.achievement, 
+	.client, 
+	.download,
+	.news{
+		margin-bottom: 60px;
+	}
+
+	footer{
+		padding-top: 60px;
+
+		.circle{
+			top: -60px;
+		}
+
+		.row{
+			margin-bottom: 40px;
+		}
+	}
+
+}
+
+@media (max-width: 500px){
+	.achievement .achievement-inner::after{
+		content: none;
+	}
+}

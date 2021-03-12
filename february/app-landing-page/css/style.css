@@ -1,0 +1,653 @@
+@import url('bootstrap-grid.css');
+@import url('reset.css');
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    color: #797979;
+ }
+
+ h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+ }
+
+p{
+    margin-bottom: 20px;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+ }
+
+ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+header{
+    margin: 35px 0;
+}
+
+header>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li>a{
+    padding: 5px;
+    margin: 0 10px;
+    color: #797979;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header li>a:hover{
+    color: #000000;
+}
+
+.logo-img{
+    max-height: 40px;
+}
+
+.button-full{
+    display: inline-flex;
+    background: #f9ba48;
+    min-width: 174px;
+    min-height: 60px;
+    padding: 16px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-full:hover{
+    background: #c5963e;
+    box-shadow: 0px 12px 25px -11px rgba(34, 60, 80, 0.22);
+}
+
+.button-full span{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.button-color{
+    background: #094b58;
+    margin-right: 0;
+}
+
+.button-color:hover{
+    background: #12788d;
+}
+
+header .button-full{
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: center;
+    padding: 20px;
+}
+
+header button:last-child{
+    margin-right: 0;
+}
+
+.burger{
+    display: none;
+    min-width: 60px;
+}
+
+.perfect{
+    background: url(../img/Overlay.png);
+    background-size: cover;
+    background-position: center;
+    padding: 110px 0;
+    color: #fff;
+    margin-bottom: 180px;
+    margin-left: 4%;
+}
+
+.container-sroke{
+    margin-left: -4%;
+    padding: 0 4%;
+}
+
+.perfect h1{
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.perfect p{
+    font-style: italic;
+}
+
+.perfect .row>div:first-child,
+.overview .row>div:first-child,
+.user .row>div{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-inner{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1;
+    margin-left: 6px;
+}
+
+.work{
+    margin-bottom: 180px;
+    text-align: center;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.title span{
+    font-weight: 400;
+}
+.work .title-text{
+    margin-left: auto;
+    margin-right: auto;
+}
+.title-text{
+    margin-bottom: 100px;
+    max-width: 470px;
+}
+.work .row>div>img{
+    margin-bottom: 60px;
+}
+
+.work h5{
+    font-size: 24px;
+}
+
+.work .row>div>p{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.work .row{
+    position: relative;
+}
+
+.work-line1{
+    position: absolute;
+    margin-left: 26%;
+    margin-top: 5%;
+}
+
+.work-line2{
+    position: absolute;
+    margin-left: 59%;
+    margin-top: 8%;
+}
+
+.overview{
+    background: linear-gradient(90deg, rgba(249,248,248,1) 50%, rgba(249,248,248,1) 50%, rgba(249,248,248,0) 50%);;
+    margin-bottom: 240px;
+}
+
+.overview .container{
+    background: #f9f8f8;
+}
+
+.overview p{
+    margin-bottom: 40px;
+}
+
+.overview-foto{
+    margin-left: 25%;
+    position: relative;
+    width: 100%;
+}
+
+.overview-foto-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(37, 30, 67, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overview-foto-hover a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overview-foto-hover:hover{
+    opacity: 1;
+}
+
+.overview-logo{
+    margin: 0 auto;
+    max-width: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 27px;
+    border-radius: 50%;
+}
+
+.user .row>div:first-child{
+    position: relative;
+    height: 608px;
+}
+
+.margin-left{
+    margin-left: 87px;
+}
+
+.user,
+.user .row{
+    margin-bottom: 180px;
+}
+
+.user-foto1{
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.user-foto2{
+    position: absolute;
+    top: 75px;
+}
+
+.user-foto-left{
+    left: -87px;
+}
+.user-foto-right{
+    right: -130px;
+}
+
+.user-foto1 img, .user-foto2 img{
+    box-shadow: 0 10px 35px rgb(0 0 0 / 15%);
+}
+
+.user-logo{
+    margin-bottom: 50px;
+}
+
+.user .title{
+    margin-bottom: 40px;
+}
+
+.user .title-text{
+    margin-bottom: 40px;
+}
+
+.achievement{
+    background: url(../img/Achievement.png);
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0 120px;
+    text-align: center;
+    color: #fefefe;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 4%;
+    margin-bottom: 130px;
+}
+
+.achievement .row>div{
+    margin-bottom: 30px;
+}
+
+.container-sroke1{
+    margin-right: -4%;
+    padding: 0 4%;
+}
+
+.achievement-text{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.achievement p{
+    font-size: 24px;
+}
+
+.news{
+    margin-bottom: 180px;
+}
+
+.news .row>div{
+    text-align: center;
+    font-size: 14px;
+}
+
+.news .row>div h5{
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.news .row>div a{
+    font-weight: 700;
+    color: #474747;
+    font-family: 'Raleway', sans-serif;
+    transition: color 0.3s ease;
+}
+.news-posted{
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: #474747;
+}
+
+.news-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+.news-text{
+    padding: 35px;
+    border: 1px solid #eeeeee;
+}
+.news-ittem{
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.news-ittem img{
+    width: 100%;
+}
+
+.news-ittem:hover .news-text>h5{
+    color: #f9ba48;
+}
+.news-ittem:hover .news-text>a{
+    color: #f9ba48;
+}
+
+.news-ittem:hover{
+    box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.2);
+}
+
+.arrow-block{
+    display: flex;
+    max-height: 62px;
+}
+
+.arrow{
+    background: #e2e2e2;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 0 8px;
+    transition: background 0.3s ease ;
+}
+.arrow img{
+    margin-bottom: 7px;
+}
+.arrow:hover{
+    background: #f9ba48;
+}
+
+.follow{
+    font-size: 20px;
+    color: #fff;
+    display: inline-flex;
+}
+.follow>a{
+    height: 36px;
+    width: 36px;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 5px;
+    color: #fff;
+    position: relative;
+}
+
+.follow>a>i{
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    right: 0;
+}
+
+.facebook{
+    background: #3b5998;
+    transition: all 0.3s ease;
+}
+
+.twitter{
+    background: #55acee;
+    transition: all 0.3s ease;
+}
+
+.instagram{
+    background: #6a453b;
+    transition: all 0.3s ease;
+}
+
+.linked{
+    background: #007ab9;
+    transition: all 0.3s ease;
+}
+
+.facebook:hover{
+    background: #fff;
+    color: #3b5998;
+}
+
+.twitter:hover{
+    background: #fff;
+    color: #55acee;
+}
+
+.instagram:hover{
+    background: #fff;
+    color: #6a453b;
+}
+
+.linked:hover{
+    background: #fff;
+    color: #007ab9;
+}
+
+footer{
+    background: #fbfbfb;
+    padding-top: 130px;
+}
+
+footer .logo-img{
+    margin-bottom: 60px;
+}
+
+footer h5{
+    margin-bottom: 50px;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+footer li{
+    margin-bottom: 20px;
+}
+
+footer li>a{
+    color: #797979;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+footer li>a:hover{
+    color: #000000;
+}
+
+footer .button-full{
+    margin-left: 0;
+    letter-spacing: -0.5px;
+}
+
+footer .button-color{
+    margin-right: 0;
+}
+
+.button-footer{
+    display: flex;
+}
+
+input[type="submit"]{
+    background-color: #f9ba48;
+    background-image: url(../img/button-icon-input.png);
+    background-repeat: no-repeat; 
+    background-position-x: 40%;
+    background-position-y: center;
+    outline: none; 
+    border: none;
+    min-width: 30%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background: #c5963e;
+    background-image: url(../img/button-icon-input.png);
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    background-position-y: center;
+}
+input[type="email"] {
+    border: none; 
+    outline: none; 
+    -webkit-appearance: none; 
+    min-width: 72%;
+    vertical-align: middle; 
+    padding: 25px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer form{
+    display: flex;
+    border: 1px solid #d8d8d8;
+    border-radius: 50px;
+    max-width: 370px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+footer .row{
+    margin-bottom: 110px;
+}
+
+footer .row>div{
+    margin-bottom: 20px;
+}
+
+.copyring{
+    background: #094b58;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    margin-left: 4%;
+}
+
+.copyring span{
+    font-weight: 700;
+}
+
+@media (max-width: 1280px){
+    .burger{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    .user-foto1{
+        position: relative;
+    }
+    .user-foto1 img, .perfect .row>div>img{
+        width: 100%;
+    }
+    .user .row:first-child>div:first-child{
+        margin-top: 150px;
+    }
+    .user .row:last-child>div:first-child
+    {
+        margin-top: 100px;
+    }
+    .user-foto2{
+        display: none;
+    }
+    .margin-left{
+        margin-left: 0;
+    }
+    .button-footer{
+        flex-wrap: wrap;
+    }
+    .overview-foto{
+        margin-left: 0;
+    }
+    
+}
+@media (max-width: 1000px){
+    .work-line1, .work-line2{
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    .buttons-block, .arrow-block{
+        display: none;
+    }
+    .perfect, .work, .overview, .user, .user .row, .achievement, .news{
+        margin-bottom: 70px;
+    }
+    .achievement{
+        padding: 50px 0 30px;
+    }
+    footer{
+        padding-top: 50px;
+    }
+    .work .row> div{
+        margin-bottom: 30px;
+    }
+    .perfect h1 {
+        font-size: 32px;
+    }
+    .perfect .row>div:first-child, .overview .row>div:first-child, .user .row>div{
+        margin-top: 150px;
+    }
+}

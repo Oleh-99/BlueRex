@@ -1,0 +1,376 @@
+@import url('bootstrap-grid.css');
+@import url('reset.css');
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 14px;
+    overflow-x: hidden;
+    color: #ffffff;
+ }
+
+ h1,h2,h3,h4,h5,h6,p{
+     margin-bottom: 20px;
+ }
+
+ p{
+     font-family: 'Open Sans';
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+li a{
+    padding: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+header{
+    position: absolute;
+    z-index: 1;
+    font-weight: 700;
+    margin: 35px 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .container{
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+header ul, header li{
+    display: contents;
+}
+
+.logo{
+    max-height: 50px;
+}
+.button-emply{
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 15px 45px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+header .button-emply{
+    margin-left: 70px;
+}
+
+.btn-burg{
+    display: none;
+}
+
+
+.top{
+    position: relative;
+    background: url(../img/Prostokątkopia.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 300px 0 0;
+    margin-bottom: 170px;
+}
+
+.title-top{
+    font-size: 72px;
+}
+
+.title-text-top{
+    font-size: 30px;
+    margin-bottom: 90px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.top form{
+    padding-bottom: 230px;
+    max-width: 770px;
+    margin: 0 auto;
+}
+
+form input{
+    font-size: 14px;
+    padding: 25px;
+}
+form > input[type="text"]{
+    flex-grow: 1;
+    border-radius: 10px 0px 0px 10px;
+}
+form > input[type="button"]{
+    min-width: 200px;
+    background-color: #e7434e;
+    color: #ffffff;
+    margin-left: -1px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.top form > input[type="button"]{
+    background: url(../img/vessel.png);
+    background-position: 35px 25px;
+    background-repeat: no-repeat;
+    background-color: #e7434e;
+}
+
+.numbers{
+    background: #ffffff;
+    color: black;
+    position: absolute;
+    padding: 40px 0;
+    margin-bottom: -75px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    box-shadow: 1px 7px 13px 0px rgba(34, 60, 80, 0.2);
+}
+
+.numbers h6 {
+    font-family: 'open Sans';
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.numbers p {
+    font-size: 18px;
+}
+
+.numbers .row>div{
+    border-right: 1px solid #d4d4d4;
+}
+
+.numbers .row>div:last-child{
+    border-right: none;
+}
+
+.explore{
+    text-align: center;
+    color: black;
+    margin-bottom: 80px;
+}
+.title{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.title-text{
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+.boad{
+    position: absolute;
+    min-width: 75px;
+    display: flex;
+    background: crimson;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    left: 10%;
+    top: 5%;
+}
+
+.text-inner{
+    position: absolute;
+    color: #ffffff;
+    left: 10%;
+    bottom: 0;
+    text-align: start;
+}
+
+.text-inner h5{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.text-inner p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.col-lg-8 .boad {
+    left: 5%;
+}
+
+.col-lg-8 .text-inner{
+    left: 5%;
+}
+
+.boad p{
+    margin-bottom: 0;
+    margin-left: 16px;
+    font-weight: 700;
+}
+
+.recently .row,
+.explore .row{
+    margin-bottom: 70px;
+}
+
+.recently .row > div,
+.explore .row > div{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.recently .button-emply,
+.explore .button-emply{
+    color: black;
+    border-color: #bdbdbd;
+}
+
+.boat{
+    background: url(../img/boat-back.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 190px 0 130px;
+    margin-bottom: 100px;
+}
+
+.boat .button-emply{
+    background: #e7434e;
+    border: none;
+}
+
+.recently{
+    color: black;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.recently .boad{
+    left: 8%;
+    top: 8%;
+}
+
+.recently .boad p{
+    margin-left: 0;
+}
+
+.recently .text-inner p{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.recently .text-inner p i:nth-child(2){
+    margin-left: 20px;
+}
+
+footer{
+    background: #404040;
+    border-top: 6px solid #e7434e;
+    padding: 50px 0 70px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer form input{
+    padding: 15px;  
+    margin-bottom: 40px; 
+}
+
+footer form > input[type="email"]{
+    min-width: 270px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+footer form > input[type="button"]{
+    min-width: 150px;
+}
+
+footer li{
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+footer h6{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.social a:nth-child(2){
+    margin: 0 20px;
+}
+@media (max-width: 960px){
+    footer .row>div{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 768px){
+    header .container {
+        width: 90%;}
+    nav{
+        display: none;
+    }
+    .numbers{
+        position: relative;
+    }
+    .top form{
+        padding-bottom: 100px;
+    }
+    form > input[type="text"], footer form > input[type="email"]{
+        min-width: 80%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    form > input[type="button"]{
+        border-radius: 10px;
+    }
+    .top form > input[type="button"]{
+        margin: 0 auto;
+    }
+    .top{
+        padding: 100px 0 0;
+    }
+    .numbers .row>div{
+        border-right: none;
+    }
+    .boad,
+    .explore .text-inner{
+        left: 20%;
+    }
+    .btn-burg{
+        display: block;
+        padding: 10px 15px;
+    }
+    .title-top {
+        font-size: 48px;
+    }
+    .title-text-top {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 480px){
+    .boad,
+    .explore .text-inner{
+        left: 10%;
+    }
+}
