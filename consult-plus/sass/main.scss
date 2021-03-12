@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 30px;
 }
 
 h4 {
@@ -69,6 +69,12 @@ a {
 	text-decoration: none;
 	color: inherit;
 	transition: all 0.3s ease;
+
+	&.link-hover {
+		&:hover{
+			opacity: 0.6;
+		}
+	}
 }
 
 img {
@@ -267,9 +273,8 @@ textarea {
 	padding: 27px 39px;
 	background: #FFAC56;
 
-	h4 {
+	h3 {
 		margin-bottom: 0;
-		font-size: 30px;
 		font-family: $font-primary-2;
 		font-weight: 300;
 		letter-spacing: -0.5px;
@@ -279,7 +284,6 @@ textarea {
 		font-family: $font-primary;
 		color: #fff;
 		margin-bottom: 0;
-		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
 }
@@ -567,13 +571,6 @@ textarea {
 	h6 {
 		margin-bottom: 17px;
 		letter-spacing: -1px;
-
-		a {
-
-			&:hover {
-				opacity: 0.6;
-			}
-		}
 	}
 
 	p {
@@ -883,13 +880,6 @@ textarea {
 	h6 {
 		margin-bottom: 12px;
 		letter-spacing: -1.2px;
-
-		a {
-
-			&:hover {
-				opacity: 0.6;
-			}
-		}
 	}
 
 	p {
@@ -1276,10 +1266,6 @@ textarea {
 
 	h6 {
 		margin-bottom: 8px;
-
-		a:hover {
-			opacity: 0.6;
-		}
 	}
 
 	p {
