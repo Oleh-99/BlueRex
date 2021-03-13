@@ -1658,7 +1658,7 @@ textarea {
   padding: 9px 0;
   font-family: inherit;
   font-size: 12px;
-  color: inherit;
+  color: #343a3b;
   background: transparent;
   outline: none;
   border: none;
@@ -1666,13 +1666,14 @@ textarea {
 }
 
 input::placeholder,
+select,
 textarea::placeholder {
+  color: #343a3b;
   text-transform: uppercase;
 }
 
 select {
   padding: 8px 0;
-  text-transform: uppercase;
 }
 
 textarea {

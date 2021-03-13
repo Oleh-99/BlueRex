@@ -2153,18 +2153,46 @@ input::placeholder {
     margin-left: 0;
     transform: none;
   }
+
+  .achievement .row > div:first-child .achievement-content {
+    margin-left: 0;
+  }
+  .achievement .row > div:last-child .achievement-content {
+    margin-right: 0;
+  }
 }
 @media (max-width: 993px) {
   .menu li:not(:last-child) {
     display: none;
   }
 
-  .main-foto {
-    margin-left: -200px;
+  .main-text h1 {
+    font-size: 48px;
+  }
+  .main-text h3 {
+    font-size: 36px;
+  }
+  .main-text p {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+
+  .store p {
+    font-size: 14px;
+  }
+  .store .sub-title {
+    font-size: 28px;
   }
 
   .testimonials-inner {
-    margin-top: 0;
+    margin-top: 30px;
     margin-left: 0;
   }
 
