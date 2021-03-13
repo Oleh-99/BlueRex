@@ -1598,6 +1598,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 33px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 25px;
+}
+
 p {
   margin-bottom: 20px;
 }
@@ -1686,7 +1710,6 @@ input::placeholder {
 }
 .main-text h1 {
   margin-bottom: 40px;
-  font-size: 64px;
 }
 .main-text p {
   margin-bottom: 53px;
@@ -1742,13 +1765,11 @@ input::placeholder {
 
 .sub-title {
   margin-bottom: 5px;
-  font-size: 33px;
   font-style: italic;
   font-family: "Palatino Linotype", sans-serif;
 }
 
 .title {
-  font-size: 50px;
   font-weight: 600;
   line-height: 1;
 }
