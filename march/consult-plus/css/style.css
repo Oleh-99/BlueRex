@@ -2053,16 +2053,21 @@ textarea {
 .projects {
   padding-bottom: 94px;
 }
-.projects .row {
-  margin-bottom: 7px;
+.projects .row .row {
+  margin-bottom: -30px;
+}
+.projects .row > [class*=col-] {
+  margin-bottom: 30px;
 }
 .projects .title {
   margin-bottom: 21px;
 }
+.projects .button-wrapper {
+  margin-top: 17px;
+}
 
 .project-foto {
   position: relative;
-  margin-bottom: 30px;
   overflow: hidden;
 }
 .project-foto img {
@@ -2143,9 +2148,6 @@ textarea {
 .projects-industary {
   padding-top: 91px;
   background: #E7EFF1;
-}
-.projects-industary .row {
-  margin-bottom: 16px;
 }
 
 .testimonials {
@@ -2392,23 +2394,25 @@ textarea {
   display: flex;
   align-items: center;
   max-width: 514px;
-  overflow: hidden;
-  border-radius: 26px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 .subscribe input[type=email] {
   min-width: 100px;
   padding: 18px;
   padding-left: 34px;
+  padding-right: 60px;
   flex-grow: 1;
   font-family: inherit;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
   border: none;
   outline: none;
 }
 .subscribe input[type=email]::placeholder {
   font-size: 13px;
   letter-spacing: 0.2px;
+}
+.subscribe .button-full {
+  margin-left: -50px;
 }
 
 .footer-link li:hover a {
@@ -2851,6 +2855,9 @@ textarea {
 
   .projects {
     padding-bottom: 50px;
+  }
+  .projects .button-wrapper {
+    margin-top: 0;
   }
 
   .projects-industary {

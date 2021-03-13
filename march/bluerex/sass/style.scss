@@ -276,6 +276,7 @@ input::placeholder {
 .list-menu-link {
 	display: flex;
 	margin-bottom: 8px;
+	overflow-y: hidden;
 
 	.button-full {
 		min-width: 130px;

@@ -1787,6 +1787,7 @@ input::placeholder {
 .list-menu-link {
   display: flex;
   margin-bottom: 8px;
+  overflow-y: hidden;
 }
 .list-menu-link .button-full {
   min-width: 130px;

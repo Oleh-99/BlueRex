@@ -611,17 +611,27 @@ textarea {
 	padding-bottom: 94px;
 
 	.row {
-		margin-bottom: 7px;
+
+		.row {
+			margin-bottom: -30px;
+		}
+
+		> [class*="col-"] {
+			margin-bottom: 30px;
+		}
 	}
 	
 	.title {
 		margin-bottom: 21px;
 	}
+
+	.button-wrapper {
+		margin-top: 17px;
+	}
 }
 
 .project-foto {
 	position: relative;
-	margin-bottom: 30px;
 	overflow: hidden;
 
 	img {
@@ -708,10 +718,6 @@ textarea {
 .projects-industary {
 	padding-top: 91px;
 	background: #E7EFF1;
-
-	.row {
-		margin-bottom: 16px;
-	}
 }
 
 
@@ -1020,17 +1026,16 @@ textarea {
 	display: flex;
 	align-items: center;
 	max-width: 514px;
-	overflow: hidden;
-	border-radius: 26px;
-	background-color: rgba($color: #000000, $alpha: 0.1);
 
 	input[type="email"] {
 		min-width: 100px;
 		padding: 18px;
 		padding-left: 34px;
+		padding-right: 60px;
 		flex-grow: 1;
 		font-family: inherit;
-		background: transparent;
+		background-color: rgba($color: #000000, $alpha: 0.1);
+		border-radius: 26px;
 		border: none;
 		outline: none;
 
@@ -1038,6 +1043,10 @@ textarea {
 			font-size: 13px;
 			letter-spacing: 0.2px;
 		}
+	}
+
+	.button-full {
+		margin-left: -50px;
 	}
 }
 
@@ -1624,6 +1633,10 @@ textarea {
 
 	.projects {
 		padding-bottom: 50px;
+
+		.button-wrapper {
+			margin-top: 0;
+		}
 	}
 
 	.projects-industary {
