@@ -7,7 +7,7 @@
 
 $font-primary: 'Hind', sans-serif;
 $font-title: 'Spartan', sans-serif;
-$color-base:  rgb(16, 16, 16);
+$color-base:  rgba(16, 16, 16, 0.8);
 $color-primary: #da8a67;
 
 // ------------------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ h5 {
 }
 
 h6 {
-	font-size: 18px;
+	font-size: 13px;
 }
 
 p {
@@ -156,6 +156,7 @@ td, th {
 }
 
 button,
+.button,
 input[type="button"],
 input[type="submit"] {
 	background: #333333;
@@ -206,6 +207,7 @@ input[type="submit"] {
 // ------------------------------------------------------------------------------------------------
 
 .header-main {
+	margin-bottom: 20px;
 	font-size: 13px;
 	font-weight: 500;
 }
@@ -266,7 +268,6 @@ input[type="submit"] {
 		margin-right: 16px;
 		display: flex;
 		align-items: center;
-		opacity: 0.8;
 		color: $color-base;
 	
 		i {
@@ -332,7 +333,7 @@ input[type="submit"] {
 		background: transparent;
 		font-size: 16px;
 		padding: 7px;
-
+		color: inherit;
 	}
 }
 
@@ -403,6 +404,7 @@ input[type="submit"] {
 	justify-content: space-between;
 	padding: 21px 18px;
 	font-size: 16px;
+	color: inherit;
 
 	.fa-bars {	
 		opacity: 1;
@@ -424,9 +426,11 @@ input[type="submit"] {
 	@include block-absolute(100%, 0, none, 0);
 	padding: 0px 20px;
 	border: 1px solid rgba(16, 16, 16, 0.05);
+	background: #fff;
 	border-top: none;
 	opacity: 0;
 	visibility: hidden;
+	z-index: 1;
 
 	li {
 		max-height: 50px;
@@ -459,7 +463,267 @@ input[type="submit"] {
 }
 
 
+// ------------------------------------------------------------------------------------------------
+// SLIDER
+// ------------------------------------------------------------------------------------------------
 
+.slider {
+	margin-bottom: 90px;
+}
+
+.slider-foto {
+	position: relative;
+
+	h1 {
+		font-weight: 500
+	}
+}
+
+.slider-foto-inner {
+	@include block-absolute(0, 0, 0, 0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 500px;
+    padding: 37px;
+}
+
+.slider-numbers {
+	@include block-absolute(none, none, 25px, 40px);
+
+	span {
+		display: inline-block;
+		opacity: 0.3;
+		padding: 0 5px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+
+		&:hover,
+		&.active {
+			opacity: 0.7;
+			font-size: 20px;
+			padding: 0 4px;
+		}
+	}
+}
+
+.button-wrapper {
+	display: flex;
+    align-items: center;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 27px;
+	font-weight: 600;
+	color: inherit;
+
+	&.button-while {
+		background: #fff;
+		color: $color-base;
+		margin-right: 20px;
+
+		&:hover {
+			background: rgb(179, 179, 179);
+		}
+	}
+
+	&.chech-product {
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		background-color: #A6B6A9;	
+
+		&:hover {
+			background-color: #8d998f;
+		}
+	}
+
+	&.chech-product-red {
+		background-color: #D55860;
+
+		&:hover {
+			background-color: #aa4349;
+		}
+	}
+
+	&.button-product {
+		background: #fff;
+		padding: 13px;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+
+	&.product-big {
+		position: relative;
+		min-width: 120px;
+		padding: 15px 5px;
+		font-size: 13px;
+		text-align: center;
+		background: #fff;
+			
+			&::after {
+				content: "+";
+				@include block-absolute(50%, 10px, none, none);
+				font-size: 20px;
+				font-weight: 300;
+				transform: translateY(-50%);
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+	
+			&:hover {
+				padding-right: 20px;
+				
+				&::after {
+					opacity: 1;
+				}
+			}
+		
+	}
+}
+
+
+// ------------------------------------------------------------------------------------------------
+// PRODUCT-MAIN
+// ------------------------------------------------------------------------------------------------
+
+.product-main {
+
+	.title {
+		margin-bottom: 0;
+	}
+
+	.row > [class*="col-"] {
+		margin-bottom: 40px;
+	}
+}
+
+.product-main-inner {
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+	margin-bottom: 38px
+}
+
+.product-menu {
+	display: flex;
+	margin-right: -20px;
+
+	li {
+		&:hover,
+		&.active {
+
+			a {
+				border-color: $color-primary;
+				opacity: 0.9;
+			}
+		}
+	}
+
+	a {
+		padding: 10px 22px;
+		color: $color-base;
+		margin: 10px 22px;
+		padding: 0px;
+		border-bottom: 2px solid transparent;
+		opacity: 0.7;
+		font-weight: 500;
+	}
+}
+
+.sub-title {
+	color: $color-primary;
+	margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.link-full {
+	@include block-absolute(0, 0, 0, 0);
+}
+
+
+//**** product-box ****//
+
+.product-box {
+
+	img {
+		width: 100%;
+	}
+
+	.price {
+		font-family: $font-title;
+		color: $color-primary;
+		font-size: 15px;
+	}
+
+	&:hover {
+
+		.product-foto-hover {
+			opacity: 1;
+		}
+	}
+}
+
+.product-foto {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.product-foto-hover {
+	@include block-absolute(0, 0, 0, 0);
+	opacity: 0;
+	transition: all 0.3s  ease;
+}
+
+.button-product-wrapper {
+	@include block-absolute(none, 0, 30px, 0);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.product-text-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	font-weight: 500;
+
+	h6 {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: #101010;
+	}
+}
+
+.check-product {
+	display: flex;
+	
+	div {
+		height: 15px;
+		width: 15px;
+		background: #2A767A;
+		cursor: pointer;
+		
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+		&.pink {
+			background: #FFC7C7;
+		}
+
+		&.gray {
+			background: #EEEEEE;
+		}
+	}
+}
 
 
 @media (min-width: 1200px){
@@ -478,6 +742,10 @@ input[type="submit"] {
 }
 
 @media (max-width: 993px) {
+
+	h1 {
+		font-size: 36px;
+	}
 	
 	.top-bar {
 		display: none;
@@ -501,5 +769,39 @@ input[type="submit"] {
 
 	.button-burger {
 		display: block;
+	}
+
+	.slider-foto-inner {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.slider-foto-inner {
+
+		h1 {
+			font-size: 25px;
+		}
+
+		p {
+			display: none;
+		}
+	}
+
+	.button{
+		padding: 5px 10px;
+	}
+}
+
+@media (max-width: 576px) {
+	.slider-foto-inner {
+
+		h1 {
+			font-size: 25px;
+		}
+	}
+
+	.slider-numbers {
+		display: none;
 	}
 }
