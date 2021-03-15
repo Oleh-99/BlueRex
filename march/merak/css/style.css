@@ -2133,6 +2133,7 @@ input[type=submit] {
 }
 .product-box .price {
   font-family: "Spartan", sans-serif;
+  font-weight: 500;
   color: #da8a67;
   font-size: 15px;
 }
