@@ -41,7 +41,7 @@ h3 {
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 25px;
 }
 
 h5 {
@@ -226,7 +226,7 @@ input[type="submit"] {
 	align-items: center;
 
 	i {
-		opacity: 0.4;
+		opacity: 0.7;
 		margin-left: 5px;
 	}
 
@@ -315,6 +315,7 @@ input[type="submit"] {
 .form-search {
 	position: relative;
 	display: flex;
+	align-items: center;
 	max-width: 580px;
 	width: 100%;
 
@@ -323,9 +324,12 @@ input[type="submit"] {
 	}
 
 	select {
-		@include block-absolute(none, 0, none, none);
+		@include block-absolute(none, 1px, none, none);
 		max-width: 150px;
 		padding: 0 10px;
+		height: 20px;
+		border: none;
+		border-left: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
 	button {
@@ -365,7 +369,26 @@ input[type="submit"] {
 	a {
 		padding: 20px 13px;
 		font-size: 16px;
-		color: $color-base;
+		color: $color-base;	
+	}
+
+	span {
+		position: relative;
+
+		&::after {
+			content: " ";
+			@include block-absolute(none, 100%, -17px, 0);
+			height: 3px;
+			background-color: $color-primary;
+			transition: all 0.3s ease;
+		}
+
+		&.active {
+
+			&::after {
+				right: 0;
+			}
+		}
 	}
 }
 
@@ -376,6 +399,13 @@ input[type="submit"] {
 		&:hover {
 			a {
 				color: $color-primary;
+			}
+
+			span {
+
+				&::after {
+					right: 0;
+				}
 			}
 		}
 	}
@@ -404,7 +434,6 @@ input[type="submit"] {
 	justify-content: space-between;
 	padding: 21px 18px;
 	font-size: 16px;
-	color: inherit;
 
 	.fa-bars {	
 		opacity: 1;
@@ -565,24 +594,33 @@ input[type="submit"] {
 		text-align: center;
 		background: #fff;
 			
+		&::after {
+			content: "+";
+			@include block-absolute(50%, 10px, none, none);
+			font-size: 20px;
+			font-weight: 300;
+			transform: translateY(-50%);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&:hover {
+			padding-right: 15px;
+			
 			&::after {
-				content: "+";
-				@include block-absolute(50%, 10px, none, none);
-				font-size: 20px;
-				font-weight: 300;
-				transform: translateY(-50%);
-				opacity: 0;
-				transition: opacity 0.3s ease;
+				opacity: 1;
 			}
-	
-			&:hover {
-				padding-right: 20px;
-				
-				&::after {
-					opacity: 1;
-				}
-			}
-		
+		}
+	}
+
+	&.button-medium {
+		background: $color-primary;
+		color: #fff;
+		padding: 9px 17px;
+
+		&:hover {
+			background: #a36950;
+		}
 	}
 }
 
@@ -592,13 +630,14 @@ input[type="submit"] {
 // ------------------------------------------------------------------------------------------------
 
 .product-main {
+	margin-bottom: 30px;
 
 	.title {
 		margin-bottom: 0;
 	}
 
 	.row > [class*="col-"] {
-		margin-bottom: 40px;
+		margin-bottom: 50px;
 	}
 }
 
@@ -677,14 +716,15 @@ input[type="submit"] {
 .product-foto-hover {
 	@include block-absolute(0, 0, 0, 0);
 	opacity: 0;
-	transition: all 0.3s  ease;
+	transition: all 0.5s  ease;
 }
 
 .button-product-wrapper {
-	@include block-absolute(none, 0, 30px, 0);
+	@include block-absolute(none, 0, 0, 0);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	padding: 20px;
 }
 
 .product-text-inner {
@@ -724,6 +764,45 @@ input[type="submit"] {
 			background: #EEEEEE;
 		}
 	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// BEST-CATEGORY
+// ------------------------------------------------------------------------------------------------
+
+.best-category {
+	background-color: rgba($color: $color-primary, $alpha: 0.1);
+	padding: 60px 0;
+
+	.row > [class*="col-"] {
+		margin-bottom: 30px;
+	}
+}
+
+.category-foto {
+	position: relative;
+}
+
+.category-banner {
+	@include block-absolute(none, 0, 0, 0);
+	max-width: 240px;
+	padding: 30px;
+	background: #fff;
+
+	h6,
+	h4,
+	a {
+		z-index: 1;
+		position: relative;
+	}
+
+	&::before {
+		content: " ";
+		@include block-absolute(0, 0, 0, 0);
+		background-color: rgba($color: $color-primary, $alpha: 0.1);
+		z-index: 0;
+	}
+
 }
 
 
