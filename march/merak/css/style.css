@@ -1999,6 +1999,9 @@ input[type=submit] {
 .menu-categories-dropdown li img {
   margin-left: -20px;
 }
+.menu-categories-dropdown li:last-child {
+  border-bottom: 0;
+}
 .menu-categories-dropdown a {
   display: flex;
   align-items: center;
@@ -2108,6 +2111,15 @@ input[type=submit] {
 }
 .button.button-medium:hover {
   background: #a36950;
+}
+.button.button-border {
+  background: transparent;
+  border: 2px solid rgba(16, 16, 16, 0.05);
+  padding: 8px 30px;
+  font-weight: 600;
+}
+.button.button-border:hover {
+  background: rgba(16, 16, 16, 0.05);
 }
 
 .btn-text-span {
@@ -2378,6 +2390,7 @@ input[type=submit] {
 .customers {
   padding-top: 60px;
   padding-bottom: 40px;
+  margin-bottom: 80px;
   background-color: rgba(218, 138, 103, 0.1);
 }
 .customers .row > [class*=col-] {
@@ -2412,6 +2425,185 @@ input[type=submit] {
 }
 .testimonial-about h6 {
   margin-bottom: 0;
+}
+
+.customers-arrow-wrapper {
+  position: relative;
+}
+
+.customers-arrow {
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  opacity: 0.2;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.customers-arrow:hover {
+  opacity: 0.6;
+}
+
+.arrow-left {
+  left: -4%;
+}
+
+.arrow-right {
+  right: -4%;
+}
+
+.articles {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.articles img {
+  width: 100%;
+}
+.articles .row > [class*=col-] {
+  margin-bottom: 30px;
+}
+
+.articles-category-foto {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.banner-category {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  padding: 10px 20px;
+  background: #fff;
+  transform: translate(50%, 50%);
+  font-size: 13px;
+  font-weight: 500;
+}
+.banner-category:hover {
+  background: #e7e6e6;
+}
+
+.banner-play {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding: 7px;
+  color: #fff;
+  background-color: #da8a67;
+}
+
+.articles-category-text {
+  padding: 20px;
+  line-height: 1.8;
+}
+.articles-category-text h5 {
+  margin-bottom: 10px;
+}
+.articles-category-text a {
+  font-weight: 600;
+  color: rgba(16, 16, 16, 0.8);
+}
+.articles-category-text a i {
+  margin-left: 5px;
+}
+
+.articles-category-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgba(16, 16, 16, 0.5);
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+.articles-category-about .author-name {
+  color: #101010;
+}
+
+.spacing-right {
+  margin-right: 5px;
+}
+
+.articles-category-author {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.instagram-foto {
+  position: relative;
+}
+.instagram-foto:hover .instagram-info {
+  opacity: 1;
+}
+
+.instagram-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 13%;
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+.instagram-info i {
+  margin-right: 5px;
+}
+.instagram-info span {
+  z-index: 1;
+}
+.instagram-info::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.instagram-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.instagram-text i {
+  font-size: 20px;
+  color: #da8a67;
+  margin-bottom: 10px;
+}
+.instagram-text p {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.instagram-link {
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(16, 16, 16, 0.8);
+  margin-bottom: 10px;
+}
+
+.spacing-bottom-65 {
+  margin-bottom: 65px;
 }
 
 @media (min-width: 1200px) {
@@ -2515,6 +2707,14 @@ input[type=submit] {
 
   .best-category {
     margin-bottom: 60px;
+  }
+
+  .customers {
+    margin-bottom: 60px;
+  }
+
+  .spacing-bottom-65 {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 768px) {
