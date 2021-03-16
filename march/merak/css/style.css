@@ -2323,8 +2323,8 @@ input[type=submit] {
 .category-banner {
   position: absolute;
   right: 0;
-  bottom: 0;
-  left: 0;
+  bottom: -2px;
+  left: -2px;
   max-width: 280px;
   padding: 30px;
   background: #fff;
@@ -2606,6 +2606,47 @@ input[type=submit] {
   margin-bottom: 65px;
 }
 
+.subscribe-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(16, 16, 16, 0.05);
+  border-bottom: 1px solid rgba(16, 16, 16, 0.05);
+}
+
+.subscribe-text {
+  display: flex;
+  align-items: start;
+  margin-bottom: 30px;
+}
+.subscribe-text img {
+  margin-right: 15px;
+}
+.subscribe-text h2 {
+  margin-bottom: 15px;
+}
+.subscribe-text h6 {
+  margin-bottom: 0;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+.subscribe-form input[type=text] {
+  margin-right: 20px;
+  max-width: 350px;
+  padding: 0 20px;
+}
+.subscribe-form .button {
+  color: #fff;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1210px;
@@ -2651,6 +2692,10 @@ input[type=submit] {
   }
   .button.product-big:hover::after {
     opacity: 1;
+  }
+
+  .subscribe-form {
+    justify-content: flex-end;
   }
 }
 @media (max-width: 1200px) {

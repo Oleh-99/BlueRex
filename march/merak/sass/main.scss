@@ -828,7 +828,7 @@ input[type="submit"] {
 }
 
 .category-banner {
-	@include block-absolute(none, 0, 0, 0);
+	@include block-absolute(none, 0, -2px,-2px);
 	max-width: 280px;
 	padding: 30px;
 	background: #fff;
@@ -1140,6 +1140,56 @@ input[type="submit"] {
 	margin-bottom: 65px;
 }
 
+// ------------------------------------------------------------------------------------------------
+// SUBSCRIBE
+// ------------------------------------------------------------------------------------------------
+
+.subscribe-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	border-top: 1px solid rgba(16, 16, 16, 0.05);
+	border-bottom: 1px solid rgba(16, 16, 16, 0.05);
+}
+
+.subscribe-text {
+	display: flex;
+    align-items: start;
+	margin-bottom: 30px;
+
+	img {
+		margin-right: 15px;
+	}
+
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	h6 {
+		margin-bottom: 0;
+	}
+}
+
+.subscribe-form {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	margin-bottom: 30px;
+
+	input[type="text"] {
+		margin-right: 20px;
+		max-width: 350px;
+		padding: 0 20px;
+	}
+
+	.button {
+		color: #fff;
+	}
+}
+
 @media (min-width: 1200px) {
 
 	.container {
@@ -1192,7 +1242,10 @@ input[type="submit"] {
 				}
 			}
 		}
+	}
 
+	.subscribe-form {
+		justify-content: flex-end;
 	}
 }
 
