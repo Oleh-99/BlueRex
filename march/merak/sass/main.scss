@@ -74,6 +74,12 @@ a {
 			opacity: 0.6;
 		}
 	}
+
+	&.link-hover-primary {
+		&:hover{
+			color: $color-primary;
+		}
+	}
 }
 
 li {
@@ -165,6 +171,7 @@ input[type="submit"] {
 	padding: 10px;
 	outline: none;
 	border: none;
+	transition: all 0.3s ease;
 	cursor: pointer;
 }
 
@@ -601,6 +608,10 @@ input[type="submit"] {
 		&:hover {
 			background: rgba(16, 16, 16, 0.05);
 		}
+	}
+
+	&:hover {
+		background: #414040;
 	}
 }
 

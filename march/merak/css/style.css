@@ -1666,6 +1666,9 @@ a {
 a.link-hover:hover {
   opacity: 0.6;
 }
+a.link-hover-primary:hover {
+  color: #da8a67;
+}
 
 li a {
   display: block;
@@ -1763,6 +1766,7 @@ input[type=submit] {
   padding: 10px;
   outline: none;
   border: none;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -2122,6 +2126,9 @@ input[type=submit] {
 }
 .button.button-border:hover {
   background: rgba(16, 16, 16, 0.05);
+}
+.button:hover {
+  background: #414040;
 }
 
 .btn-text-span {
