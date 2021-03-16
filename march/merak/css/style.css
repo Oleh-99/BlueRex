@@ -1848,7 +1848,8 @@ input[type=submit] {
   justify-content: center;
 }
 
-.logo-header {
+.logo-main {
+  display: inline-block;
   flex-shrink: 0;
   max-height: 70px;
 }
@@ -2052,6 +2053,7 @@ input[type=submit] {
   display: inline-block;
   opacity: 0.3;
   padding: 0 5px;
+  font-family: "Spartan", sans-serif;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -2606,6 +2608,10 @@ input[type=submit] {
   margin-bottom: 65px;
 }
 
+.subscribe {
+  margin-bottom: 40px;
+}
+
 .subscribe-inner {
   display: flex;
   justify-content: space-between;
@@ -2645,6 +2651,57 @@ input[type=submit] {
 }
 .subscribe-form .button {
   color: #fff;
+}
+
+.footer-general a {
+  font-size: 13px;
+  color: rgba(16, 16, 16, 0.8);
+  opacity: 0.7;
+}
+.footer-general i {
+  font-size: 16px;
+}
+.footer-general li {
+  margin-bottom: 3px;
+}
+.footer-general p,
+.footer-general .address {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+.footer-general .logo-main {
+  margin-bottom: 30px;
+}
+.footer-general .tell {
+  font-family: "Spartan", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.footer-link {
+  padding-top: 20px;
+}
+
+.footer-about-us {
+  padding-top: 10px;
+}
+
+.footer-about-us a {
+  padding: 5px;
+}
+
+.footer-general-inner {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(16, 16, 16, 0.05);
+}
+
+.copyring {
+  padding: 20px 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.4;
 }
 
 @media (min-width: 1200px) {
