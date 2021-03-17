@@ -3116,6 +3116,27 @@ input[type=submit] {
   border: 1px solid rgba(16, 16, 16, 0.1);
 }
 
+.to-top {
+  position: sticky;
+  bottom: 20px;
+  width: 60px;
+  margin-left: 100%;
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.to-top a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  color: rgba(16, 16, 16, 0.8);
+}
+.to-top a span {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1210px;
