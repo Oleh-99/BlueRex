@@ -1633,15 +1633,15 @@ h2 {
 }
 
 h3 {
-  font-size: 28px;
-}
-
-h4 {
   font-size: 25px;
 }
 
-h5 {
+h4 {
   font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
 }
 
 h6 {
@@ -2022,10 +2022,14 @@ input[type=submit] {
 .button-burger {
   display: none;
   font-size: 20px;
+  padding: 10px 15px;
+  background: #fff;
+  border: 1px solid rgba(16, 16, 16, 0.5);
 }
 .button-burger i {
   margin-left: 0;
   opacity: 1;
+  color: rgba(16, 16, 16, 0.8);
 }
 
 .slider {
@@ -3075,6 +3079,43 @@ input[type=submit] {
   padding: 0 20px;
 }
 
+.about-us {
+  margin-bottom: 90px;
+  padding-top: 20px;
+}
+
+.about-us-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 480px;
+  padding: 30px 0;
+  height: 100%;
+}
+
+.about-infobox {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.about-infobox .row > [class*=col-] {
+  margin-bottom: 30px;
+}
+
+.about-title-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.infobox img {
+  margin-bottom: 20px;
+}
+.infobox.infobox-border {
+  padding: 40px;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1210px;
@@ -3189,6 +3230,11 @@ input[type=submit] {
 
   .spacing-bottom-65 {
     margin-bottom: 10px;
+  }
+
+  .about-us {
+    padding-top: 0;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 768px) {

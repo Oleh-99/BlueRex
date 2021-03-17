@@ -38,15 +38,15 @@ h2 {
 }
 
 h3 {
-	font-size: 28px;
-}
-
-h4 {
 	font-size: 25px;
 }
 
-h5 {
+h4 {
 	font-size: 20px;
+}
+
+h5 {
+	font-size: 15px;
 }
 
 h6 {
@@ -490,10 +490,14 @@ input[type="submit"] {
 .button-burger {
 	display: none;
 	font-size: 20px;
+	padding: 10px 15px;
+	background: #fff;
+	border: 1px solid rgba($color: $color-base, $alpha: 0.5);
 
 	i {
 		margin-left: 0;
 		opacity: 1;
+		color: $color-base;
 	}
 }
 
@@ -1731,6 +1735,59 @@ input[type="submit"] {
 }
 
 // ------------------------------------------------------------------------------------------------
+// ABOUT-US PAGE
+// ------------------------------------------------------------------------------------------------
+
+.about-us {
+	margin-bottom: 90px;
+    padding-top: 20px;
+}
+
+.about-us-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 480px;
+	padding: 30px 0;
+	height: 100%;
+}
+
+// ------------------------------------------
+// INFOBOX
+// ------------------------------------------
+
+
+.about-infobox {
+	margin-bottom: 30px;
+	text-align: center;
+
+	.row {
+		> [class*=col-] {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.about-title-wrapper {
+	max-width: 580px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+.infobox {
+
+	img {
+		margin-bottom: 20px;
+	}
+
+	&.infobox-border {
+		padding: 40px;
+		border: 1px solid rgba($color: $color-base, $alpha: 0.1);
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
 // MEDIA
 // ------------------------------------------------------------------------------------------------
 
@@ -1864,7 +1921,13 @@ input[type="submit"] {
 	.spacing-bottom-65 {
 		margin-bottom: 10px;
 	}
+
+	.about-us {
+		padding-top: 0;
+		margin-bottom: 60px;
+	}
 }
+
 
 @media (max-width: 768px) {
 	.slider-foto-inner {
