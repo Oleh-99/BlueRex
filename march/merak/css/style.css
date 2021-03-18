@@ -1736,7 +1736,7 @@ textarea {
   font-size: 13px;
   color: inherit;
   outline: none;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.05);
 }
 input[type=text]::placeholder,
 input[type=email]::placeholder,
@@ -1803,7 +1803,7 @@ input[type=submit] {
 }
 
 .header-main {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 13px;
   font-weight: 500;
 }
@@ -2073,6 +2073,7 @@ input[type=submit] {
 
 .slider {
   margin-bottom: 90px;
+  margin-top: -20px;
   min-height: 500px;
 }
 
@@ -2802,11 +2803,10 @@ input[type=submit] {
 }
 
 .navigation-page {
-  padding-top: 18px;
   margin-bottom: 20px;
 }
 .navigation-page.single-product {
-  padding-top: 10px;
+  margin-top: -10px;
 }
 
 .navigation-page-inner {
@@ -3141,7 +3141,6 @@ input[type=submit] {
 
 .about-us {
   margin-bottom: 90px;
-  padding-top: 20px;
 }
 
 .about-us-inner {
@@ -3200,6 +3199,41 @@ input[type=submit] {
   font-size: 13px;
   font-weight: 500;
   text-align: center;
+}
+
+.contact-map {
+  margin-bottom: 80px;
+}
+
+.contact-form {
+  margin-bottom: 60px;
+}
+.contact-form input[type=text],
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form input[type=tell] {
+  padding: 0 20px;
+}
+.contact-form textarea {
+  padding: 20px;
+}
+.contact-form p,
+.contact-form .tell {
+  font-size: 13px;
+  color: rgba(16, 16, 16, 0.5);
+}
+.contact-form .row > [class*=col-] {
+  margin-bottom: 20px;
+}
+.contact-form .title {
+  margin-bottom: 40px;
+}
+.contact-form .infobox {
+  text-align: center;
+}
+
+.spacing-20 {
+  margin-bottom: -20px;
 }
 
 @media (min-width: 1200px) {

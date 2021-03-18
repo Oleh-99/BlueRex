@@ -148,7 +148,7 @@ textarea{
 	font-size: 13px;
 	color: inherit;
 	outline: none;
-	border: 2px solid rgba($color: #000000, $alpha: 0.1);
+	border: 2px solid rgba($color: #000000, $alpha: 0.05);
 
 	&::placeholder {
 		color: inherit;
@@ -235,7 +235,7 @@ input[type="submit"] {
 // ------------------------------------------------------------------------------------------------
 
 .header-main {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	font-size: 13px;
 	font-weight: 500;
 }
@@ -552,6 +552,7 @@ input[type="submit"] {
 
 .slider {
 	margin-bottom: 90px;
+	margin-top: -20px;
 	min-height: 500px;
 }
 
@@ -1387,11 +1388,10 @@ input[type="submit"] {
 // ------------------------------------------------------------------------------------------------
 
 .navigation-page {
-	padding-top: 18px;
 	margin-bottom: 20px;
 
 	&.single-product {
-		padding-top: 10px;
+		margin-top: -10px;
 	}
 }
 
@@ -1810,7 +1810,6 @@ input[type="submit"] {
 
 .about-us {
 	margin-bottom: 90px;
-    padding-top: 20px;
 }
 
 .about-us-inner {
@@ -1888,6 +1887,55 @@ input[type="submit"] {
 			text-align: center;
 		}
 	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// CONTACT-US
+// ------------------------------------------------------------------------------------------------
+
+.contact-map {
+	margin-bottom: 80px;
+}
+
+.contact-form {
+	margin-bottom: 60px;
+
+	input[type="text"],
+	input[type="text"],
+	input[type="email"],
+	input[type="tell"] {
+		padding: 0 20px;
+	}
+
+	textarea {
+		padding: 20px;
+	}
+
+	p,
+	.tell {
+		font-size: 13px;
+		color: rgba($color: $color-base, $alpha: 0.5);
+	}
+
+	
+	
+	.row {
+		> [class*=col-] {
+			margin-bottom: 20px;
+		}
+	}
+
+	.title {
+		margin-bottom: 40px;
+	}
+
+	.infobox {
+		text-align: center;
+	}
+}
+
+.spacing-20 {
+	margin-bottom: -20px;
 }
 
 // ------------------------------------------------------------------------------------------------
