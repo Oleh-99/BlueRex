@@ -2127,6 +2127,9 @@ input[type=submit] {
   width: 1080px;
   left: -270px;
 }
+.menu-dropdown.sweatshirts {
+  width: 680px;
+}
 
 .menu-dropdown-inner {
   display: flex;
@@ -2246,6 +2249,18 @@ input[type=submit] {
 }
 .popular-categories a:hover {
   transform: scale(1.1);
+}
+
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.dropdown-title img {
+  margin-right: 10px;
+}
+.dropdown-title h5 {
+  margin-bottom: 0;
 }
 
 .button-burger {
