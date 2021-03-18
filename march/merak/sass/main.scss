@@ -504,6 +504,7 @@ input[type="submit"] {
 	z-index: 1;
 	transition: all 0.3s ease;
 	list-style: none;
+	box-shadow: 0px 10px 11px 0px rgba(34, 60, 80, 0.2);
 
 	li {
 		margin-bottom: 0;
@@ -525,7 +526,6 @@ input[type="submit"] {
 	}
 
 	a {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -537,12 +537,18 @@ input[type="submit"] {
 
 	p {
 		font-size: 16px;
+		color: rgba($color: $color-base, $alpha: 0.4);
+	}
+
+	.inner-inner {
+		position: relative;
 	}
 
 	.inner {
-		@include block-absolute(-10px, 10px, none, none);
+		@include block-absolute(-10px, -2px, none, none);
 		padding: 2px;
 		border-radius: 1px 3px;
+		transform: translateX(100%);
 		background-color: #65b32e;
 		color: #fff;
 		font-size: 9px;
@@ -550,7 +556,6 @@ input[type="submit"] {
 		text-transform: uppercase;
 
 		&.hot {
-			right: 50px;
 			background-color: #d41212;
 		}
 	}
@@ -560,6 +565,7 @@ input[type="submit"] {
 		padding: 0px 20px;
 		border-top: none;
 		border: 1px solid rgba(16, 16, 16, 0.05);
+		box-shadow: none;
 	
 		li {
 			max-height: 50px;
@@ -578,6 +584,7 @@ input[type="submit"] {
 	&.large-dropdown {
 		display: flex;
 		justify-content: space-between;
+		padding: 40px;
 
 		li {
 			margin-bottom: 20px;
@@ -590,24 +597,39 @@ input[type="submit"] {
 
 	&.blog {
 		width: 920px;
+		left: -190px;
+		padding: 0;
+	}
+
+	&.home {
+		width: 990px;
+		left: -90px;
 	}
 }
 
 .menu-dropdown-inner {
 	display: flex;
 	padding: 40px;
-	padding-right: 0;
 }
 
 .col-dropdown {
 	width: 200px;
 	margin-right: 40px;
+	flex-grow: 1;
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .rectangle {
 	width: 400px;
 	padding: 40px;
 	background: $color-primary;
+
+	p {
+		color: inherit;
+	}
 }
 
 .rectangle-video {
