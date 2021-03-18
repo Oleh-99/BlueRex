@@ -37,12 +37,14 @@
 					<div class="header-col-center">
 						<form class="form-search">
 							<input type="text" placeholder="Search for products">
-							<select>
-								<option>Select Category</option>
-								<option>Select Category 1</option>
-								<option>Select Category 2</option>
-								<option>Select Category 3</option>
-							</select>
+							<span class="select-wrapper">
+								<select>
+									<option>Select Category</option>
+									<option>Select Category 1</option>
+									<option>Select Category 2</option>
+									<option>Select Category 3</option>
+								</select>
+							</span>
 							<button><i class="fas fa-search"></i></button>
 						</form>
 					</div>
@@ -164,9 +166,9 @@
 						</form>
 						<div class="row sku-category">
 							<div class="col-3"><span>SKU:</span></div>
-							<div class="col-9"><span>N/A</span></div>
+							<div class="col-9"><span class="info">N/A</span></div>
 							<div class="col-3"><span>Category:</span></div>
-							<div class="col-9"><span>Dress</span></div>
+							<div class="col-9"><span class="info">Dress</span></div>
 						</div>
 						<div class="description">
 							<select>
@@ -233,7 +235,7 @@
 				<h2 class="title">Promotions and discounts</h2>
 				<p>The clothes that you like. New collections of clothes for every taste for you and your family.</p>
 			</div>
-			<div class="promotions-row">
+			<div class="promotions-row customers-arrow-wrapper">
 				<div class="col-promotions">
 					<div class="product-box">
 						<div class="product-foto">
@@ -357,6 +359,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="customers-arrow arrow-left"><i class="fas fa-chevron-left"></i></div>
+				<div class="customers-arrow arrow-right"><i class="fas fa-chevron-right"></i></div>
 			</div>
 		</div>
 	</section>
@@ -388,23 +392,23 @@
 							<a href="#"><img src="../img/payment-metods.png" alt=""></a>
 						</div>
 						<div class="col-sm-12 col-md-6 offset-lg-1 col-lg-2">
-							<div class="footer-link">
-								<ul>
-									<li><a href="about-us.html" class="link-hover-primary">About</a></li>
-									<li><a href="#" class="link-hover-primary">Blog</a></li>
-									<li><a href="#" class="link-hover-primary">Contact</a></li>
-									<li><a href="#" class="link-hover-primary">FAQs</a></li>
+							<div class="footer-link-wrapper">
+								<ul class="footer-link">
+									<li><a href="pages/about-us.html" class="link-hover-primary">About</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">FAQs</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-sm-12 col-md-6 col-lg-3">
-							<div class="footer-link">
-								<ul>
-									<li><a href="#" class="link-hover-primary">Privacy Policy</a></li>
-									<li><a href="#" class="link-hover-primary">Returns</a></li>
-									<li><a href="#" class="link-hover-primary">Order tracking</a></li>
-									<li><a href="#" class="link-hover-primary">Conditions</a></li>
-									<li><a href="#" class="link-hover-primary">Support</a></li>
+							<div class="footer-link-wrapper">
+								<ul class="footer-link">
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Returns</a></li>
+									<li><a href="#">Order tracking</a></li>
+									<li><a href="#">Conditions</a></li>
+									<li><a href="#">Support</a></li>
 								</ul>
 							</div>
 						</div>

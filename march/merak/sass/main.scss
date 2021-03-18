@@ -83,7 +83,26 @@ a {
 	}
 }
 
+ul,
+ol {
+	padding-left: 40px;
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
 li {
+	margin-bottom: 10px;
 	a {
 		display: block;
 		padding: 10px;
@@ -129,7 +148,7 @@ textarea{
 	font-size: 13px;
 	color: inherit;
 	outline: none;
-	border: 1px solid rgba($color: #000000, $alpha: 0.1);
+	border: 2px solid rgba($color: #000000, $alpha: 0.1);
 
 	&::placeholder {
 		color: inherit;
@@ -223,6 +242,7 @@ input[type="submit"] {
 
 .top-bar {
 	background-color: #da8a67;
+	font-weight: 400;
 
 	.header-row {	
 		height: 40px;
@@ -258,7 +278,6 @@ input[type="submit"] {
 }
 
 .languare {
-	font-family: 'Archivo', sans-serif;;
 
 	img {
 		width: 21px;
@@ -267,10 +286,9 @@ input[type="submit"] {
 }
 
 .header-general {
-	padding: 20px 0px;
 
 	.header-row {	
-		height: 60px;
+		height: 100px;
 	}
 
 	a {
@@ -334,12 +352,24 @@ input[type="submit"] {
 	}
 
 	select {
-		@include block-absolute(none, 1px, none, none);
+		
 		max-width: 150px;
 		padding: 0 10px;
-		height: 38px;
+		height: 36px;
 		border: none;
-		border-left: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.select-wrapper {
+		@include block-absolute(none, 1px, none, none);
+
+		&::before {
+			content: " ";
+			@include block-absolute(50%, none, none, 0);
+			height: 15px;
+			width: 1px;
+			transform: translateY(-50%);
+			background: rgba($color: $color-base, $alpha: 0.05);
+		}
 	}
 
 	button {
@@ -367,11 +397,17 @@ input[type="submit"] {
 .menu-main {
 	display: flex;
 	margin-left: -23px;
+	padding-left: 0;
+	list-style: none;
 
 	a {
 		padding: 20px 13px;
 		font-size: 16px;
 		color: $color-base;	
+	}
+
+	li {
+		margin-bottom: 0;
 	}
 
 	span {
@@ -417,6 +453,12 @@ input[type="submit"] {
 	position: relative;
 	background: $color-primary;
 	min-width: 280px;
+	padding-left: 0;
+	list-style: none;
+
+	li {
+		margin-bottom: 0;
+	}
 }
 
 .menu-categories-hover {
@@ -434,7 +476,7 @@ input[type="submit"] {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 21px 18px;
+	padding: 19px 18px;
 	font-size: 16px;
 
 	.fa-bars {	
@@ -462,8 +504,10 @@ input[type="submit"] {
 	visibility: hidden;
 	z-index: 1;
 	transition: all 0.3s ease;
+	list-style: none;
 
 	li {
+		margin-bottom: 0;
 		max-height: 50px;
 		border-bottom: 1px solid rgba(16, 16, 16, 0.05);
 
@@ -526,6 +570,7 @@ input[type="submit"] {
 
 .slider-numbers {
 	@include block-absolute(none, none, 25px, 40px);
+	z-index: 1;
 
 	span {
 		display: inline-block;
@@ -554,6 +599,7 @@ input[type="submit"] {
 	padding: 10px 27px;
 	font-weight: 600;
 	color: inherit;
+	font-size: 14px;
 
 	&.button-while {
 		background: #fff;
@@ -689,8 +735,12 @@ input[type="submit"] {
 	margin-right: -20px;
 	margin-left: -20px;
 	overflow-y: hidden;
+	padding-left: 0;
+	list-style: none;
 
 	li {
+		margin-bottom: 0;
+
 		&:hover,
 		&.active {
 
@@ -1289,8 +1339,23 @@ input[type="submit"] {
 	}
 }
 
-.footer-link {
+.footer-link-wrapper {
 	padding-top: 20px;
+}
+
+.footer-link {
+	list-style: none;
+
+	li {
+		margin-bottom: 0;
+
+		&:hover {
+
+			a {
+				color: $color-primary;
+			}
+		}
+	}
 }
 
 .footer-about-us {
@@ -1636,6 +1701,10 @@ input[type="submit"] {
 	&.row > [class*=col-] {
 		margin-bottom: 20px;
 	}
+
+	.info {
+		opacity: 0.5;
+	}
 }
 
 .description {
@@ -1731,6 +1800,7 @@ input[type="submit"] {
 	select {
 		max-width: 380px;
 		padding: 0 20px;
+		color: rgba($color: $color-base, $alpha: 0.4);
 	}
 }
 
@@ -1751,6 +1821,18 @@ input[type="submit"] {
 	max-width: 480px;
 	padding: 30px 0;
 	height: 100%;
+}
+
+.about-button-wrapper {
+
+	a {
+		margin-right: 20px;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 // ------------------------------------------
@@ -1789,18 +1871,15 @@ input[type="submit"] {
 
 
 .to-top {
-	position: sticky;
+	position: fixed;
 	bottom: 20px;
-	width: 60px;
-	margin-left: 100%;
-	transform: translateX(-100%);
+	right: 20px;
 	z-index: 1;
 
 	a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-right: 20px;
 		color: $color-base;
 
 		span {

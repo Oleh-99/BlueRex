@@ -1671,6 +1671,27 @@ a.link-hover-primary:hover {
   color: #da8a67;
 }
 
+ul,
+ol {
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  margin-bottom: 10px;
+}
 li a {
   display: block;
   padding: 10px;
@@ -1715,7 +1736,7 @@ textarea {
   font-size: 13px;
   color: inherit;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 input[type=text]::placeholder,
 input[type=email]::placeholder,
@@ -1789,6 +1810,7 @@ input[type=submit] {
 
 .top-bar {
   background-color: #da8a67;
+  font-weight: 400;
 }
 .top-bar .header-row {
   height: 40px;
@@ -1818,19 +1840,13 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.languare {
-  font-family: "Archivo", sans-serif;
-}
 .languare img {
   width: 21px;
   margin-right: 3px;
 }
 
-.header-general {
-  padding: 20px 0px;
-}
 .header-general .header-row {
-  height: 60px;
+  height: 100px;
 }
 .header-general a {
   margin-right: 16px;
@@ -1887,13 +1903,24 @@ input[type=submit] {
   padding: 0 150px 0 35px;
 }
 .form-search select {
-  position: absolute;
-  right: 1px;
   max-width: 150px;
   padding: 0 10px;
-  height: 38px;
+  height: 36px;
   border: none;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-search .select-wrapper {
+  position: absolute;
+  right: 1px;
+}
+.form-search .select-wrapper::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 15px;
+  width: 1px;
+  transform: translateY(-50%);
+  background: rgba(16, 16, 16, 0.05);
 }
 .form-search button {
   position: absolute;
@@ -1921,11 +1948,16 @@ input[type=submit] {
 .menu-main {
   display: flex;
   margin-left: -23px;
+  padding-left: 0;
+  list-style: none;
 }
 .menu-main a {
   padding: 20px 13px;
   font-size: 16px;
   color: rgba(16, 16, 16, 0.8);
+}
+.menu-main li {
+  margin-bottom: 0;
 }
 .menu-main span {
   position: relative;
@@ -1957,6 +1989,11 @@ input[type=submit] {
   position: relative;
   background: #da8a67;
   min-width: 280px;
+  padding-left: 0;
+  list-style: none;
+}
+.menu-categories li {
+  margin-bottom: 0;
 }
 
 .menu-categories-hover:hover .menu-categories-dropdown, .menu-categories-hover.active .menu-categories-dropdown {
@@ -1968,7 +2005,7 @@ input[type=submit] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 21px 18px;
+  padding: 19px 18px;
   font-size: 16px;
 }
 .categories-main .fa-bars {
@@ -1998,8 +2035,10 @@ input[type=submit] {
   visibility: hidden;
   z-index: 1;
   transition: all 0.3s ease;
+  list-style: none;
 }
 .menu-categories-dropdown li {
+  margin-bottom: 0;
   max-height: 50px;
   border-bottom: 1px solid rgba(16, 16, 16, 0.05);
 }
@@ -2058,6 +2097,7 @@ input[type=submit] {
   position: absolute;
   bottom: 25px;
   left: 40px;
+  z-index: 1;
 }
 .slider-numbers span {
   display: inline-block;
@@ -2083,6 +2123,7 @@ input[type=submit] {
   padding: 10px 27px;
   font-weight: 600;
   color: inherit;
+  font-size: 14px;
 }
 .button.button-while {
   background: #fff;
@@ -2193,6 +2234,11 @@ input[type=submit] {
   margin-right: -20px;
   margin-left: -20px;
   overflow-y: hidden;
+  padding-left: 0;
+  list-style: none;
+}
+.product-menu li {
+  margin-bottom: 0;
 }
 .product-menu li:hover a, .product-menu li.active a {
   border-color: #da8a67;
@@ -2720,8 +2766,18 @@ input[type=submit] {
   margin-bottom: 25px;
 }
 
-.footer-link {
+.footer-link-wrapper {
   padding-top: 20px;
+}
+
+.footer-link {
+  list-style: none;
+}
+.footer-link li {
+  margin-bottom: 0;
+}
+.footer-link li:hover a {
+  color: #da8a67;
 }
 
 .footer-about-us {
@@ -2992,6 +3048,9 @@ input[type=submit] {
 .sku-category.row > [class*=col-] {
   margin-bottom: 20px;
 }
+.sku-category .info {
+  opacity: 0.5;
+}
 
 .description {
   border-top: 1px solid rgba(16, 16, 16, 0.05);
@@ -3077,6 +3136,7 @@ input[type=submit] {
 .choose-size select {
   max-width: 380px;
   padding: 0 20px;
+  color: rgba(16, 16, 16, 0.4);
 }
 
 .about-us {
@@ -3092,6 +3152,14 @@ input[type=submit] {
   max-width: 480px;
   padding: 30px 0;
   height: 100%;
+}
+
+.about-button-wrapper a {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.about-button-wrapper a:last-child {
+  margin-right: 0;
 }
 
 .about-infobox {
@@ -3117,18 +3185,15 @@ input[type=submit] {
 }
 
 .to-top {
-  position: sticky;
+  position: fixed;
   bottom: 20px;
-  width: 60px;
-  margin-left: 100%;
-  transform: translateX(-100%);
+  right: 20px;
   z-index: 1;
 }
 .to-top a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
   color: rgba(16, 16, 16, 0.8);
 }
 .to-top a span {
