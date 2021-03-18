@@ -64,8 +64,8 @@
 				<div class="header-row">
 					<div class="header-col-left">
 						<ul class="menu-categories">
-							<li class="menu-categories-hover"><a href="#" class="categories-main color-schema-white"><span><i class="fas fa-bars"></i> Browse Categories</span> <i class="fas fa-angle-down"></i></a>
-								<ul class="menu-categories-dropdown">
+							<li><a href="#" class="categories-main color-schema-white"><span><i class="fas fa-bars"></i> Browse Categories</span> <i class="fas fa-angle-down"></i></a>
+								<ul class="menu-dropdown menu-categories">
 									<li><a href="#"><span><img src="../img/category-svg/merak-category-icon-1.svg" alt="">Sweatshirts</span> <i class="fas fa-angle-right"></i></a></li>
 									<li><a href="#"><span><img src="../img/category-svg/merak-category-icon-2.svg" alt="">Dresses</span> <i class="fas fa-angle-right"></i></a></li>
 									<li><a href="#"><span><img src="../img/category-svg/merak-category-icon-3.svg" alt="">Jackets</span> <i class="fas fa-angle-right"></i></a></li>
@@ -82,11 +82,52 @@
 					</div>
 					<div class="header-col-center">
 						<ul class="menu-main">
-							<li><a href="../index.html"><span> Home </span><i class="fas fa-angle-down"></i></a></li>
-							<li><a href="shop.html"><span class="active">Shop</span> <i class="fas fa-angle-down"></i></a></li>
-							<li><a href="#"><span>Blog </span><i class="fas fa-angle-down"></i></a></li>
-							<li><a href="about-us.html"><span>About us</span></a></li>
-							<li><a href="contact-us.html"><span>Contact us</span></a></li>
+							<li><a href="../index.html"><span  class="menu-border"> Home </span><i class="fas fa-angle-down"></i></a></li>
+							<li><a href="shop.html"><span class="menu-border active">Shop</span> <i class="fas fa-angle-down"></i></a></li>
+							<li><a href="#"><span class="menu-border">Blog </span><i class="fas fa-angle-down"></i></a>
+								<div class="menu-dropdown large-dropdown blog">
+									<div class="menu-dropdown-inner">
+										<div class="col-dropdown">
+											<h5>Blog posts</h5>
+											<ul>
+												<li><a href="#">Post Example #1</a></li>
+												<li><a href="#">Post Example #2</a></li>
+												<li><a href="#">Post Gutenberg <span class="inner hot">HOT</span></a></li>
+											</ul>
+											<h5>Blog options</h5>
+											<ul>
+												<li><a href="#">Post design default</a></li>
+												<li><a href="#">Post design mask</a></li>
+												<li><a href="#">Load more button</a></li>
+												<li><a href="#">Infinite scrolling</a></li>
+											</ul>
+										</div>
+										<div class="col-dropdown">
+											<h5>Features</h5>
+											<ul>
+												<li><a href="#">Image in page title</a></li>
+												<li><a href="#">Content layout boxed</a></li>
+												<li><a href="#">Masonry layout</a></li>
+												<li><a href="#">Different post sizes</a></li>
+												<li><a href="#">One column layout</a></li>
+												<li><a href="#">Image in page title</a></li>
+												<li><a href="#">Content layout boxed <span class="inner">new</span></a></li>
+												<li><a href="#">Masonry layout</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="rectangle color-schema-white">
+										<h5>We are a very popular store</h5>
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,	there live the blind texts.</p>
+										<div class="rectangle-video">
+											<img src="../img/megamenues/merak-megamenu-video.jpg" alt="">
+											<a href="#" class="play"><i class="fal fa-play"></i></a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="about-us.html"><span  class="menu-border">About us</span></a></li>
+							<li><a href="contact-us.html"><span  class="menu-border">Contact us</span></a></li>
 						</ul>
 					</div>
 					<div class="header-col-right">
@@ -157,7 +198,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="single-product.html">Dress with a floral print</a></h6>
+								<h6><a href="single-product.html" class="link-hover">Dress with a floral print</a></h6>
 								<div class="check-product">
 									<div></div>
 									<div class="pink"></div>
@@ -183,7 +224,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Olive Pants</a></h6>
+								<h6><a href="#" class="link-hover">Olive Pants</a></h6>
 							</div>
 							<div class="price">$68.00</div>
 						</div>
@@ -205,7 +246,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Green lace dress</a></h6>
+								<h6><a href="#" class="link-hover">Green lace dress</a></h6>
 								<div class="check-product">
 									<div></div>
 									<div class="pink"></div>
@@ -232,7 +273,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Knitted top</a></h6>
+								<h6><a href="#" class="link-hover">Knitted top</a></h6>
 							</div>
 							<div class="price">$65.00</div>
 						</div>
@@ -254,7 +295,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Openwork dress</a></h6>
+								<h6><a href="#" class="link-hover">Openwork dress</a></h6>
 							</div>
 							<div class="price">$90.00</div>
 						</div>
@@ -276,7 +317,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Shoes with a sharp toe</a></h6>
+								<h6><a href="#" class="link-hover">Shoes with a sharp toe</a></h6>
 							</div>
 							<div class="price">$100.00</div>
 						</div>
@@ -298,7 +339,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Women's dress</a></h6>
+								<h6><a href="#" class="link-hover">Women's dress</a></h6>
 							</div>
 							<div class="price">$120.00</div>
 						</div>
@@ -320,7 +361,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Shopper bag</a></h6>
+								<h6><a href="#" class="link-hover">Shopper bag</a></h6>
 							</div>
 							<div class="price">$49.99</div>
 						</div>
@@ -342,7 +383,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Dress with a floral print</a></h6>
+								<h6><a href="#" class="link-hover">Dress with a floral print</a></h6>
 								<div class="check-product">
 									<div class="black"></div>
 									<div class="pink"></div>
@@ -368,7 +409,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Shirt with a print</a></h6>
+								<h6><a href="#" class="link-hover">Shirt with a print</a></h6>
 								<div class="check-product">
 									<div class="blue"></div>
 									<div class="light-blue"></div>
@@ -395,7 +436,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Heeled sandals</a></h6>
+								<h6><a href="#" class="link-hover">Heeled sandals</a></h6>
 							</div>
 							<div class="price">$48.00</div>
 						</div>
@@ -417,7 +458,7 @@
 						</div>
 						<div class="product-text">
 							<div class="product-text-inner">
-								<h6><a href="#">Light Mom-fit Jeans</a></h6>
+								<h6><a href="#" class="link-hover">Light Mom-fit Jeans</a></h6>
 								<div class="check-product">
 									<div class="light-blue"></div>
 									<div class="light"></div>
