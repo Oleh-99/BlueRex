@@ -1950,6 +1950,12 @@ input[type=submit] {
 .header-bottom .header-row {
   height: 60px;
 }
+.header-bottom .button-product-wrapper a {
+  opacity: 1;
+}
+.header-bottom .button-product-wrapper i {
+  margin-left: 0;
+}
 
 .menu-main {
   display: flex;
@@ -1965,10 +1971,11 @@ input[type=submit] {
 .menu-main li {
   margin-bottom: 0;
 }
-.menu-main .menu-border {
+
+.menu-border {
   position: relative;
 }
-.menu-main .menu-border::after {
+.menu-border::after {
   content: " ";
   position: absolute;
   right: 100%;
@@ -1978,7 +1985,7 @@ input[type=submit] {
   background-color: #da8a67;
   transition: all 0.3s ease;
 }
-.menu-main .menu-border.active::after {
+.menu-border.active::after {
   right: 0;
 }
 
@@ -1996,6 +2003,9 @@ input[type=submit] {
   justify-content: space-between;
   padding: 19px 18px;
   font-size: 16px;
+}
+.categories-main i {
+  color: #fff;
 }
 .categories-main .fa-bars {
   opacity: 1;
@@ -2030,6 +2040,7 @@ input[type=submit] {
 .menu-main li.active-dropdown > .menu-dropdown {
   opacity: 1;
   visibility: visible;
+  transform: translate(0, 0);
 }
 
 .menu-dropdown {
@@ -2039,10 +2050,11 @@ input[type=submit] {
   background: #fff;
   opacity: 0;
   visibility: hidden;
-  z-index: 1;
-  transition: all 0.3s ease;
+  z-index: 2;
+  transition: all 0.4s ease;
   list-style: none;
   box-shadow: 0px 10px 11px 0px rgba(34, 60, 80, 0.2);
+  transform: translateY(20px);
 }
 .menu-dropdown li {
   margin-bottom: 0;
@@ -2071,29 +2083,11 @@ input[type=submit] {
   font-size: 16px;
   color: rgba(16, 16, 16, 0.4);
 }
-.menu-dropdown .inner-inner {
-  position: relative;
-}
-.menu-dropdown .inner {
-  position: absolute;
-  top: -10px;
-  right: -2px;
-  padding: 2px;
-  border-radius: 1px 3px;
-  transform: translateX(100%);
-  background-color: #65b32e;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.menu-dropdown .inner.hot {
-  background-color: #d41212;
-}
 .menu-dropdown .menu-dropdown {
   top: 0;
   left: 100%;
   margin-left: 20px;
+  transform: translate(40px, 0);
 }
 .menu-dropdown .menu-dropdown::after {
   content: " ";
@@ -2122,8 +2116,6 @@ input[type=submit] {
   border-bottom: 0;
 }
 .menu-dropdown.large-dropdown {
-  display: flex;
-  justify-content: space-between;
   padding: 40px;
 }
 .menu-dropdown.large-dropdown li {
@@ -2135,6 +2127,7 @@ input[type=submit] {
 .menu-dropdown.blog {
   width: 920px;
   left: -190px;
+  display: flex;
 }
 .menu-dropdown.home {
   width: 990px;
@@ -2150,8 +2143,38 @@ input[type=submit] {
 .menu-dropdown.sweatshirts {
   width: 680px;
 }
-.menu-dropdown.dresses {
+.menu-dropdown.dresses .row {
+  margin-bottom: 40px;
+}
+.menu-dropdown.jackets, .menu-dropdown.pants, .menu-dropdown.dresses {
   width: 760px;
+}
+.menu-dropdown.pants img {
+  margin-bottom: 40px;
+}
+.menu-dropdown .new-pants {
+  margin-bottom: 60px;
+}
+
+.menu-label {
+  position: relative;
+}
+
+.menu-label-inner {
+  position: absolute;
+  top: -10px;
+  right: -2px;
+  padding: 2px;
+  border-radius: 1px 3px;
+  transform: translateX(100%);
+  background-color: #65b32e;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.menu-label-inner.hot {
+  background-color: #d41212;
 }
 
 .menu-dropdown-inner {
@@ -2272,12 +2295,12 @@ input[type=submit] {
 .dropdown-category-img {
   display: flex;
   align-items: flex-end;
-  flex-grow: 1;
-  margin-bottom: -40px;
+  height: 100%;
   margin-right: -80px;
+  margin-left: -55px;
 }
 .dropdown-category-img img {
-  margin-left: 0;
+  margin-bottom: -40px;
 }
 
 .dropdown-title-img {
@@ -2295,18 +2318,41 @@ input[type=submit] {
 }
 
 .popular-products {
-  margin: -40px;
+  margin-right: -42px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  min-height: 500px;
   padding: 40px;
   background: rgba(16, 16, 16, 0.05);
 }
-
-.popular-products-inner {
-  display: flex;
-  align-items: center;
+.popular-products .menu-border::after {
+  bottom: 0;
 }
 
 .popular-products h5 {
   margin-bottom: 0;
+}
+
+.dresses-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid rgba(16, 16, 16, 0.05);
+}
+.dresses-menu-link a {
+  width: 60px;
+  height: 60px;
+}
+.dresses-menu-link a:not(:last-child) {
+  margin-right: 10px;
+}
+.dresses-menu-link a:hover {
+  transform: scale(1.2);
+}
+
+.menu-border-left {
+  border-left: 1px solid rgba(16, 16, 16, 0.05);
 }
 
 .button-burger {
@@ -2822,11 +2868,11 @@ input[type=submit] {
 }
 
 .arrow-left {
-  left: -4%;
+  left: -40px;
 }
 
 .arrow-right {
-  right: -4%;
+  right: -40px;
 }
 
 .articles {
