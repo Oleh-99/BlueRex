@@ -1952,6 +1952,10 @@ input[type=submit] {
 }
 .header-bottom .button-product-wrapper a {
   opacity: 1;
+  width: 42px;
+}
+.header-bottom .button-product-wrapper .fa-plus {
+  margin-left: 2px;
 }
 .header-bottom .button-product-wrapper i {
   margin-left: 0;
@@ -2776,6 +2780,9 @@ input[type=submit] {
 }
 .promotions .row > [class*=col-] {
   margin-bottom: 30px;
+}
+.promotions .customers-arrow {
+  top: 40%;
 }
 
 .block-title-center {

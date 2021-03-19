@@ -403,6 +403,11 @@ input[type="submit"] {
 		
 		a {
 			opacity: 1;
+			width: 42px;
+		}
+
+		.fa-plus {
+			margin-left: 2px;
 		}
 
 		i {
@@ -1355,6 +1360,10 @@ input[type="submit"] {
 
 	.row > [class*="col-"] {
 		margin-bottom: 30px;
+	}
+
+	.customers-arrow {
+		top: 40%;
 	}
 }
 
