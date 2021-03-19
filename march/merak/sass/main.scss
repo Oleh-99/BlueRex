@@ -620,7 +620,6 @@ input[type="submit"] {
 	&.blog {
 		width: 920px;
 		left: -190px;
-		padding: 0;
 	}
 
 	&.home {
@@ -647,26 +646,31 @@ input[type="submit"] {
 }
 
 .menu-dropdown-inner {
-	display: flex;
-	padding: 40px;
-}
+	flex-grow: 1;
 
-.col-dropdown,
-.col-2-dropdown {
-	margin-right: 40px;
-
-	&:last-child {
-		margin-right: 0;
+	&:not(:last-child) {
+		margin-right: 40px;
 	}
 }
 
-.col-dropdown {
-	width: 200px;
-}
+// .col-dropdown,
+// .col-2-dropdown {
+// 	margin-right: 40px;
+
+// 	&:last-child {
+// 		margin-right: 0;
+// 	}
+// }
+
+// .col-dropdown {
+// 	width: 200px;
+// }
 
 .rectangle {
 	width: 400px;
 	padding: 40px;
+	margin: -40px;
+	margin-left: 0;
 	background: $color-primary;
 
 	p {
@@ -702,18 +706,12 @@ input[type="submit"] {
 
 .shop-dropdown-img {
 	position: relative;
-	max-width: 280px;
-	margin-right: 40px;
+	height: 100%;
 
 	img {
 		object-fit: cover;
 		object-position: center;
 		height: 100%;
-	}
-
-
-	&:last-child {
-		margin-right: 0;
 	}
 }
 
@@ -747,12 +745,6 @@ input[type="submit"] {
 
 .shop-list-col-2 {
 	column-count: 2;
-	margin-right: -40px;
-
-	li {
-		width: 200px;
-		margin-right: 40px;
-	}
 }
 
 .popular-categories {
