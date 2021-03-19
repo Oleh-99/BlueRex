@@ -1674,6 +1674,11 @@ a.link-hover-primary:hover {
 ul,
 ol {
   padding-left: 40px;
+  margin-bottom: 20px;
+}
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
 }
 
 ul {
@@ -1729,6 +1734,7 @@ textarea {
   height: 40px;
   font-family: inherit;
   font-size: 13px;
+  padding: 0 20px;
   color: inherit;
   outline: none;
   border: 2px solid rgba(0, 0, 0, 0.05);
@@ -1755,6 +1761,7 @@ select {
 textarea {
   height: auto;
   overflow: hidden;
+  padding: 20px;
 }
 
 table {
@@ -2417,6 +2424,10 @@ input[type=submit] {
   background: #fff;
   padding: 13px;
   max-height: 42px;
+  margin-right: 5%;
+}
+.button.button-product:last-child {
+  margin-right: 0;
 }
 .button.button-product:hover {
   color: #da8a67;
@@ -2581,7 +2592,7 @@ input[type=submit] {
   bottom: 20px;
   left: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -2623,6 +2634,9 @@ input[type=submit] {
 }
 .check-product div:not(:last-child) {
   margin-right: 5px;
+}
+.check-product div.dark-green {
+  background: #2A767A;
 }
 .check-product div.pink {
   background: #FFC7C7;
@@ -2748,10 +2762,8 @@ input[type=submit] {
   margin-bottom: 10px;
 }
 
-.promotions-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -15px 60px;
+.promotions-inner {
+  margin-bottom: 60px;
 }
 
 .col-promotions {
@@ -2777,7 +2789,7 @@ input[type=submit] {
 .testimonial-wrapper {
   background-color: #fff;
   padding: 45px 30px;
-  line-height: 1.6;
+  height: 100%;
 }
 
 .testimonial {
@@ -3022,7 +3034,6 @@ input[type=submit] {
 .subscribe-form input[type=text] {
   margin-right: 20px;
   max-width: 350px;
-  padding: 0 20px;
 }
 .subscribe-form .button {
   color: #fff;
@@ -3385,13 +3396,6 @@ input[type=submit] {
   margin: 0 auto;
   margin-bottom: 70px;
 }
-.navigation-product textarea {
-  padding: 20px;
-}
-.navigation-product input[type=text],
-.navigation-product input[type=email] {
-  padding: 0 20px;
-}
 .navigation-product p {
   font-size: 13px;
   margin-bottom: 40px;
@@ -3495,15 +3499,6 @@ input[type=submit] {
 .contact-form {
   margin-bottom: 60px;
 }
-.contact-form input[type=text],
-.contact-form input[type=text],
-.contact-form input[type=email],
-.contact-form input[type=tell] {
-  padding: 0 20px;
-}
-.contact-form textarea {
-  padding: 20px;
-}
 .contact-form p,
 .contact-form .tell {
   font-size: 13px;
@@ -3523,6 +3518,11 @@ input[type=submit] {
   margin-bottom: -20px;
 }
 
+.col-custom-20 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1210px;
@@ -3532,9 +3532,15 @@ input[type=submit] {
   .btn-text-span {
     display: inline-block;
   }
+  .col-custom-20 .btn-text-span {
+    display: none;
+  }
 
   .btn-plus {
     display: none;
+  }
+  .col-custom-20 .btn-plus {
+    display: inline-block;
   }
 
   .button.product-big {
@@ -3545,12 +3551,16 @@ input[type=submit] {
     text-align: center;
     background: #fff;
   }
-  .col-promotions .button.product-big {
-    min-width: 100px;
-    padding: 6px 5px;
+  .col-custom-20 .button.product-big {
+    min-width: auto;
+    padding: 13px;
   }
-  .col-promotions .button.product-big::after {
-    right: 5px;
+  .col-custom-20 .button.product-big::after {
+    content: none;
+  }
+  .col-custom-20 .button.product-big:hover {
+    padding: 13px;
+    color: #da8a67;
   }
   .button.product-big::after {
     content: "+";
@@ -3578,6 +3588,15 @@ input[type=submit] {
 @media (max-width: 1200px) {
   .menu-main a {
     padding: 20px 7px;
+  }
+}
+@media (min-width: 992px) {
+  .col-custom-20 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 @media (max-width: 993px) {
@@ -3618,8 +3637,7 @@ input[type=submit] {
     padding: 10px;
   }
 
-  .promotions-row {
-    flex-wrap: wrap;
+  .promotions-inner {
     margin-bottom: 0;
   }
 
@@ -3642,6 +3660,14 @@ input[type=submit] {
   .about-us {
     padding-top: 0;
     margin-bottom: 60px;
+  }
+
+  .col-custom-20 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 768px) {
