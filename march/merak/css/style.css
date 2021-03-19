@@ -2626,34 +2626,35 @@ input[type=submit] {
 .check-product {
   display: flex;
 }
-.check-product div {
+
+.swatch {
   height: 15px;
   width: 15px;
   background: #2A767A;
   cursor: pointer;
 }
-.check-product div:not(:last-child) {
+.swatch:not(:last-child) {
   margin-right: 5px;
 }
-.check-product div.dark-green {
+.swatch.dark-green {
   background: #2A767A;
 }
-.check-product div.pink {
+.swatch.pink {
   background: #FFC7C7;
 }
-.check-product div.gray {
+.swatch.gray {
   background: #EEEEEE;
 }
-.check-product div.black {
+.swatch.black {
   background: #1A1A1C;
 }
-.check-product div.blue {
+.swatch.blue {
   background: #31397D;
 }
-.check-product div.light-blue {
+.swatch.light-blue {
   background: #CEDADE;
 }
-.check-product div.light {
+.swatch.light {
   background: #F2F2F2;
 }
 

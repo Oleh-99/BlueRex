@@ -1170,44 +1170,44 @@ input[type="submit"] {
 
 .check-product {
 	display: flex;
+}
+
+.swatch {
+	height: 15px;
+	width: 15px;
+	background: #2A767A;
+	cursor: pointer;
 	
-	div {
-		height: 15px;
-		width: 15px;
+	&:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	&.dark-green {
 		background: #2A767A;
-		cursor: pointer;
-		
-		&:not(:last-child) {
-			margin-right: 5px;
-		}
+	}
 
-		&.dark-green {
-			background: #2A767A;
-		}
+	&.pink {
+		background: #FFC7C7;
+	}
 
-		&.pink {
-			background: #FFC7C7;
-		}
+	&.gray {
+		background: #EEEEEE;
+	}
 
-		&.gray {
-			background: #EEEEEE;
-		}
+	&.black {
+		background: #1A1A1C;
+	}
 
-		&.black {
-			background: #1A1A1C;
-		}
+	&.blue {
+		background: #31397D;
+	}
 
-		&.blue {
-			background: #31397D;
-		}
+	&.light-blue {
+		background: #CEDADE;
+	}
 
-		&.light-blue {
-			background: #CEDADE;
-		}
-
-		&.light {
-			background: #F2F2F2;
-		}
+	&.light {
+		background: #F2F2F2;
 	}
 }
 
