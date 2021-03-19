@@ -584,10 +584,12 @@ input[type="submit"] {
 			max-height: 50px;
 			border-bottom: 1px solid rgba(16, 16, 16, 0.05);
 	
-			img {
-				margin-left: -20px;
+			span {
+				img {
+					margin-left: -20px;
+				}
 			}
-	
+			
 			&:last-child {
 				border-bottom: 0;
 			}
@@ -630,6 +632,10 @@ input[type="submit"] {
 
 	&.sweatshirts {
 		width: 680px;
+	}
+
+	&.dresses {
+		width: 760px;
 	}
 }
 
@@ -768,9 +774,14 @@ input[type="submit"] {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
+	margin-top: -15px;
 
 	h5 {
 		margin-bottom: 0;
+	}
+
+	img {
+		margin-left: -20px;
 	}
 }
 
@@ -782,7 +793,34 @@ input[type="submit"] {
 	margin-right: -80px;
 
 	img {
-		margin: 0;
+		margin-left: 0;
+	}
+}
+
+.dropdown-title-img {
+	position: relative;
+}
+
+.dropdown-title-img-inner {
+	@include block-absolute(0, 0, 0, 0);
+	display: flex;
+	align-items: center;
+}
+
+.popular-products {
+	margin: -40px;
+	padding: 40px;
+	background: rgba($color: $color-base, $alpha: 0.05);
+}
+
+.popular-products-inner {
+	display: flex;
+	align-items: center;
+}
+
+.popular-products {
+	h5 {
+		margin-bottom: 0;
 	}
 }
 
