@@ -749,9 +749,23 @@ td, th {
 		background: #fff;
 		border-radius: 5px;
 		
+		.product-text {
+			padding: 10px;
+		}
 
 		.product-img {
 			margin-right: 10px;
+		}
+	}
+
+	&.product-vertical {		
+
+		.product-img {
+			margin-bottom: 20px;
+		}
+
+		h5 {
+			margin-bottom: 10px;
 		}
 	}
 
@@ -783,10 +797,35 @@ td, th {
 
 .product-img {
 	overflow: hidden;
+	border-radius: 5px;
+
+	.inner-hot {
+		@include block-absolute(20px, none, none, 35px);
+		width: 55px;
+		padding: 4px;
+		font-family: $font-title;
+		font-size: 12px;
+		background: #D23336;
+		color: #fff;
+		text-align: center;
+
+		&:hover {
+			background: #a3292b;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	a {
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 .product-text {
-	padding: 10px;
 	
 	h5 {
 		font-weight: 500;
@@ -830,6 +869,51 @@ td, th {
 	i {
 		margin-left: 5px;
 		font-size: 18px;
+	}
+}
+
+.arrow-slider {
+	@include block-absolute(none, none, 60px, 80px);
+
+	.arrow-inner {
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.arrow-inner-wrapper {
+	position: relative;
+}
+
+.arrow-inner {
+	position: absolute;
+	top: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;	
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #fff;
+	transition: background 0.3s ease;
+	cursor: pointer;
+
+	&.left {
+		left: -35px;
+	}
+
+	&.right {
+		right: -35px;
+	}
+
+	&.arrow-slider-inner {
+		position: relative;
+	}
+
+	&:hover {
+		background: rgb(199, 199, 199);
 	}
 }
 
@@ -879,6 +963,113 @@ td, th {
 	}
 }
 
+// ------------------------------------------------------------------------------------------------
+// BESTSELLER
+// ------------------------------------------------------------------------------------------------
+
+.bestseller {
+	margin-bottom: 80px;
+}
+
+.title-wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+
+	h2 {
+		margin-bottom: 0;
+		font-weight: 600;
+	}
+
+	img {
+		margin-right: 10px;
+	}
+}
+
+.swatch-wrapper {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.swatch {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1px solid #333333;
+	background: #333333;
+	transition: border 0.3s ease;
+	cursor: pointer;
+	
+	&:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	&:hover,
+	&.active {
+		border-color: $color-primary !important;
+	}
+
+	&.pink {
+		border-color: #d6cdce;
+		background: #d6cdce;
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// BRANDS
+// ------------------------------------------------------------------------------------------------
+
+.brands {
+
+}
+
+.brands-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 35px;
+	padding-bottom: 120px;
+	padding-left: 70px;
+	padding-right: 70px;
+	margin-bottom: -90px;
+	margin-left: -70px;
+	margin-right: -70px;
+	border-radius: 5px;
+	background-color: #f1bb2f;
+
+	.title-wrapper {
+		margin-bottom: 10px;
+	}
+
+	.view-more {
+		margin-bottom: 10px;
+	}
+}
+
+.brand {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 100%;
+	position: relative;
+	text-align: center;
+	background: #fff;
+
+	h4 {
+		font-weight: 500;
+	}
+
+	.availability {
+		font-size: 12px;
+		opacity: 0.3;
+	}
+}
+
 
 @media (min-width: 1300px) {
 	.container {
@@ -897,7 +1088,7 @@ td, th {
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
 
 	.top-bar {
 		display: none;
@@ -924,6 +1115,10 @@ td, th {
 	.slider-product-wrapper {
 		display: none;
 	}
+
+	.bestseller {
+		margin-bottom: 50px;
+	}
 }
 
 @media (max-width: 576px) {
@@ -937,7 +1132,7 @@ td, th {
 	}
 
 	.banner-text {
-		
+
 		h2 {
 			font-size: 18px;
 		}

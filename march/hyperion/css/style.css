@@ -138,30 +138,6 @@ html {
     padding-left: 15px;
   }
 }
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-    max-width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-    max-width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-    max-width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-    max-width: 100%;
-  }
-}
 .container-fluid {
   position: relative;
   margin-left: auto;
@@ -2249,8 +2225,17 @@ td, th {
   background: #fff;
   border-radius: 5px;
 }
+.product.product-horizon .product-text {
+  padding: 10px;
+}
 .product.product-horizon .product-img {
   margin-right: 10px;
+}
+.product.product-vertical .product-img {
+  margin-bottom: 20px;
+}
+.product.product-vertical h5 {
+  margin-bottom: 10px;
 }
 .product.slider-product {
   min-width: 310px;
@@ -2272,11 +2257,30 @@ td, th {
 
 .product-img {
   overflow: hidden;
+  border-radius: 5px;
+}
+.product-img .inner-hot {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  width: 55px;
+  padding: 4px;
+  font-family: "NotoSans", sans-serif;
+  font-size: 12px;
+  background: #D23336;
+  color: #fff;
+  text-align: center;
+}
+.product-img .inner-hot:hover {
+  background: #a3292b;
+}
+.product-img img {
+  width: 100%;
+}
+.product-img a:hover {
+  opacity: 1;
 }
 
-.product-text {
-  padding: 10px;
-}
 .product-text h5 {
   font-weight: 500;
   margin-bottom: 0;
@@ -2313,6 +2317,48 @@ td, th {
 .view-more i {
   margin-left: 5px;
   font-size: 18px;
+}
+
+.arrow-slider {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+}
+.arrow-slider .arrow-inner {
+  margin-right: 8px;
+}
+.arrow-slider .arrow-inner:last-child {
+  margin-right: 0;
+}
+
+.arrow-inner-wrapper {
+  position: relative;
+}
+
+.arrow-inner {
+  position: absolute;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+.arrow-inner.left {
+  left: -35px;
+}
+.arrow-inner.right {
+  right: -35px;
+}
+.arrow-inner.arrow-slider-inner {
+  position: relative;
+}
+.arrow-inner:hover {
+  background: #c7c7c7;
 }
 
 .banner {
@@ -2361,6 +2407,91 @@ td, th {
   margin-bottom: 30px;
 }
 
+.bestseller {
+  margin-bottom: 80px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.title-wrapper h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.title-wrapper img {
+  margin-right: 10px;
+}
+
+.swatch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.swatch {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  background: #333333;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+.swatch:not(:last-child) {
+  margin-right: 5px;
+}
+.swatch:hover, .swatch.active {
+  border-color: #1169b6 !important;
+}
+.swatch.pink {
+  border-color: #d6cdce;
+  background: #d6cdce;
+}
+
+.brands-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  padding-bottom: 120px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: -90px;
+  margin-left: -70px;
+  margin-right: -70px;
+  border-radius: 5px;
+  background-color: #f1bb2f;
+}
+.brands-inner .title-wrapper {
+  margin-bottom: 10px;
+}
+.brands-inner .view-more {
+  margin-bottom: 10px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+.brand h4 {
+  font-weight: 500;
+}
+.brand .availability {
+  font-size: 12px;
+  opacity: 0.3;
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1330px;
@@ -2376,7 +2507,7 @@ td, th {
     margin-left: 330px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .top-bar {
     display: none;
   }
@@ -2400,6 +2531,10 @@ td, th {
 @media (max-width: 993px) {
   .slider-product-wrapper {
     display: none;
+  }
+
+  .bestseller {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 576px) {
