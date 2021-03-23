@@ -2042,16 +2042,6 @@ td, th {
   color: #1169b6;
 }
 
-.spacing-font-weight-bold {
-  font-weight: 700;
-}
-
-.spacing-border-bottom {
-  padding-right: 10px;
-  margin-right: 10px;
-  border-right: 1px solid rgba(51, 51, 51, 0.2);
-}
-
 .categories-main {
   display: flex;
   align-items: center;
@@ -2482,6 +2472,18 @@ td, th {
   margin-bottom: 40px;
 }
 
+.spacing-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.spacing-border-bottom {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.spacing-row-bottom-20 {
+  margin-bottom: 20px;
+}
+
 .bestseller {
   margin-bottom: 80px;
 }
@@ -2636,6 +2638,9 @@ td, th {
 .infobox p {
   opacity: 0.6;
 }
+.infobox h3 {
+  font-weight: 500;
+}
 
 .infobox-number {
   text-align: center;
@@ -2645,6 +2650,10 @@ td, th {
   font-family: "NotoSans", sans-serif;
   font-weight: 500;
   color: #1169b6;
+}
+
+.infobox-foto {
+  margin-right: 43px;
 }
 
 .recomend-products {
@@ -2879,6 +2888,7 @@ td, th {
   background-position: center;
   padding-top: 60px;
   padding-bottom: 47px;
+  margin-bottom: 20px;
 }
 .subscribe p {
   font-size: 12px;
@@ -2911,6 +2921,156 @@ td, th {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.about-infobox {
+  margin-bottom: 60px;
+}
+
+.footer-main {
+  margin-bottom: 15px;
+}
+.footer-main h4 {
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.footer-main .logo-main {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.footer-main .spacing-border-bottom {
+  margin-bottom: 38px;
+}
+
+.list-vertical {
+  list-style: none;
+  padding-left: 0;
+}
+.list-vertical li {
+  margin-bottom: 0;
+}
+.list-vertical li:hover a {
+  color: #1169b6;
+}
+.list-vertical a {
+  display: block;
+  padding: 10px 0;
+  color: #333333;
+  opacity: 0.8;
+}
+
+.open-time li {
+  padding: 10px 0;
+  opacity: 0.8;
+}
+
+.our-apps-wrapper h4 {
+  margin-bottom: 15px;
+}
+.our-apps-wrapper a {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.our-apps-wrapper a:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.pay span,
+.shipping span,
+.social-link span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.pay span,
+.shipping span {
+  margin-right: 20px;
+}
+
+.follow {
+  color: #fff;
+  display: inline-flex;
+}
+.follow a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 5px;
+  color: #fff;
+}
+
+.facebook {
+  background: #3b5998;
+}
+.facebook:hover {
+  background: #fff;
+  color: #3b5998;
+}
+
+.twitter {
+  background: #55acee;
+}
+.twitter:hover {
+  background: #fff;
+  color: #55acee;
+}
+
+.pinterest {
+  background: #CB2027;
+}
+.pinterest:hover {
+  background: #fff;
+  color: #CB2027;
+}
+
+.linked {
+  background: #007ab9;
+}
+.linked:hover {
+  background: #fff;
+  color: #007ab9;
+}
+
+.telegram {
+  background: #37AEE2;
+}
+.telegram:hover {
+  background: #fff;
+  color: #37AEE2;
+}
+
+.copyring {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.copyring-text {
+  margin-bottom: 10px;
+}
+
+.copyring-link {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.copyring-link a {
+  margin-right: 10px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+.copyring-link a:last-child {
+  margin-right: 0;
 }
 
 @media (min-width: 1300px) {
@@ -2954,6 +3114,15 @@ td, th {
 
   .button-burger {
     display: block;
+  }
+}
+@media (min-width: 993px) {
+  .shipping {
+    text-align: center;
+  }
+
+  .social-link {
+    text-align: right;
   }
 }
 @media (max-width: 993px) {

@@ -505,17 +505,6 @@ td, th {
 	color: $color-primary
 }
 
-.spacing-font-weight-bold {
-	font-weight: 700;
-}
-
-
-.spacing-border-bottom {
-	padding-right: 10px;
-	margin-right: 10px;
-	border-right: 1px solid rgba($color: $color-base, $alpha: 0.2);
-}
-
 .categories-main {
 	display: flex;
 	align-items: center;
@@ -1030,9 +1019,19 @@ td, th {
 	> [class*="col-"] {
 		margin-bottom: 40px;
 	}
-
 }
 
+.spacing-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.spacing-border-bottom {
+	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
+}
+
+.spacing-row-bottom-20 {
+	margin-bottom: 20px;
+}
 // ------------------------------------------------------------------------------------------------
 // BESTSELLER
 // ------------------------------------------------------------------------------------------------
@@ -1220,6 +1219,10 @@ td, th {
 	p {
 		opacity: 0.6;
 	}
+
+	h3 {
+		font-weight: 500;
+	}
 }
 
 .infobox-number {
@@ -1230,6 +1233,10 @@ td, th {
 	font-family: $font-title;
 	font-weight: 500;
 	color: $color-primary;
+}
+
+.infobox-foto {
+	margin-right: 43px;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -1497,6 +1504,7 @@ td, th {
 	@include background(url(../img/hyperion-subscribe-bg.jpg));
 	padding-top: 60px;
 	padding-bottom: 47px;
+	margin-bottom: 20px;
 
 	p {
 		font-size: 12px;
@@ -1538,6 +1546,199 @@ td, th {
 	height: 100%;
 }
 
+// ------------------------------------------------------------------------------------------------
+// ABOUT-INFOBOX
+// ------------------------------------------------------------------------------------------------
+
+.about-infobox {
+	margin-bottom: 60px;
+}
+
+// ------------------------------------------------------------------------------------------------
+// FOOTER-MAIN
+// ------------------------------------------------------------------------------------------------
+
+.footer-main {
+	margin-bottom: 15px;
+
+	h4 {
+		margin-bottom: 25px;
+		font-weight: 500;
+	}
+
+	.logo-main {
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+
+	.spacing-border-bottom {
+		margin-bottom: 38px;
+	}
+}
+
+.list-vertical {
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		margin-bottom: 0;
+
+		&:hover {
+
+			a {
+				color: $color-primary;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		padding: 10px 0;
+		color: $color-base;
+		opacity: 0.8;
+	}
+}
+
+.open-time {
+	
+	li {
+		padding: 10px 0;
+		opacity: 0.8;
+	}
+}
+
+.our-apps-wrapper {
+
+	h4 {
+		margin-bottom: 15px;
+	}
+
+	a {
+		display: inline-block;
+		margin-bottom: 20px;
+		margin-right: 10px;
+	
+		&:last-child {
+			margin-bottom: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.pay,
+.shipping,
+.social-link {
+
+	span {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+}
+
+.pay,
+.shipping {
+
+	span {
+		margin-right: 20px;
+	}
+}
+
+.follow{
+	color: #fff;
+	display: inline-flex;
+
+	a{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+		padding: 5px;
+		border-radius: 50%;
+		text-align: center;
+		margin: 0 5px;
+		color: #fff;
+	}
+}
+
+.facebook{
+	background: #3b5998;
+
+	&:hover {
+		background: #fff;
+		color: #3b5998;
+	}
+}
+
+.twitter{
+	background: #55acee;
+
+	&:hover {
+		background: #fff;
+		color: #55acee;
+	}
+}
+
+.pinterest{
+	background: #CB2027;
+
+	&:hover {
+		background: #fff;
+		color: #CB2027;
+	}
+}
+
+.linked{
+	background: #007ab9;
+
+	&:hover {
+		background: #fff;
+		color: #007ab9;
+	}
+}
+
+.telegram {
+	background: #37AEE2;
+
+	&:hover {
+		background: #fff;
+		color: #37AEE2;
+	}
+}
+
+.copyring {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: 12px;
+	opacity: 0.5;
+
+}
+
+.copyring-text {
+	margin-bottom: 10px;
+}
+
+.copyring-link {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+
+	a {
+		margin-right: 10px;
+		color: $color-base;
+		margin-bottom: 5px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// MEDIA
+// ------------------------------------------------------------------------------------------------
 
 @media (min-width: 1300px) {
 	.container {
@@ -1584,6 +1785,17 @@ td, th {
 
 	.button-burger {
 		display: block;
+	}
+}
+
+@media (min-width: 993px) {
+
+	.shipping {
+		text-align: center;
+	}
+	
+	.social-link {
+		text-align: right;
 	}
 }
 
