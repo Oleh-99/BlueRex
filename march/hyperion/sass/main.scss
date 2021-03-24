@@ -28,6 +28,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 20px;
 	font-family: $font-title;
+	font-weight: 500;
 }
 
 h1 {
@@ -176,7 +177,6 @@ textarea {
 button,
 input[type="button"],
 input[type="submit"] {
-	display: inline-block;
 	height: 40px;
 	background: $color-primary;
 	color: #fff;
@@ -189,14 +189,14 @@ input[type="submit"] {
 	pointer-events: all;
 	cursor: pointer;
 
-	// & a {
-	// 	display: inline-block;
-	// }
-
 	&:hover {
 		background-color: rgba($color: $color-primary, $alpha: 0.7);
 		opacity: 1;
 	}
+}
+
+a.button {
+	display: inline-block;
 }
 
 table {
@@ -312,7 +312,7 @@ td, th {
 }
 
 .header-general {
-	font-weight: 500;
+	// font-weight: 500;
 
 	.header-row {	
 		height: 100px;
@@ -365,7 +365,11 @@ td, th {
 .logo-main {
 	display: inline-block;
 	flex-shrink: 0;
-	max-height: 70px;
+	
+
+	img {
+		max-height: 70px;
+	}
 }
 
 .header-col-left {
@@ -808,6 +812,10 @@ td, th {
 	&.best-choise {
 		align-items: flex-start;
 		
+		h5 {
+			font-weight: 400;
+		}
+		
 		.product-text {
 			padding: 0 10px;
 		}
@@ -873,7 +881,6 @@ td, th {
 .product-text {
 	
 	h5 {
-		font-weight: 500;
 		margin-bottom: 0;
 
 		a {
@@ -1015,6 +1022,10 @@ td, th {
 		margin-bottom: 20px;
 		font-size: 12px;
 		opacity: 0.8;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
 	}
 
 	&:hover {
@@ -1264,7 +1275,6 @@ td, th {
 	overflow: hidden;
 
 	h4 {
-		font-weight: 500;
 		margin-bottom: 15px;
 	}
 
@@ -1298,10 +1308,6 @@ td, th {
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
-
-	h5 {
-		font-weight: 500;
-	}
 
 	a {
 		color: $color-base;
@@ -1343,6 +1349,7 @@ td, th {
 
 	img {
 		height: 100%;
+		width: 100%;
 		object-fit: cover;
 		object-position: center;
 	}
@@ -1624,7 +1631,6 @@ td, th {
 
 	h3 {
 		margin-bottom: 12px;
-		font-weight: 500;
 		text-transform: capitalize;
 
 		a {
@@ -1775,7 +1781,6 @@ td, th {
 
 	h4 {
 		margin-bottom: 25px;
-		font-weight: 500;
 	}
 
 	.logo-main {
@@ -2063,7 +2068,6 @@ td, th {
 	margin-right: 10px;
 	margin-bottom: 10px;
 	font-size: 12px;
-	font-weight: 500;
 
 	span:not(.grid-title) {
 		margin-right: 5px;
@@ -2154,7 +2158,6 @@ td, th {
 	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
     padding-bottom: 5px;
     margin-bottom: 20px;
-	font-weight: 500;
 }
 
 .price-wrapper {
@@ -2188,7 +2191,9 @@ td, th {
 			&:hover,
 			&.active {
 				background: $color-primary;
+				border-color: $color-primary;
 				color: #fff;
+				opacity: 1;
 			}
 		}
 	}
@@ -2252,7 +2257,6 @@ td, th {
 
 	h4 {
 		margin-bottom: 6px;
-		font-weight: 500;
 	}
 
 	.proffession {
@@ -2267,14 +2271,14 @@ td, th {
 	}
 }
 
-.teammember-inner {
+.teammember-background {
 	background: #f1bb2f;
-	height: 180px;
+	height: 190px;
 	border-radius: 5px;
 	margin-left: -80px;
 	margin-top: -23px;
 	margin-right: -80px;
-	margin-bottom: -140px;
+	margin-bottom: -150px;
 }
 
 .teammember-foto {
@@ -2282,6 +2286,10 @@ td, th {
 	border-radius: 50%;
 	overflow: hidden;
 	margin-bottom: 23px;
+
+	img {
+		max-height: 120px;
+	}
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -2311,6 +2319,12 @@ td, th {
 	position: relative;
 	padding: 19px 10px;
 	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
+
+	&:hover {
+		&::before {
+			color: $color-primary;
+		}
+	}
 	
 	&::before {
 		content: "\f078";
@@ -2320,6 +2334,7 @@ td, th {
 		padding: 10px;
 		font-size: 18px;
 		z-index: 1;
+		transition: color 0.3s ease;
 		cursor: pointer;
 	}
 
@@ -2373,6 +2388,7 @@ td, th {
 // ------------------------------------------------------------------------------------------------
 
 @media (min-width: 1300px) {
+
 	.container {
 		width: 1330px;
 		max-width: 100%;
@@ -2384,6 +2400,7 @@ td, th {
 }
 
 @media (min-width: 1200px) {
+
 	.slider-wrapper {
 		margin-left: 330px;
 	}
@@ -2408,6 +2425,11 @@ td, th {
 		p {
 			max-width: 430px;
 		}
+	}
+
+	.teammember-wrapper {
+		position: relative;
+		margin-right: calc(((1300px - 30px) / 2) - 45vw);
 	}
 }
 
@@ -2446,6 +2468,7 @@ td, th {
 }
 
 @media (max-width: 993px) {
+
 	.slider-product-wrapper {
 		display: none;
 	}
@@ -2475,17 +2498,46 @@ td, th {
 			margin-bottom: 30px;
 		}
 	}
+
+	.to-top {
+		display: none;
+	}
 }
 
 @media (max-width: 576px) {
+	
+	.slider-content h1,
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+	
+	h3 {
+		font-size: 18px;
+	}
+	
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 13px;
+	}
+	
+	h6 {
+		font-size: 11px;
+	}
 
 	.slider-content {
 		margin-top: 0;
 	}
 
-	h1 {
-		font-size: 30px;
-	}
+	.logo-main img {
+		max-height: 30px;
+	} 
 
 	.banner-text {
 

@@ -1994,6 +1994,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   font-family: "NotoSans", sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -2146,7 +2147,6 @@ textarea {
 button,
 input[type=button],
 input[type=submit] {
-  display: inline-block;
   height: 40px;
   background: #1169b6;
   color: #fff;
@@ -2165,6 +2165,10 @@ input[type=button]:hover,
 input[type=submit]:hover {
   background-color: rgba(17, 105, 182, 0.7);
   opacity: 1;
+}
+
+a.button {
+  display: inline-block;
 }
 
 table {
@@ -2243,9 +2247,6 @@ td, th {
   margin-right: 3px;
 }
 
-.header-general {
-  font-weight: 500;
-}
 .header-general .header-row {
   height: 100px;
 }
@@ -2292,6 +2293,8 @@ td, th {
 .logo-main {
   display: inline-block;
   flex-shrink: 0;
+}
+.logo-main img {
   max-height: 70px;
 }
 
@@ -2668,6 +2671,9 @@ td, th {
 .product.best-choise {
   align-items: flex-start;
 }
+.product.best-choise h5 {
+  font-weight: 400;
+}
 .product.best-choise .product-text {
   padding: 0 10px;
 }
@@ -2713,7 +2719,6 @@ td, th {
 }
 
 .product-text h5 {
-  font-weight: 500;
   margin-bottom: 0;
 }
 .product-text h5 a {
@@ -2838,6 +2843,9 @@ td, th {
   margin-bottom: 20px;
   font-size: 12px;
   opacity: 0.8;
+}
+.banner:not(:last-child) {
+  margin-bottom: 20px;
 }
 .banner:hover img {
   transform: scale(1.1);
@@ -3044,7 +3052,6 @@ td, th {
   overflow: hidden;
 }
 .brand h4 {
-  font-weight: 500;
   margin-bottom: 15px;
 }
 .brand .availability {
@@ -3077,9 +3084,6 @@ td, th {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
-}
-.category h5 {
-  font-weight: 500;
 }
 .category a {
   color: #333333;
@@ -3117,6 +3121,7 @@ td, th {
 }
 .infobox-hover-image img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -3358,7 +3363,6 @@ td, th {
 }
 .blog-text h3 {
   margin-bottom: 12px;
-  font-weight: 500;
   text-transform: capitalize;
 }
 .blog-text h3 a {
@@ -3482,7 +3486,6 @@ td, th {
 }
 .footer-main h4 {
   margin-bottom: 25px;
-  font-weight: 500;
 }
 .footer-main .logo-main {
   margin-top: -10px;
@@ -3719,7 +3722,6 @@ td, th {
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight: 500;
 }
 .shop-grid-number span:not(.grid-title) {
   margin-right: 5px;
@@ -3799,7 +3801,6 @@ td, th {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   padding-bottom: 5px;
   margin-bottom: 20px;
-  font-weight: 500;
 }
 
 .price-wrapper .title-filter {
@@ -3828,7 +3829,9 @@ td, th {
 }
 .page-numbers a:not(.arrow):hover, .page-numbers a:not(.arrow).active {
   background: #1169b6;
+  border-color: #1169b6;
   color: #fff;
+  opacity: 1;
 }
 .page-numbers i {
   font-weight: 300;
@@ -3872,7 +3875,6 @@ td, th {
 }
 .teammember h4 {
   margin-bottom: 6px;
-  font-weight: 500;
 }
 .teammember .proffession {
   margin-bottom: 10px;
@@ -3884,14 +3886,14 @@ td, th {
   padding: 5px;
 }
 
-.teammember-inner {
+.teammember-background {
   background: #f1bb2f;
-  height: 180px;
+  height: 190px;
   border-radius: 5px;
   margin-left: -80px;
   margin-top: -23px;
   margin-right: -80px;
-  margin-bottom: -140px;
+  margin-bottom: -150px;
 }
 
 .teammember-foto {
@@ -3899,6 +3901,9 @@ td, th {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 23px;
+}
+.teammember-foto img {
+  max-height: 120px;
 }
 
 .about-questions {
@@ -3924,6 +3929,9 @@ td, th {
   padding: 19px 10px;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
+.question:hover::before {
+  color: #1169b6;
+}
 .question::before {
   content: "";
   position: absolute;
@@ -3934,6 +3942,7 @@ td, th {
   padding: 10px;
   font-size: 18px;
   z-index: 1;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 .question:first-child {
@@ -3999,6 +4008,11 @@ td, th {
   .teammembers-title p {
     max-width: 430px;
   }
+
+  .teammember-wrapper {
+    position: relative;
+    margin-right: calc(((1300px - 30px) / 2) - 45vw);
+  }
 }
 @media (max-width: 1199px) {
   .top-bar {
@@ -4059,14 +4073,43 @@ td, th {
   .spacing-col-bottom-40 > [class*=col-] {
     margin-bottom: 30px;
   }
+
+  .to-top {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
+  .slider-content h1,
+h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  h6 {
+    font-size: 11px;
+  }
+
   .slider-content {
     margin-top: 0;
   }
 
-  h1 {
-    font-size: 30px;
+  .logo-main img {
+    max-height: 30px;
   }
 
   .banner-text h2 {
