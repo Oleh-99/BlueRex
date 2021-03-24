@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 32px;
 }
 
 h2 {
@@ -761,6 +761,7 @@ td, th {
 	h1 {
 		font-weight: 700;
 		margin-bottom: 0;
+		font-size: 40px;
 	}
 
 	h6 {
@@ -947,6 +948,7 @@ td, th {
 	font-weight: 600;
 	font-family: $font-title;
 	color: #fff;
+	pointer-events: all;
 
 	i {
 		margin-left: 5px;
@@ -1334,7 +1336,25 @@ td, th {
 	margin-bottom: 20px;
 }
 
+.infobox-hover-image {
+	@include block-absolute(0, 0, 0, 0);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 .infobox {
+	position: relative;
+	overflow: hidden;
+	
+	i {
+		transition: color 0.3s ease;
+	}
 
 	&.infobox-vertical {
 		display: flex;
@@ -1346,42 +1366,94 @@ td, th {
 		}
 	}
 
+	&.infobox-large {
+		padding: 40px;
+
+		p {
+			margin-bottom: 25px;
+		}
+
+		.info-title {
+			margin-bottom: 25px;
+		}
+
+		.infobox-number {
+			margin-bottom: 15px;
+			text-align: left;
+		}
+	}
+
+	&.infobox-background {
+		background-color: #fff;
+		height: 100%;
+		border-radius: 5px;
+
+		a {
+			color: $color-base;
+
+			i {
+				color: $color-primary;
+			}
+		}
+
+		&:hover {
+			color: #fff;
+
+			.infobox-hover-image {
+				opacity: 1;
+			}
+
+			a,
+			i,
+			.infobox-number {
+				color: #fff;
+			}
+		}
+	}
+
+	.view-more {
+		position: relative;
+		z-index: 2;
+	}
+
 	&.infobox-center {
 		text-align: center;
 	}
 
 	p {
 		opacity: 0.6;
+		transition: color 0.3s ease;
 	}
 
-	h3 {
-		font-weight: 500;
-	}
-
-	h5 {
-		font-weight: 600;
-	}
-
-	h3,
-	h5 {
+	.info-title{
 		text-transform: capitalize;
+		font-weight: 600;
+		transition: color 0.3s ease;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 
+	h3.info-title {
+		font-weight: 500;
+	}
+}
 
+.infobox-text {
+	position: relative;
 }
 
 .infobox-number {
-	text-align: center;
+	position: relative;
 	width: 90px;
 	margin-right: 10px;
 	font-size: 50px;
 	font-family: $font-title;
 	font-weight: 500;
 	color: $color-primary;
+	text-align: center;
+	transition: color 0.3s ease;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -1486,6 +1558,7 @@ td, th {
 .title {
 	margin-bottom: 30px;
 	font-weight: 600;
+	text-transform: capitalize;
 }
 
 .sub-title {
@@ -2127,6 +2200,159 @@ td, th {
 }
 
 // ------------------------------------------------------------------------------------------------
+// TITLE-PAGE
+// ------------------------------------------------------------------------------------------------
+
+.title-page {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+// ------------------------------------------------------------------------------------------------
+// ABOUT-PAGE-INFOBOX
+// ------------------------------------------------------------------------------------------------
+
+.about-page-infobox {
+	margin-bottom: 164px;
+}
+
+// ------------------------------------------------------------------------------------------------
+// TEAMMEMBERS
+// ------------------------------------------------------------------------------------------------
+
+.teammembers {
+	margin-bottom: 100px;
+}
+
+.teammembers-title {
+
+	p {
+		margin-bottom: 33px;
+	}
+
+	.sub-title,
+	.title {
+		margin-bottom: 23px;
+	}	
+}
+
+.teammembers-title-wrapper {
+	margin-bottom: 10px;
+}
+
+.teammember {
+	background: #fff;
+	max-width: 200px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+
+	h4 {
+		margin-bottom: 6px;
+		font-weight: 500;
+	}
+
+	.proffession {
+		margin-bottom: 10px;
+		font-size: 12px;
+		color: #212121;
+		opacity: 0.8;
+	}
+
+	a {
+		padding: 5px;
+	}
+}
+
+.teammember-inner {
+	background: #f1bb2f;
+	height: 180px;
+	border-radius: 5px;
+	margin-left: -80px;
+	margin-top: -23px;
+	margin-right: -80px;
+	margin-bottom: -140px;
+}
+
+.teammember-foto {
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 23px;
+}
+
+// ------------------------------------------------------------------------------------------------
+// ABOUT-QUESTIONS
+// ------------------------------------------------------------------------------------------------
+
+.about-questions {
+	margin-bottom: 60px;
+
+	.title {
+		max-width: 400px;
+		margin-bottom: 15px;
+	}
+}
+
+.questions-title-text {
+	margin-bottom: 25px;
+}
+
+.about-questions-foto {
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.question {
+	position: relative;
+	padding: 19px 10px;
+	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
+	
+	&::before {
+		content: "\f078";
+		@include block-absolute(10px, 2px, none, none);
+		font-family: "Font Awesome 5 Pro";
+		font-weight: 400;
+		padding: 10px;
+		font-size: 18px;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	&:first-child {
+		border-top: 1px solid rgba($color: $color-base, $alpha: 0.1);
+
+		&::before {
+			transform: rotate(180deg);
+		}
+
+		h4 {
+			opacity: 1;
+		}
+	}
+
+	p {
+		opacity: 0.8;
+	}
+
+	h4 {
+		opacity: 0.8;
+		margin-bottom: 15px;
+		margin-right: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+// ------------------------------------------------------------------------------------------------
 // CATEGORIES-INFOBOX   page HOME#2
 // ------------------------------------------------------------------------------------------------
 
@@ -2167,6 +2393,20 @@ td, th {
 
 		> [class*="col-"] {
 			margin-bottom: 70px;
+		}
+	}
+
+	.teammembers-title-wrapper{
+		display: flex;
+		justify-content: flex-end
+	}
+
+	.teammembers-title {
+		max-width: 500px;
+		width: 100%;
+	
+		p {
+			max-width: 430px;
 		}
 	}
 }
@@ -2210,7 +2450,9 @@ td, th {
 		display: none;
 	}
 
-	.bestseller  {
+	.bestseller,
+	.about-page-infobox,
+	.teammembers {
 		margin-bottom: 50px;
 	}
 
