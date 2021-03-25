@@ -1963,11 +1963,6 @@ html {
 /*# sourceMappingURL=bootstrap-grid.css.map */
 @font-face {
   font-family: "NotoSans";
-  src: url("../font/NotoSans-Bold.woff");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "NotoSans";
   src: url("../font/NotoSans-Regular.woff");
   font-weight: 400;
 }
@@ -1980,6 +1975,16 @@ html {
   font-family: "NotoSans";
   src: url("../font/NotoSans-SemiBold.woff");
   font-weight: 600;
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../font/NotoSans-Bold.woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../font/NotoSans-Black.woff");
+  font-weight: 900;
 }
 body {
   font-family: "Mulish", sans-serif;
@@ -2195,7 +2200,7 @@ td, th {
   color: #fff;
 }
 .color-scheme-white p, .color-scheme-white ul, .color-scheme-white span, .color-scheme-white i {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .header-main {
@@ -2553,6 +2558,11 @@ td, th {
   color: #fff;
 }
 
+.button.extra-large {
+  height: auto;
+  padding: 19px 40px;
+  font-size: 16px;
+}
 .button.large {
   padding: 10px 30px;
 }
@@ -2561,7 +2571,16 @@ td, th {
   height: 42px;
 }
 .button.small {
-  padding: 10px 17px;
+  padding: 8px 17px;
+}
+.button.transparent {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+}
+.button.transparent:hover {
+  background: #fff;
+  color: #333333;
 }
 .button.color-yellow {
   background: #f1bb2f;
@@ -2840,11 +2859,6 @@ td, th {
 .banner img {
   width: 100%;
 }
-.banner .info {
-  margin-bottom: 20px;
-  font-size: 12px;
-  opacity: 0.8;
-}
 .banner:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -2872,7 +2886,7 @@ td, th {
   padding: 40px;
 }
 .banner.big-large-banner .banner-text .title {
-  font-weight: 700;
+  max-width: 380px;
 }
 .banner.big-large-banner .banner-text .sub-title {
   font-weight: 600;
@@ -2910,52 +2924,18 @@ td, th {
   margin-bottom: 20px;
 }
 
+.info-banner {
+  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
 .link-full {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-.spacing-col-20 {
-  margin-left: -10px;
-  margin-right: -10px;
-  margin-bottom: -20px;
-}
-.spacing-col-20 > [class*=col-] {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 20px;
-}
-
-.spacing-col-bottom-40 {
-  margin-bottom: -40px;
-}
-.spacing-col-bottom-40 > [class*=col-] {
-  margin-bottom: 40px;
-}
-
-.spacing-bottom-10 {
-  margin-bottom: 10px;
-}
-
-.spacing-border-bottom {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-}
-
-.spacing-border-right {
-  padding-right: 15px;
-  margin-right: 15px;
-  border-right: 1px solid rgba(51, 51, 51, 0.2);
-}
-
-.spacing-bottom-20 {
-  margin-bottom: 20px;
-}
-
-.spacing-bottom-30 {
-  margin-bottom: 30px;
 }
 
 .bestseller {
@@ -3352,6 +3332,7 @@ td, th {
 }
 
 .blog-wrapper {
+  height: 100%;
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
@@ -4053,6 +4034,175 @@ td, th {
   overflow: hidden;
 }
 
+.discount-now {
+  margin-bottom: 40px;
+}
+
+.discount-now-inner {
+  background-image: linear-gradient(134.9999998094deg, #ee5959 0%, #ee59aa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+.discount-now-inner .date-inner {
+  width: 57px;
+  height: 59px;
+  margin-right: 8px;
+  padding: 5px 0;
+}
+.discount-now-inner .date-wrapper {
+  margin-bottom: 0;
+}
+
+.discount-foto {
+  margin-bottom: -25px;
+  margin-top: -25px;
+}
+
+.discount-title h4 {
+  margin-bottom: 0;
+}
+.discount-title .title {
+  margin-bottom: 5px;
+}
+
+.hot-product {
+  margin-bottom: 80px;
+}
+
+.hot-product-title {
+  padding: 15px;
+  background: #F1BB2F;
+  color: #fff;
+}
+.hot-product-title .title-wrapper {
+  margin-bottom: 0;
+}
+
+.product-list {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+.product-list a {
+  display: block;
+}
+
+.hot-product-inner {
+  padding: 35px 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+}
+
+.banner-discount {
+  margin-bottom: 70px;
+}
+.banner-discount .banner-text {
+  position: relative;
+  padding: 0;
+}
+.banner-discount .info-banner {
+  margin-bottom: 8px;
+}
+.banner-discount .title {
+  margin-bottom: 25px;
+}
+
+.banner-text-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.banner-line {
+  width: 29px;
+  height: 1px;
+  margin-bottom: 5px;
+  background: #f1bb2f;
+}
+
+.banner-discount-foto {
+  position: relative;
+  margin-top: -70px;
+  margin-right: -25px;
+  margin-left: -25px;
+}
+
+.banner-discount-inner {
+  position: relative;
+  background: #4D7CF5;
+  padding: 30px 60px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+}
+
+.banner-text-opacity {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "NotoSans", sans-serif;
+  font-weight: 900;
+  font-size: 9vw;
+  transform: translateY(40%);
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.popular-categories {
+  margin-bottom: 80px;
+}
+
+.spacing-col-20 {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -20px;
+}
+.spacing-col-20 > [class*=col-] {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.spacing-col-bottom-40 {
+  margin-bottom: -40px;
+}
+.spacing-col-bottom-40 > [class*=col-] {
+  margin-bottom: 40px;
+}
+
+.spacing-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.spacing-border-bottom {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.spacing-border-right {
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.spacing-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.spacing-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.spacing-font-weight-bold {
+  font-weight: 700;
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1330px;
@@ -4140,7 +4290,8 @@ td, th {
   .bestseller,
 .about-page-infobox,
 .teammembers,
-.contact-question {
+.contact-question,
+.popular-categories {
     margin-bottom: 50px;
   }
 
@@ -4165,6 +4316,15 @@ td, th {
 
   .to-top {
     display: none;
+  }
+
+  .banner-discount-inner {
+    padding: 20px;
+  }
+
+  .banner-discount-foto {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 576px) {
@@ -4229,6 +4389,10 @@ h1 {
   }
   .banner.big-large-banner .banner-text {
     padding: 20px;
+  }
+
+  .banner-discount-foto {
+    margin-top: -30px;
   }
 }
 

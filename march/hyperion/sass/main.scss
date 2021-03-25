@@ -247,7 +247,7 @@ td, th {
 	}
 
 	p, ul, span, i {
-		color: rgba($color: #fff, $alpha: 0.8);
+		color: rgba($color: #fff, $alpha: 0.7);
 	}
 }
 
@@ -676,6 +676,12 @@ td, th {
 
 .button {
 
+	&.extra-large {
+		height: auto;
+		padding: 19px 40px;
+		font-size: 16px;
+	}
+
 	&.large {
 		padding: 10px 30px;
 	}
@@ -686,7 +692,18 @@ td, th {
 	}
 
 	&.small {
-		padding: 10px 17px;
+		padding: 8px 17px;
+	}
+
+	&.transparent {
+		background: transparent;
+		border: 2px solid rgba($color: #fff, $alpha: 0.2);
+		border-radius: 0;
+
+		&:hover {
+			background: #fff;
+			color: $color-base;
+		}
 	}
 
 	&.color-yellow {
@@ -1013,6 +1030,8 @@ td, th {
 	}
 }
 
+
+
 .banner {
 	position: relative;
 	border-radius: 5px;
@@ -1022,11 +1041,7 @@ td, th {
 		width: 100%;
 	}
 
-	.info {
-		margin-bottom: 20px;
-		font-size: 12px;
-		opacity: 0.8;
-	}
+	
 
 	&:not(:last-child) {
 		margin-bottom: 20px;
@@ -1072,7 +1087,7 @@ td, th {
 			padding: 40px;
 
 			.title {
-				font-weight: 700;
+				max-width: 380px;
 			}
 
 			.sub-title {
@@ -1120,50 +1135,14 @@ td, th {
 	}
 }
 
+.info-banner {
+	margin-bottom: 20px;
+	font-size: 12px;
+	opacity: 0.8;
+}
+
 .link-full {
 	@include block-absolute(0, 0, 0, 0);
-}
-
-.spacing-col-20 {
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-bottom: -20px;
-
-	> [class*="col-"] {
-		padding-left: 10px;
-		padding-right: 10px;
-		margin-bottom: 20px;
-	}
-}
-
-.spacing-col-bottom-40 {
-	margin-bottom: -40px;
-
-	> [class*="col-"] {
-		margin-bottom: 40px;
-	}
-}
-
-.spacing-bottom-10 {
-	margin-bottom: 10px;
-}
-
-.spacing-border-bottom {
-	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
-}
-
-.spacing-border-right {
-	padding-right: 15px;
-	margin-right: 15px;
-	border-right: 1px solid rgba($color: $color-base, $alpha: 0.2);
-}
-
-.spacing-bottom-20 {
-	margin-bottom: 20px;
-}
-
-.spacing-bottom-30 {
-	margin-bottom: 30px;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -1635,6 +1614,7 @@ td, th {
 }
 
 .blog-wrapper {
+	height: 100%;
 	background: #fff;
 	border-radius: 5px;
 	overflow: hidden;
@@ -2494,6 +2474,204 @@ td, th {
 }
 
 // ------------------------------------------------------------------------------------------------
+// DISCOUNT-NOW Home#3
+// ------------------------------------------------------------------------------------------------
+
+.discount-now {
+	margin-bottom: 40px;
+}
+
+.discount-now-inner {
+	background-image: linear-gradient(134.99999980940316deg, #ee5959 0%, #ee59aa 100%);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 40px;
+
+	.date-inner {
+		width: 57px;
+		height: 59px;
+		margin-right: 8px;
+		padding: 5px 0;
+	}
+
+	.date-wrapper {
+		margin-bottom: 0;
+	}
+}
+
+.discount-foto {
+	margin-bottom: -25px;
+    margin-top: -25px;
+}
+
+.discount-title {
+
+	h4 {
+		margin-bottom: 0;
+	}
+
+	.title {
+		margin-bottom: 5px;
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// HOT-PRODUCT home#3
+// ------------------------------------------------------------------------------------------------
+
+.hot-product {
+	margin-bottom: 80px;
+}
+
+.hot-product-title {
+    padding: 15px;
+	background: #F1BB2F;
+	color: #fff;
+
+	.title-wrapper {
+		margin-bottom: 0;
+	}
+}
+
+.product-list {
+	position: relative;
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+
+	a {
+		display: block;
+	}
+}
+
+.hot-product-inner {
+	padding: 35px 40px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+}
+ 
+// ------------------------------------------------------------------------------------------------
+// BANNER-DISCOUNT Home#3
+// ------------------------------------------------------------------------------------------------
+.banner-discount {
+	margin-bottom: 70px;
+
+	.banner-text {
+		position: relative;
+		padding: 0
+	}
+
+	.info-banner {
+		margin-bottom: 8px;
+	}
+
+	.title {
+		margin-bottom: 25px;
+	}
+}
+
+.banner-text-wrapper {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.banner-line {
+	width: 29px;
+	height: 1px;
+	margin-bottom: 5px;
+	background: #f1bb2f;
+}
+
+.banner-discount-foto {
+	position: relative;
+	margin-top: -70px;
+	margin-right: -25px;
+	margin-left: -25px;
+}
+
+.banner-discount-inner {
+	position: relative;
+	background: #4D7CF5;
+	padding: 30px 60px;
+	border-radius: 5px;
+	box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+}
+
+.banner-text-opacity {
+	@include block-absolute(none, 0, 0, 0);
+	font-family: $font-title;
+	font-weight: 900;
+	font-size: 9vw;
+	transform: translateY(40%);
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFF;
+	opacity: 0.05;
+	pointer-events: none;
+}
+
+// ------------------------------------------------------------------------------------------------
+// POPULAR-CATEGORIES   Home#3
+// ------------------------------------------------------------------------------------------------
+.popular-categories {
+	margin-bottom: 80px;
+}
+
+
+// ------------------------------------------
+// SPACING
+// ------------------------------------------
+
+.spacing-col-20 {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -20px;
+
+	> [class*="col-"] {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+.spacing-col-bottom-40 {
+	margin-bottom: -40px;
+
+	> [class*="col-"] {
+		margin-bottom: 40px;
+	}
+}
+
+.spacing-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.spacing-border-bottom {
+	border-bottom: 1px solid rgba($color: $color-base, $alpha: 0.1);
+}
+
+.spacing-border-right {
+	padding-right: 15px;
+	margin-right: 15px;
+	border-right: 1px solid rgba($color: $color-base, $alpha: 0.2);
+}
+
+.spacing-bottom-20 {
+	margin-bottom: 20px;
+}
+
+.spacing-bottom-30 {
+	margin-bottom: 30px;
+}
+
+.spacing-font-weight-bold {
+	font-weight: 700;
+}
+
+// ------------------------------------------------------------------------------------------------
 // MEDIA
 // ------------------------------------------------------------------------------------------------
 
@@ -2595,7 +2773,8 @@ td, th {
 	.bestseller,
 	.about-page-infobox,
 	.teammembers,
-	.contact-question  {
+	.contact-question,
+	.popular-categories  {
 		margin-bottom: 50px;
 	}
 
@@ -2621,6 +2800,15 @@ td, th {
 
 	.to-top {
 		display: none;
+	}
+
+	.banner-discount-inner {
+		padding: 20px;
+	}
+	
+	.banner-discount-foto {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -2712,4 +2900,8 @@ td, th {
 		}
 		
 	}	
+
+	.banner-discount-foto  {
+		margin-top: -30px;
+	}
 }
