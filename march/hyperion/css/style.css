@@ -2855,16 +2855,24 @@ td, th {
   top: auto;
   padding: 30px;
 }
-.banner.big-banner .banner-text h2 {
+.banner.big-banner .banner-text .title {
   margin-bottom: 20px;
+}
+.banner.banner-with-text .title {
+  margin-bottom: 0;
+}
+.banner.banner-with-text img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  min-height: 250px;
 }
 .banner.big-large-banner .banner-text {
   top: auto;
   padding: 40px;
 }
-.banner.big-large-banner .banner-text h1 {
+.banner.big-large-banner .banner-text .title {
   font-weight: 700;
-  margin-bottom: 0;
 }
 .banner.big-large-banner .banner-text .sub-title {
   font-weight: 600;
@@ -2885,12 +2893,9 @@ td, th {
   padding: 20px;
   pointer-events: none;
 }
-.banner-text h2 {
-  font-weight: 600;
+.banner-text .title {
   margin-bottom: 10px;
 }
-.banner-text h1,
-.banner-text h2,
 .banner-text .sub-title {
   text-transform: capitalize;
 }
@@ -2900,6 +2905,9 @@ td, th {
 }
 .banner-text a {
   pointer-events: all;
+}
+.banner-text.banner-title .title {
+  margin-bottom: 20px;
 }
 
 .link-full {
@@ -3254,11 +3262,11 @@ td, th {
   margin-right: 0;
 }
 .recomend-products-inner ul li:hover a, .recomend-products-inner ul li.active a {
-  border-color: #1169b6;
+  border-color: rgba(17, 105, 182, 0.9);
 }
 .recomend-products-inner ul a {
   color: #333333;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid rgba(17, 105, 182, 0);
   white-space: nowrap;
 }
 .recomend-products-inner ul a:hover {
@@ -4033,6 +4041,18 @@ td, th {
   margin-bottom: 60px;
 }
 
+.banner-product {
+  margin-bottom: 40px;
+}
+
+.banner-product-inner {
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1330px;
@@ -4101,6 +4121,15 @@ td, th {
 
   .social-link {
     text-align: right;
+  }
+
+  .banner-product-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .banner-product-content-inner {
+    max-width: 420px;
   }
 }
 @media (max-width: 993px) {
@@ -4185,6 +4214,20 @@ h1 {
   }
 
   .infobox.infobox-large {
+    padding: 20px;
+  }
+
+  .banner-product-inner {
+    padding: 20px;
+  }
+
+  .banner.banner-with-text p {
+    display: none;
+  }
+  .banner.banner-with-text .title {
+    margin-bottom: 10px;
+  }
+  .banner.big-large-banner .banner-text {
     padding: 20px;
   }
 }

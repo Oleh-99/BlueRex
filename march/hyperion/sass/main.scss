@@ -1045,9 +1045,23 @@ td, th {
 			top: auto;
 			padding: 30px;
 
-			h2 {
+			.title {
 				margin-bottom: 20px;
 			}
+		}
+	}
+
+	&.banner-with-text {
+
+		.title {
+			margin-bottom: 0;
+		}
+
+		img {
+			object-fit: cover;
+			object-position: center;
+			height: 100%;
+			min-height: 250px;
 		}
 	}
 
@@ -1057,9 +1071,8 @@ td, th {
 			top: auto;
 			padding: 40px;
 
-			h1 {
+			.title {
 				font-weight: 700;
-				margin-bottom: 0;
 			}
 
 			.sub-title {
@@ -1082,13 +1095,10 @@ td, th {
 	padding: 20px;
 	pointer-events: none;
 
-	h2 {
-		font-weight: 600;
+	.title {
 		margin-bottom: 10px;
 	}
 
-	h1,
-	h2,
 	.sub-title {
 		text-transform: capitalize;
 	}
@@ -1100,6 +1110,13 @@ td, th {
 
 	a {
 		pointer-events: all;
+	}
+
+	&.banner-title {
+
+		.title {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -1516,14 +1533,14 @@ td, th {
 			&.active {
 				
 				a {
-					border-color: $color-primary;
+					border-color: rgba($color: $color-primary, $alpha: 0.9);
 				}
 			}
 		}
 
 		a {
 			color: $color-base;
-			border-bottom: 2px solid transparent;
+			border-bottom: 2px solid rgba($color: $color-primary, $alpha: 0);
 			white-space: nowrap;
 
 			&:hover {
@@ -2461,6 +2478,22 @@ td, th {
 }
 
 // ------------------------------------------------------------------------------------------------
+// BANNER-PRODUCT Home#2
+// ------------------------------------------------------------------------------------------------
+
+.banner-product {
+	margin-bottom: 40px;
+}
+
+.banner-product-inner {
+	background: #fff;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+}
+
+// ------------------------------------------------------------------------------------------------
 // MEDIA
 // ------------------------------------------------------------------------------------------------
 
@@ -2541,6 +2574,15 @@ td, th {
 	
 	.social-link {
 		text-align: right;
+	}
+
+	.banner-product-content {
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	.banner-product-content-inner {
+		max-width: 420px;
 	}
 }
 
@@ -2644,4 +2686,30 @@ td, th {
 			padding: 20px;
 		}
 	}
+
+	.banner-product-inner {
+		padding: 20px;
+	}
+
+	.banner {
+
+		&.banner-with-text {
+
+			p {
+				display: none;
+			}
+	
+			.title {
+				margin-bottom: 10px;
+			}
+		}
+
+		&.big-large-banner {
+
+			.banner-text {
+				padding: 20px;
+			}
+		}
+		
+	}	
 }
