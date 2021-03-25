@@ -190,7 +190,7 @@ input[type="submit"] {
 	cursor: pointer;
 
 	&:hover {
-		background-color: rgba($color: $color-primary, $alpha: 0.7);
+		background: #0a4a81;
 		opacity: 1;
 	}
 }
@@ -654,7 +654,7 @@ td, th {
 .button-burger {
 	display: none;
 	font-size: 20px;
-	padding: 6px 15px;
+	padding: 5px 15px;
 	background: #fff;
 	border: 1px solid rgba($color: $color-base, $alpha: 0.5);
 
@@ -662,6 +662,13 @@ td, th {
 		margin-left: 0;
 		opacity: 1;
 		color: $color-base;
+	}
+
+	&:hover {
+
+		i {
+			color: #fff;
+		}	
 	}
 }
 
@@ -719,12 +726,9 @@ td, th {
 
 		&:hover {
 			color: #fff;
+			background: $color-primary;
+			border-color: $color-primary;
 		}
-	}
-
-	&:hover {
-		background: #0a4a81;
-		opacity: 1;
 	}
 }
 
@@ -1172,8 +1176,10 @@ td, th {
 	display: flex;
 	align-items: center;
 	margin-bottom: 15px;
+}
 
-
+.color-filter {
+	flex-wrap: wrap;
 }
 
 .swatch {
@@ -1192,6 +1198,7 @@ td, th {
 	.color-filter & {
 		width: 25px;
 		height: 25px;
+		margin-bottom: 5px;
 
 		&:not(:last-child) {
 			margin-right: 13px;
@@ -1281,6 +1288,13 @@ td, th {
 	.availability {
 		font-size: 12px;
 		opacity: 0.3;
+	}
+
+	&:hover {
+
+		> img {
+			transform: scale(1.1);
+		}
 	}
 }
 
@@ -1375,6 +1389,13 @@ td, th {
 
 	&.infobox-large {
 		padding: 40px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.05);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 
 		p {
 			margin-bottom: 25px;
@@ -1391,9 +1412,7 @@ td, th {
 	}
 
 	&.infobox-background {
-		background-color: #fff;
 		height: 100%;
-		border-radius: 5px;
 
 		a {
 			color: $color-base;
@@ -2365,7 +2384,65 @@ td, th {
 	}
 }
 
+// ------------------------------------------------------------------------------------------------
+// LOCATION  page Contact us
+// ------------------------------------------------------------------------------------------------
 
+.location {
+	margin-bottom: 50px;
+}
+
+.map-wrapper {
+	border-radius: 5px;
+	overflow: hidden;
+	min-height: 540px;
+	height: 100%;
+}
+
+.location-table {
+	border: none;
+
+	td {
+		padding: 10px 0;
+		border: none;
+		text-align: left;
+
+		&:not(:first-child) {
+			opacity: 0.8;
+		}
+
+		&:not(:last-child) {
+			padding-right: 10px;
+		}
+	}
+}
+
+// ------------------------------------------------------------------------------------------------
+// CONTACT-QUESTION
+// ------------------------------------------------------------------------------------------------
+
+.contact-question {
+	margin-bottom: 120px;
+}
+
+.contact-question-inner {
+	text-align: center;
+
+	p {
+		max-width: 540px;
+		margin-left: auto;
+		margin-right: auto;
+		color: rgba(51, 51, 51, 0.6);
+	}
+
+	strong {
+		color: $color-base;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+}
 
 // ------------------------------------------------------------------------------------------------
 // CATEGORIES-INFOBOX   page HOME#2
@@ -2475,7 +2552,8 @@ td, th {
 
 	.bestseller,
 	.about-page-infobox,
-	.teammembers {
+	.teammembers,
+	.contact-question  {
 		margin-bottom: 50px;
 	}
 
@@ -2557,6 +2635,13 @@ td, th {
 
 		.title-wrapper {
 			flex-wrap: wrap;
+		}
+	}
+
+	.infobox {
+
+		&.infobox-large {
+			padding: 20px;
 		}
 	}
 }
