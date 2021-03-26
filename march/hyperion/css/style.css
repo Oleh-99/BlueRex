@@ -4738,6 +4738,10 @@ input[id=box]:checked ~ label[for=box] > i {
   .button.extra-large {
     padding: 9px 20px;
   }
+
+  .arrow-inner {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

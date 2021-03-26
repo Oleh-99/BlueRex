@@ -3331,4 +3331,8 @@ input[id="box"]:checked ~ label[for="box"]>i{
 			padding: 9px 20px;
 		}
 	}
+
+	.arrow-inner {
+		display: none;
+	}
 }
