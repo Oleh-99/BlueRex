@@ -2196,10 +2196,10 @@ td, th {
 .color-scheme-white {
   color: #fff;
 }
-.color-scheme-white h1, .color-scheme-white h2, .color-scheme-white h3, .color-scheme-white h4, .color-scheme-white h5, .color-scheme-white h6, .color-scheme-white input {
+.color-scheme-white h1, .color-scheme-white h2, .color-scheme-white h3, .color-scheme-white h4, .color-scheme-white h5, .color-scheme-white h6, .color-scheme-white span, .color-scheme-white input {
   color: #fff;
 }
-.color-scheme-white p, .color-scheme-white ul, .color-scheme-white span, .color-scheme-white i {
+.color-scheme-white p, .color-scheme-white ul, .color-scheme-white i {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -2869,10 +2869,10 @@ td, th {
   top: auto;
   padding: 30px;
 }
-.banner.big-banner .banner-text .title {
+.banner.big-banner .banner-text .title-banner {
   margin-bottom: 20px;
 }
-.banner.banner-with-text .title {
+.banner.banner-with-text .title-banner {
   margin-bottom: 0;
 }
 .banner.banner-with-text img {
@@ -2885,7 +2885,7 @@ td, th {
   top: auto;
   padding: 40px;
 }
-.banner.big-large-banner .banner-text .title {
+.banner.big-large-banner .banner-text .title-banner {
   max-width: 380px;
 }
 .banner.big-large-banner .banner-text .sub-title {
@@ -2907,9 +2907,6 @@ td, th {
   padding: 20px;
   pointer-events: none;
 }
-.banner-text .title {
-  margin-bottom: 10px;
-}
 .banner-text .sub-title {
   text-transform: capitalize;
 }
@@ -2920,8 +2917,31 @@ td, th {
 .banner-text a {
   pointer-events: all;
 }
-.banner-text.banner-title .title {
+.banner-text.banner-title .title-banner {
   margin-bottom: 20px;
+}
+
+.title-banner {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.title-banner.weight-medium {
+  font-weight: 500;
+}
+.title-banner.weight-bold {
+  font-weight: 700;
+}
+.title-banner.size-medium {
+  font-size: 20px;
+}
+.title-banner.size-large {
+  font-size: 32px;
+}
+.title-banner.size-huge {
+  font-size: 40px;
 }
 
 .info-banner {
