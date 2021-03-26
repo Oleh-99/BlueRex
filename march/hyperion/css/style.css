@@ -4714,6 +4714,9 @@ input[id=box]:checked ~ label[for=box] > i {
   .banner.banner-with-text .title {
     margin-bottom: 10px;
   }
+  .banner.banner-with-text .title-banner {
+    margin-bottom: 20px;
+  }
   .banner.big-large-banner .banner-text {
     padding: 20px;
   }
