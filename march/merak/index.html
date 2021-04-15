@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Hind:wght@400;500;600&family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Merak</title>
 </head>
@@ -213,7 +214,7 @@
 																			<a href="#" class="link-full"></a>
 																			<div class="button-product-wrapper">
 																				<a href="#" class="button button-product"><i class="fas fa-plus"></i></a>
-																				<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+																				<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 																				<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 																			</div>
 																		</div>
@@ -235,7 +236,7 @@
 																			<a href="#" class="link-full"></a>
 																			<div class="button-product-wrapper">
 																				<a href="#" class="button button-product"><i class="fas fa-plus"></i></a>
-																				<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+																				<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 																				<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 																			</div>
 																		</div>
@@ -442,7 +443,7 @@
 			<div class="row">
 				<div class="offset-lg-4 col-lg-8 offset-xl-3 col-xl-9">
 					<div class="slider-foto color-schema-white">
-						<div class="swiper-container">
+						<div class="swiper-container" data-option='{"loop":true, "navigation":true, "pagination":true, "slidesPerView": 1}'>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<img src="img/merak-home-1-slider-1.jpg" alt="">
@@ -482,9 +483,9 @@
 								</div>
 							</div>
 							<div class="slider-numbers">
-								<span class="left"><i class="fas fa-chevron-left"></i></span>
+								<span class="slider-left"><i class="fas fa-chevron-left"></i></span>
 								<div class="swiper-pagination"></div>
-								<span class="right"><i class="fas fa-chevron-right"></i></span>
+								<span class="slider-right"><i class="fas fa-chevron-right"></i></span>
 							</div>							
 						</div>
 					</div>
@@ -492,7 +493,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="product-main">
+	<section class="product-main" id="basic-waypoint">
 		<div class="container">
 			<div class="product-main-inner">
 				<div class="title-wrapper">
@@ -517,7 +518,7 @@
 									<a href="pages/single-product.html" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -543,7 +544,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -565,7 +566,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -592,7 +593,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -614,7 +615,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -636,7 +637,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -658,7 +659,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -680,7 +681,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -706,7 +707,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -728,7 +729,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -750,7 +751,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -772,7 +773,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -794,7 +795,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -820,7 +821,7 @@
 									<a href="single-product.html" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -846,7 +847,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -868,7 +869,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -894,7 +895,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -925,7 +926,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -947,7 +948,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -973,7 +974,7 @@
 									<a href="pages/single-product.html" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -999,7 +1000,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -1021,7 +1022,7 @@
 									<a href="#" class="link-full"></a>
 									<div class="button-product-wrapper">
 										<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-										<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+										<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 										<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 									</div>
 								</div>
@@ -1060,7 +1061,7 @@
 										<a href="#" class="link-full"></a>
 										<div class="button-product-wrapper">
 											<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-											<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 										</div>
 									</div>
@@ -1082,7 +1083,7 @@
 										<a href="#" class="link-full"></a>
 										<div class="button-product-wrapper">
 											<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-											<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
 											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 										</div>
 									</div>
@@ -1099,13 +1100,13 @@
 				</div>
 				<div class="col-md-12 offset-lg-1 col-lg-5">
 					<div class="category-foto">
-						<div class="swiper-container">
+						<div class="swiper-container" data-option='{"loop":true, "navigation":true, "pagination":false, "slidesPerView": 1}'>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide"><img src="img/merak-banner-img-2.jpg" alt=""></div>
 								<div class="swiper-slide"><img src="img/merak-banner-img-1.jpg" alt=""></div>
 							</div>
-							<span class="arrow-category left"><i class="fas fa-chevron-left"></i></span>
-							<span class="arrow-category right"><i class="fas fa-chevron-right"></i></span>
+							<span class="arrow-category left slider-left"><i class="fas fa-chevron-left"></i></span>
+							<span class="arrow-category right slider-right"><i class="fas fa-chevron-right"></i></span>
 						</div>
 						<div class="category-banner">
 							<div class="category-banner-content">
@@ -1127,132 +1128,185 @@
 				<h2 class="title">Promotions and discounts</h2>
 				<p>The clothes that you like. New collections of clothes for every taste for you and your family.</p>
 			</div>
-			<div class="row promotions-inner customers-arrow-wrapper">
-				<div class="col-custom-20">
-					<div class="product-box">
-						<div class="product-foto">
-							<img src="img/products(compressed)/merak-product-13-1-min.jpg" alt="">
-							<div class="product-foto-hover">
-								<img src="img/products(compressed)/merak-product-13-0-min.jpg" alt="">
-								<a href="#" class="link-full"></a>
-								<div class="button-product-wrapper">
-									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
-									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+			<div class="promotions-inner customers-arrow-wrapper">
+				<div class="swiper-container" data-option='{"loop":false, "navigation":true, "pagination":false, "slidesPerView": 5, "spaceBetween": 30}'>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-13-1-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-13-0-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Dress with a floral print</a></h6>
+										<div class="check-product">
+											<div class="swatch black"></div>
+											<div class="swatch pink"></div>
+										</div>
+									</div>
+									<div class="price">$67.00</div>
 								</div>
 							</div>
 						</div>
-						<div class="product-text">
-							<div class="product-text-inner">
-								<h6><a href="#" class="link-hover">Dress with a floral print</a></h6>
-								<div class="check-product">
-									<div class="swatch black"></div>
-									<div class="swatch pink"></div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-11-1-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-11-0-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text swiper-slide">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Shirt with a print</a></h6>
+										<div class="check-product">
+											<div class="swatch blue"></div>
+											<div class="swatch light-blue"></div>
+											<div class="swatch black"></div>
+										</div>
+									</div>
+									<div class="price">$58.00</div>
 								</div>
 							</div>
-							<div class="price">$67.00</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-6-0-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-6-1-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Heeled sandals</a></h6>
+									</div>
+									<div class="price">$48.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-4-2-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-4-0-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Light Mom-fit Jeans</a></h6>
+										<div class="check-product">
+											<div class="swatch light-blue"></div>
+											<div class="swatch light"></div>
+										</div>
+									</div>
+									<div class="price">$89.99</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-10-1-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-10-0-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Denim shorts</a></h6>
+									</div>
+									<div class="price">$32.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-11-1-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-11-0-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text swiper-slide">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Shirt with a print</a></h6>
+										<div class="check-product">
+											<div class="swatch blue"></div>
+											<div class="swatch light-blue"></div>
+											<div class="swatch black"></div>
+										</div>
+									</div>
+									<div class="price">$58.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-box">
+								<div class="product-foto">
+									<img src="img/products(compressed)/merak-product-6-0-min.jpg" alt="">
+									<div class="product-foto-hover">
+										<img src="img/products(compressed)/merak-product-6-1-min.jpg" alt="">
+										<a href="#" class="link-full"></a>
+										<div class="button-product-wrapper">
+											<a href="#" class="button button-product"><i class="far fa-plus"></i></a>
+											<a href=".quick-view" class="button button-product button-search" data-effect="mfp-zoom-in"><i class="fas fa-search"></i></a>
+											<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="product-text">
+									<div class="product-text-inner">
+										<h6><a href="#" class="link-hover">Heeled sandals</a></h6>
+									</div>
+									<div class="price">$48.00</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-custom-20">
-					<div class="product-box">
-						<div class="product-foto">
-							<img src="img/products(compressed)/merak-product-11-1-min.jpg" alt="">
-							<div class="product-foto-hover">
-								<img src="img/products(compressed)/merak-product-11-0-min.jpg" alt="">
-								<a href="#" class="link-full"></a>
-								<div class="button-product-wrapper">
-									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
-									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="product-text-inner">
-								<h6><a href="#" class="link-hover">Shirt with a print</a></h6>
-								<div class="check-product">
-									<div class="swatch blue"></div>
-									<div class="swatch light-blue"></div>
-									<div class="swatch black"></div>
-								</div>
-							</div>
-							<div class="price">$58.00</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-custom-20">
-					<div class="product-box">
-						<div class="product-foto">
-							<img src="img/products(compressed)/merak-product-6-0-min.jpg" alt="">
-							<div class="product-foto-hover">
-								<img src="img/products(compressed)/merak-product-6-1-min.jpg" alt="">
-								<a href="#" class="link-full"></a>
-								<div class="button-product-wrapper">
-									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
-									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="product-text-inner">
-								<h6><a href="#" class="link-hover">Heeled sandals</a></h6>
-							</div>
-							<div class="price">$48.00</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-custom-20">
-					<div class="product-box">
-						<div class="product-foto">
-							<img src="img/products(compressed)/merak-product-4-2-min.jpg" alt="">
-							<div class="product-foto-hover">
-								<img src="img/products(compressed)/merak-product-4-0-min.jpg" alt="">
-								<a href="#" class="link-full"></a>
-								<div class="button-product-wrapper">
-									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
-									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="product-text-inner">
-								<h6><a href="#" class="link-hover">Light Mom-fit Jeans</a></h6>
-								<div class="check-product">
-									<div class="swatch light-blue"></div>
-									<div class="swatch light"></div>
-								</div>
-							</div>
-							<div class="price">$89.99</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-custom-20">
-					<div class="product-box">
-						<div class="product-foto">
-							<img src="img/products(compressed)/merak-product-10-1-min.jpg" alt="">
-							<div class="product-foto-hover">
-								<img src="img/products(compressed)/merak-product-10-0-min.jpg" alt="">
-								<a href="#" class="link-full"></a>
-								<div class="button-product-wrapper">
-									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
-									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="product-text-inner">
-								<h6><a href="#" class="link-hover">Denim shorts</a></h6>
-							</div>
-							<div class="price">$32.00</div>
-						</div>
-					</div>
-				</div>
-				<div class="customers-arrow arrow-left"><i class="fas fa-chevron-left"></i></div>
-				<div class="customers-arrow arrow-right"><i class="fas fa-chevron-right"></i></div>
+				<div class="customers-arrow arrow-left slider-left"><i class="fas fa-chevron-left"></i></div>
+				<div class="customers-arrow arrow-right slider-right"><i class="fas fa-chevron-right"></i></div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-lg-4">
@@ -1302,7 +1356,7 @@
 				<p>The clothes that you like. New collections of clothes for every taste for you and your family.</p>
 			</div>
 			<div class="customers-arrow-wrapper">
-			<div class="swiper-container ">
+			<div class="swiper-container" data-option='{"loop":false, "navigation":true, "pagination":false, "slidesPerView": 3, "spaceBetween": 30}'>
 				<div class="swiper-wrapper">
 				  <div class="swiper-slide">
 					<div class="testimonial-wrapper">
@@ -1370,77 +1424,8 @@
 				  </div>
 				</div>
 			</div>
-			<div class="customers-arrow arrow-left"><i class="fas fa-chevron-left"></i></div>
-			<div class="customers-arrow arrow-right"><i class="fas fa-chevron-right"></i></div>
-		</div>
-			<!-- <div class="row customers-arrow-wrapper">
-				<div class="col-md-12 col-lg-4">
-					<div class="testimonial-wrapper">
-						<div class="testimonial">
-							<div class="testimonial-foto">
-								<img src="img/merak-testimonials-1.jpg" alt="">
-							</div>
-							<div class="testimonial-about">
-								<h4>Jennie Edwards</h4>
-								<h6 class="sub-title">Customer</h6>
-							</div>
-						</div>
-						<div class="testimonial-text">
-							<p>Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court built.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-4">
-					<div class="testimonial-wrapper">
-						<div class="testimonial">
-							<div class="testimonial-foto">
-								<img src="img/merak-testimonials-2.jpg" alt="">
-							</div>
-							<div class="testimonial-about">
-								<h4>Kristin Watson </h4>
-								<h6 class="sub-title">Customer</h6>
-							</div>
-						</div>
-						<div class="testimonial-text">
-							<p>Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court built.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-4">
-					<div class="testimonial-wrapper">
-						<div class="testimonial">
-							<div class="testimonial-foto">
-								<img src="img/merak-testimonials-3.jpg" alt="">
-							</div>
-							<div class="testimonial-about">
-								<h4>Courtney Henry</h4>
-								<h6 class="sub-title">Customer</h6>
-							</div>
-						</div>
-						<div class="testimonial-text">
-							<p>Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court built.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-4">
-					<div class="testimonial-wrapper">
-						<div class="testimonial">
-							<div class="testimonial-foto">
-								<img src="img/merak-testimonials-2.jpg" alt="">
-							</div>
-							<div class="testimonial-about">
-								<h4>Kristin Watson </h4>
-								<h6 class="sub-title">Customer</h6>
-							</div>
-						</div>
-						<div class="testimonial-text">
-							<p>Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court built.</p>
-						</div>
-					</div>
-				</div>
-				<div class="customers-arrow arrow-left"><i class="fas fa-chevron-left"></i></div>
-				<div class="customers-arrow arrow-right"><i class="fas fa-chevron-right"></i></div>
-			</div> -->
+			<div class="customers-arrow arrow-left slider-left"><i class="fas fa-chevron-left"></i></div>
+			<div class="customers-arrow arrow-right slider-right"><i class="fas fa-chevron-right"></i></div>
 		</div>
 	</section>
 	<section class="articles">
@@ -1630,8 +1615,7 @@
 	<section class="to-top">
 		<a href="#" class="link-hover"><i class="fas fa-arrow-up"></i><span>To top</span> </a>
 	</section>
-	<div class="quick-view-wraper"></div>
-	<div class="quick-view">
+	<div class="quick-view white-popup mfp-with-anim mfp-hide">
 		<div class="row">
 			<div class="col-md-12 col-lg-6">
 				<img src="img/products(compressed)/merak-product-3-0-min.jpg" alt="">
@@ -1670,6 +1654,9 @@
 	</div>
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/noframework.waypoints.min.js"></script>
+	<script src="js/magnific-popup.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

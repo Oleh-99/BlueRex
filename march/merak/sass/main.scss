@@ -932,6 +932,7 @@ input[type="submit"] {
 		font-family: $font-title;
 		transition: all 0.3s ease;
 		cursor: pointer;
+		outline: none;
 
 		&.left,
 		&.right {
@@ -952,17 +953,15 @@ input[type="submit"] {
 	}
 
 	.swiper-pagination {
+		position: relative;
 		display: flex;
 		text-align: center;
-		margin-left: 20px;
-
-		span {
-			margin: 0 5px;
-		}
 	}
 
 	.swiper-pagination-bullet {
 		background: transparent;
+		width: 20px;
+		height: 20px;
 	}
 }
 
@@ -1398,7 +1397,7 @@ input[type="submit"] {
 	}
 
 	.customers-arrow {
-		top: 40%;
+		top: 50%;
 	}
 }
 
@@ -2355,19 +2354,7 @@ input[type="submit"] {
 // quick-view
 // ------------------------------------------------------------------------------------------------
 
-.quick-view-wraper {
-	display: none;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	background: rgba($color: #000, $alpha: 0.2);
-}
-
 .quick-view {
-	display: none;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -2511,10 +2498,6 @@ input[type="submit"] {
 
 	.slider-foto-inner {
 		padding: 10px;
-	}
-
-	.promotions-inner {
-		margin-bottom: 0;
 	}
 
 	.product-main {
