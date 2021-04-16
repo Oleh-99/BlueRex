@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_bootstrap-grid.scss';
+@import '_tooltip.scss';
 
 // ------------------------------------------------------------------------------------------------
 // Variables
@@ -2356,14 +2357,27 @@ input[type="submit"] {
 
 .quick-view {
 	position: fixed;
-	top: 50%;
-	left: 50%;
+	top: calc(50% - 250px);
+	left: calc(50% - 410px);
 	width: 820px;
 	padding: 20px;
-	transform: translate(-50%, -50%);
+	// transform: translate(-50%, -50%);
 	background: #fff;
 	z-index: 10;
 }
+
+.with-animated {
+    transform: translateY(150px);
+	opacity: 0;
+	transition: all .3s ease;
+
+	&.animate {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
 
 // ------------------------------------------------------------------------------------------------
 // MEDIA
