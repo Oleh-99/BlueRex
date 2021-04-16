@@ -2361,7 +2361,6 @@ input[type="submit"] {
 	left: calc(50% - 410px);
 	width: 820px;
 	padding: 20px;
-	// transform: translate(-50%, -50%);
 	background: #fff;
 	z-index: 10;
 }
@@ -2377,7 +2376,32 @@ input[type="submit"] {
 	}
 }
 
+.slider-left,
+.slider-right {
+	cursor: pointer;
+}
 
+#gmap {
+    width: 100%; 
+    height: 520px;
+
+	h3 {
+		margin-bottom: 0;
+	}
+}
+
+.gallery-thumbs {
+	margin: 10px 0;
+
+	.swiper-slide {
+		max-height: 100%;
+		opacity: 0.4;
+	}
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+	opacity: 1;
+}
 
 // ------------------------------------------------------------------------------------------------
 // MEDIA

@@ -9,6 +9,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Hind:wght@400;500;600&family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/photoswipe.min.css">
+	<link rel="stylesheet" href="../css/default-skin.min.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<title>Dress with a floral print</title>
 </head>
@@ -460,18 +462,20 @@
 		<div class="container">
 			<div class="row product-main-page-inner">
 				<div class="col-md-12 col-lg-8">
-					<div class="row spacing-30">
-						<div class="col-sm-12 col-md-6">
-							<img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt="">
+					<div class="swiper-container gallery-thumbs"  data-option='{"loop":true, "slidesPerView": 3, "freeMode":true, "loopedSlides": 5}'>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></div>
 						</div>
-						<div class="col-sm-12 col-md-6">
-							<img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt="">
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt="">
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt="">
+					</div>
+					<div class="swiper-container gallery-top" data-option='{"loop":true, "slidesPerView": 1, "freeMode":true, "loopedSlides": 5}'>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -778,6 +782,8 @@
 		<a href="#" class="link-hover"><i class="fas fa-arrow-up"></i><span>To top</span> </a>
 	</section>
 	<script src="../js/jquery-3.6.0.min.js"></script>
+	<script src="../js/swiper-bundle.min.js"></script>
+	<script src="../js/photoswipe.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
 	<script src="../js/main.js"></script>
 </body>
