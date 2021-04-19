@@ -1,5 +1,4 @@
 (function($) {
-	$.noConflict();
 
 	function productTabs() {
 		$('.product-main').each(function() {
@@ -23,17 +22,17 @@
 	}
 
 	function toTop() {
-		var toTop = $('.to-top');
+		var $toTop = $('.to-top');
 
 		$(document).scroll(function () {
 			if ($(this).scrollTop() > 300) {
-				toTop.fadeIn();
+				$toTop.fadeIn();
 			} else {
-				toTop.fadeOut();
+				$toTop.fadeOut();
 			}
 		});
 
-		toTop.click(function () {
+		$toTop.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
 			}, 400);
@@ -49,9 +48,9 @@
 			return;
 		}
 
-		$swipers.each(function(e) {
+		$swipers.each(function() {
 			var $this = $(this);
-			var $thisData = $this .data('option');
+			var $thisData = $this.data('option');
 			new Swiper(this, renderSlider($thisData));
 		});
 
@@ -102,11 +101,11 @@
 	}
 
 	function singleProduct() {
-		if('undefined' === typeof Swiper || 0 === $(".gallery-thumbs").length || 0 === $(".gallery-top").length) {
+		if('undefined' === typeof Swiper || 0 === $('.gallery-thumbs').length || 0 === $('.gallery-top').length) {
 			return;
 		}
 
-		var galleryThumbs = new Swiper(".gallery-thumbs", {
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
 			spaceBetween: 10,
 			slidesPerView: 4,
 			loop: true,
@@ -115,24 +114,22 @@
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true
 		});
-			new Swiper(".gallery-top", {
+		new Swiper('.gallery-top', {
 			spaceBetween: 10,
 			loop: true,
 			loopedSlides: 5,
 			thumbs: {
 				swiper: galleryThumbs
 			}
-			});
+		});
 	}
 
 	function quickView() {
-		var $btnPopup = $('.btn-popup');
-
-		if ('undefined' === typeof $btnPopup.magnificPopup) {
+		if ('undefined' === typeof $.fn.magnificPopup) {
 			return;
 		}
 		
-		$btnPopup.each(function(e) {
+		$('.btn-popup').each(function() {
 			$(this).magnificPopup({
 				type: 'inline',
 				removalDelay: 500,
@@ -143,9 +140,7 @@
 				},
 				midClick: true,
 			});
-		})
-
-
+		});
 	}
 
 	function filterProduct() {
@@ -208,166 +203,166 @@
 			return;
 		}
 
-		var arrStyle =[
+		var arrStyle = [
 			{
-			  "elementType": "geometry",
-			  "stylers": [
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#f5f5f5"
+					"color": "#f5f5f5"
 				}
-			  ]
+				]
 			},
 			{
-			  "elementType": "labels.icon",
-			  "stylers": [
+				"elementType": "labels.icon",
+				"stylers": [
 				{
-				  "visibility": "off"
+					"visibility": "off"
 				}
-			  ]
+				]
 			},
 			{
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#616161"
+					"color": "#616161"
 				}
-			  ]
+				]
 			},
 			{
-			  "elementType": "labels.text.stroke",
-			  "stylers": [
+				"elementType": "labels.text.stroke",
+				"stylers": [
 				{
-				  "color": "#f5f5f5"
+					"color": "#f5f5f5"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "administrative.land_parcel",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "administrative.land_parcel",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#bdbdbd"
+					"color": "#bdbdbd"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "poi",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#eeeeee"
+					"color": "#eeeeee"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "poi",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "poi",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#757575"
+					"color": "#757575"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "poi.park",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "poi.park",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#e5e5e5"
+					"color": "#e5e5e5"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "poi.park",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "poi.park",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#9e9e9e"
+					"color": "#9e9e9e"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "road",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "road",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#ffffff"
+					"color": "#ffffff"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "road.arterial",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "road.arterial",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#757575"
+					"color": "#757575"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "road.highway",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "road.highway",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#dadada"
+					"color": "#dadada"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "road.highway",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "road.highway",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#616161"
+					"color": "#616161"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "road.local",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "road.local",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#9e9e9e"
+					"color": "#9e9e9e"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "transit.line",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "transit.line",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#e5e5e5"
+					"color": "#e5e5e5"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "transit.station",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "transit.station",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#eeeeee"
+					"color": "#eeeeee"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "water",
-			  "elementType": "geometry",
-			  "stylers": [
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [
 				{
-				  "color": "#c9c9c9"
+					"color": "#c9c9c9"
 				}
-			  ]
+				]
 			},
 			{
-			  "featureType": "water",
-			  "elementType": "labels.text.fill",
-			  "stylers": [
+				"featureType": "water",
+				"elementType": "labels.text.fill",
+				"stylers": [
 				{
-				  "color": "#9e9e9e"
+					"color": "#9e9e9e"
 				}
-			  ]
+				]
 			}
-		  ]
+		]
 
 		var data = [{
 			lat: 55.679224,
@@ -393,7 +388,6 @@
 	}
 
 	function fotoSwipe() {
-
 		if ('undefined' === typeof PhotoSwipe) {
 			return;
 		}
@@ -403,24 +397,24 @@
 		$('.photo-swipe').find('.swiper-slide').each(function(){
 			var $link = $(this).find('a');
 			var item = {
-					src: $link.attr('href'),
-					w: $link.data('width'),
-					h: $link.data('height'),
-				};
+				src: $link.attr('href'),
+				w: $link.data('width'),
+				h: $link.data('height'),
+			};
 			arrOption.push(item);
 		  });
 
-		  $('.photo-swipe').find('a').click(function(e){
+		$('.photo-swipe').find('a').on('click', function(e){
 			e.preventDefault();
 	
 			var $pswp = $('.pswp')[0];
 			var options = {
-					bgOpacity: 0.85,
-					showHideOpacity: true,
-				};
+				bgOpacity: 0.85,
+				showHideOpacity: true,
+			};
 	
 			new PhotoSwipe($pswp, PhotoSwipeUI_Default, arrOption, options).init();
-		  });
+		});
 	}
 
 	function contentSticky() {
@@ -465,7 +459,7 @@
 			},
 			onHint: function (hint) {
 				$('.autocomplete-ajax-x').val(hint);
-			}
+			},
 		});
 	}
 
