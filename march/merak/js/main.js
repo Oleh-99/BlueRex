@@ -237,9 +237,9 @@
 		$('.photo-swipe').find('.swiper-slide').each(function(){
 			var $link = $(this).find('a'),
 				item = {
-				  src: $link.attr('href'),
-				  w: $link.data('width'),
-				  h: $link.data('height')
+					src: $link.attr('href'),
+					w: $link.data('width'),
+					h: $link.data('height')
 				};
 			arrOption.push(item);
 		  });
@@ -267,13 +267,38 @@
 
 	function autocomplete() {
 
+		var countriesArray = $.map(countries, function (value, key) { return { value: value, data: key }; });
+
 		$.mockjax({
-			url: 'http://api.openweathermap.org/data/2.5/find?q=lviv&appid=35db184017637f2f4de0b6667c28da23&units=metric',
+			url: '*',
 			responseTime: 2000,
-			response: function (data) {
-				console.log(data);
+			response: function (settings) {
+				var query = settings.data.query,
+					queryLowerCase = query.toLowerCase(),
+					re = new RegExp('\\b' + $.Autocomplete.utils.escapeRegExChars(queryLowerCase), 'gi'),
+					suggestions = $.grep(countriesArray, function (country) {
+						return re.test(country.value);
+					}),
+					response = {
+						query: query,
+						suggestions: suggestions
+					};
+	
+				this.responseText = JSON.stringify(response);
 			}
 		});
+	
+		$('.autocomplete-ajax').autocomplete({
+			lookup: countriesArray,
+			lookupFilter: function(suggestion, originalQuery, queryLowerCase) {
+				var re = new RegExp('\\b' + $.Autocomplete.utils.escapeRegExChars(queryLowerCase), 'gi');
+				return re.test(suggestion.value);
+			},
+			onHint: function (hint) {
+				$('.autocomplete-ajax-x').val(hint);
+			}
+		});
+	
 
 	}
 
