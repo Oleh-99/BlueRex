@@ -38,7 +38,9 @@
 					</div>
 					<div class="header-col-center">
 						<form class="form-search">
-							<input type="text" placeholder="Search for products">
+							<input type="text" class="autocomplete-ajax-x" disabled="disabled">
+							<input type="text" placeholder="Search for products" class="autocomplete-ajax">
+							
 							<span class="select-wrapper">
 								<select>
 									<option>Select Category</option>
@@ -48,6 +50,7 @@
 								</select>
 							</span>
 							<button><i class="fas fa-search"></i></button>
+							<div class="selction-ajax"></div>
 						</form>
 					</div>
 					<div class="header-col-right">
@@ -1658,6 +1661,9 @@
 	<script src="js/jquery.waypoints.js"></script>
 	<script src="js/magnific-popup.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.autocomplete.min.js"></script>
+	<script src="js/jquery.mockjax.js"></script>
+	<script src="js/countries.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

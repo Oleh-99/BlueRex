@@ -462,7 +462,15 @@
 		<div class="container">
 			<div class="row product-main-page-inner">
 				<div class="col-md-12 col-lg-8">
-					<div class="swiper-container gallery-thumbs"  data-option='{"loop":true, "slidesPerView": 3, "freeMode":true, "loopedSlides": 5}'>
+					<div class="swiper-container gallery-top" >
+						<div class="swiper-wrapper photo-swipe">
+							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-0-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-1-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-2-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-3-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></a></div>
+						</div>
+					</div>
+					<div class="swiper-container gallery-thumbs" >
 						<div class="swiper-wrapper">
 							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></div>
 							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></div>
@@ -470,17 +478,46 @@
 							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></div>
 						</div>
 					</div>
-					<div class="swiper-container gallery-top" data-option='{"loop":true, "slidesPerView": 1, "freeMode":true, "loopedSlides": 5}'>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></div>
-							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></div>
-							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt=""></div>
-							<div class="swiper-slide"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></div>
-						</div>
+					<div class="navigation-product">
+						<div class="navigation-product-title">Reviews (0)</div>
+						<p>There are no reviews yet.</p>
+						<div class="navigation-product-title">Be the first to review “Dress with a floral print”</div>
+						<form>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="rating">
+										<span class="navigation-product-title-second">Your Rating</span>
+										<i class="far fa-star"></i>
+										<i class="far fa-star"></i>
+										<i class="far fa-star"></i>
+										<i class="far fa-star"></i>
+										<i class="far fa-star"></i>
+									</div>
+									<textarea name="" id="" rows="4" placeholder="Your Review"></textarea>
+								</div>
+								<div class="col-sm-12 col-md-6">
+									<input type="text" placeholder="Your Name">
+								</div>
+								<div class="col-sm-12 col-md-6">
+									<input type="email" placeholder="Your Email Address">
+								</div>
+								<div class="col-sm-12">
+									<div class="choose-size">
+										<span class="navigation-product-title-second">What size did you try on?</span>
+										<select>
+											<option>Choose Size</option>
+											<option>Choose Size 1</option>
+											<option>Choose Size 2</option>
+										</select>
+									</div>
+									<button class="button button-extra-large button-primary">Submit</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				<div class="col-md-12 col-lg-4">
-					<div class="product-page-text">
+					<div class="product-page-text product-sticky">
 						<h3>Dress with a floral print</h3>
 						<div class="price">$142.50</div>
 						<p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her. Strongly thoughts remember.</p>
@@ -532,43 +569,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="navigation-product">
-				<div class="navigation-product-title">Reviews (0)</div>
-				<p>There are no reviews yet.</p>
-				<div class="navigation-product-title">Be the first to review “Dress with a floral print”</div>
-				<form>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="rating">
-								<span class="navigation-product-title-second">Your Rating</span>
-								<i class="far fa-star"></i>
-								<i class="far fa-star"></i>
-								<i class="far fa-star"></i>
-								<i class="far fa-star"></i>
-								<i class="far fa-star"></i>
-							</div>
-							<textarea name="" id="" rows="4" placeholder="Your Review"></textarea>
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<input type="text" placeholder="Your Name">
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<input type="email" placeholder="Your Email Address">
-						</div>
-						<div class="col-sm-12">
-							<div class="choose-size">
-								<span class="navigation-product-title-second">What size did you try on?</span>
-								<select>
-									<option>Choose Size</option>
-									<option>Choose Size 1</option>
-									<option>Choose Size 2</option>
-								</select>
-							</div>
-							<button class="button button-extra-large button-primary">Submit</button>
-						</div>
-					</div>
-				</form>
-			</div>
+			
 		</div>
 	</section>
 	<section class="promotions">
@@ -781,10 +782,48 @@
 	<section class="to-top">
 		<a href="#" class="link-hover"><i class="fas fa-arrow-up"></i><span>To top</span> </a>
 	</section>
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar">
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<button class="pswp__button pswp__button--share" title="Share"></button>
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+						  <div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip"></div> 
+				</div>
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+				</button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+				</button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
 	<script src="../js/photoswipe.min.js"></script>
+	<script src="../js/photoswipe-ui-default.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
+	<script src="../js/jquery.sticky-kit.min.js"></script>
 	<script src="../js/main.js"></script>
 </body>
 </html>

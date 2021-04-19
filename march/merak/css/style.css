@@ -4119,6 +4119,50 @@ input[type=submit] {
   opacity: 1;
 }
 
+.autocomplete-ajax-x {
+  position: absolute;
+  background: transparent;
+  pointer-events: none;
+}
+
+.selction-ajax {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #ffff;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto;
+}
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF;
+}
+
+.autocomplete-group {
+  padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #000;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1210px;
