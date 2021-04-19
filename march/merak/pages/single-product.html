@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="../css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../css/photoswipe.min.css">
 	<link rel="stylesheet" href="../css/default-skin.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<title>Dress with a floral print</title>
 </head>
@@ -39,7 +40,8 @@
 					</div>
 					<div class="header-col-center">
 						<form class="form-search">
-							<input type="text" placeholder="Search for products">
+							<input type="text" class="autocomplete-ajax-x" disabled="disabled">
+							<input type="text" placeholder="Search for products" class="autocomplete-ajax">
 							<span class="select-wrapper">
 								<select>
 									<option>Select Category</option>
@@ -49,13 +51,14 @@
 								</select>
 							</span>
 							<button><i class="fas fa-search"></i></button>
+							<div class="selction-ajax"></div>
 						</form>
 					</div>
 					<div class="header-col-right">
 						<div class="header-link">
-							<a href="#"><i class="far fa-user"></i>Login / Register</a>
+							<a href=".sing-up" class="btn-popup" data-effect="mfp-move-horizontal-right"><i class="far fa-user"></i>Login / Register</a>
 							<a href="#"><i class="far fa-heart"></i> Wishlist</a>
-							<a href="#"><i class="icons-main-header fal fa-shopping-bag"></i> 2  <span>/ $280.00</span></a>
+							<a href=".shop-card" class="btn-popup" data-effect="mfp-move-horizontal-right"><i class="icons-main-header fal fa-shopping-bag"></i> 2  <span>/ $280.00</span></a>
 						</div>
 						<button class="button-burger"><i class="fas fa-bars"></i></button>
 					</div>
@@ -215,7 +218,7 @@
 																			<a href="#" class="link-full"></a>
 																			<div class="button-product-wrapper">
 																				<a href="#" class="button button-product"><i class="fas fa-plus"></i></a>
-																				<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+																				<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 																				<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 																			</div>
 																		</div>
@@ -237,7 +240,7 @@
 																			<a href="#" class="link-full"></a>
 																			<div class="button-product-wrapper">
 																				<a href="#" class="button button-product"><i class="fas fa-plus"></i></a>
-																				<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+																				<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 																				<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 																			</div>
 																		</div>
@@ -589,7 +592,7 @@
 								<a href="#" class="link-full"></a>
 								<div class="button-product-wrapper">
 									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+									<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 								</div>
 							</div>
@@ -615,7 +618,7 @@
 								<a href="#" class="link-full"></a>
 								<div class="button-product-wrapper">
 									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+									<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 								</div>
 							</div>
@@ -642,7 +645,7 @@
 								<a href="#" class="link-full"></a>
 								<div class="button-product-wrapper">
 									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+									<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 								</div>
 							</div>
@@ -664,7 +667,7 @@
 								<a href="#" class="link-full"></a>
 								<div class="button-product-wrapper">
 									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+									<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 								</div>
 							</div>
@@ -690,7 +693,7 @@
 								<a href="#" class="link-full"></a>
 								<div class="button-product-wrapper">
 									<a href="#" class="button button-product product-big"><span class="btn-text-span">Select option</span><span class="btn-plus">+</span> </a>
-									<a href="#" class="button button-product button-search"><i class="fas fa-search"></i></a>
+									<a href="#" class="button button-product btn-popup"><i class="fas fa-search"></i></a>
 									<a href="#" class="button button-product"><i class="far fa-heart"></i></a>
 								</div>
 							</div>
@@ -818,8 +821,22 @@
 			</div>
 		</div>
 	</div>
+	<div class="sing-up mfp-with-anim mfp-hide">
+		<h4><strong>SIGN IN</strong></h4>
+		<form>
+			<input type="text" placeholder="Login">
+			<input type="password" placeholder="Password">
+			<button>Sing up</button>
+			<button>Register</button>
+		</form>
+	</div>
+	<div class="shop-card mfp-with-anim mfp-hide">
+		<h4><strong>SHOPPING CART</strong></h4>
+		<a href="#" class="button button-medium">Add product</a>
+	</div>
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
+	<script src="../js/magnific-popup.js"></script>
 	<script src="../js/photoswipe.min.js"></script>
 	<script src="../js/photoswipe-ui-default.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>

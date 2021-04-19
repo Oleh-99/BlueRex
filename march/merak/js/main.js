@@ -126,22 +126,26 @@
 	}
 
 	function quickView() {
-		var $btnSearch = $('.button-search');
+		var $btnPopup = $('.btn-popup');
 
-		if ('undefined' === typeof $btnSearch.magnificPopup || 0 === $btnSearch.length) {
+		if ('undefined' === typeof $btnPopup.magnificPopup) {
 			return;
 		}
 		
-		$btnSearch.magnificPopup({
-			type: 'inline',
-			removalDelay: 500,
-			callbacks: {
-				beforeOpen: function () {
-					this.st.mainClass = this.st.el.data('effect');
-				}
-			},
-			midClick: true 
-		});
+		$btnPopup.each(function(e) {
+			$(this).magnificPopup({
+				type: 'inline',
+				removalDelay: 500,
+				callbacks: {
+					beforeOpen: function () {
+						this.st.mainClass = this.st.el.data('effect');
+					}
+				},
+				midClick: true,
+			});
+		})
+
+
 	}
 
 	function filterProduct() {
@@ -204,6 +208,167 @@
 			return;
 		}
 
+		var arrStyle =[
+			{
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#f5f5f5"
+				}
+			  ]
+			},
+			{
+			  "elementType": "labels.icon",
+			  "stylers": [
+				{
+				  "visibility": "off"
+				}
+			  ]
+			},
+			{
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#616161"
+				}
+			  ]
+			},
+			{
+			  "elementType": "labels.text.stroke",
+			  "stylers": [
+				{
+				  "color": "#f5f5f5"
+				}
+			  ]
+			},
+			{
+			  "featureType": "administrative.land_parcel",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#bdbdbd"
+				}
+			  ]
+			},
+			{
+			  "featureType": "poi",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#eeeeee"
+				}
+			  ]
+			},
+			{
+			  "featureType": "poi",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#757575"
+				}
+			  ]
+			},
+			{
+			  "featureType": "poi.park",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#e5e5e5"
+				}
+			  ]
+			},
+			{
+			  "featureType": "poi.park",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#9e9e9e"
+				}
+			  ]
+			},
+			{
+			  "featureType": "road",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#ffffff"
+				}
+			  ]
+			},
+			{
+			  "featureType": "road.arterial",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#757575"
+				}
+			  ]
+			},
+			{
+			  "featureType": "road.highway",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#dadada"
+				}
+			  ]
+			},
+			{
+			  "featureType": "road.highway",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#616161"
+				}
+			  ]
+			},
+			{
+			  "featureType": "road.local",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#9e9e9e"
+				}
+			  ]
+			},
+			{
+			  "featureType": "transit.line",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#e5e5e5"
+				}
+			  ]
+			},
+			{
+			  "featureType": "transit.station",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#eeeeee"
+				}
+			  ]
+			},
+			{
+			  "featureType": "water",
+			  "elementType": "geometry",
+			  "stylers": [
+				{
+				  "color": "#c9c9c9"
+				}
+			  ]
+			},
+			{
+			  "featureType": "water",
+			  "elementType": "labels.text.fill",
+			  "stylers": [
+				{
+				  "color": "#9e9e9e"
+				}
+			  ]
+			}
+		  ]
+
 		var data = [{
 			lat: 55.679224,
 			lon: 12.583471,
@@ -223,6 +388,7 @@
 			controls_type: 'list',
 			controls_on_map: true,
 			start: 1,
+			styles: arrStyle,
 		}).Load();
 	}
 
@@ -235,11 +401,11 @@
 		var arrOption = [];
 
 		$('.photo-swipe').find('.swiper-slide').each(function(){
-			var $link = $(this).find('a'),
-				item = {
+			var $link = $(this).find('a');
+			var item = {
 					src: $link.attr('href'),
 					w: $link.data('width'),
-					h: $link.data('height')
+					h: $link.data('height'),
 				};
 			arrOption.push(item);
 		  });
@@ -247,10 +413,10 @@
 		  $('.photo-swipe').find('a').click(function(e){
 			e.preventDefault();
 	
-			var $pswp = $('.pswp')[0],
-				options = {
+			var $pswp = $('.pswp')[0];
+			var options = {
 					bgOpacity: 0.85,
-					showHideOpacity: true
+					showHideOpacity: true,
 				};
 	
 			new PhotoSwipe($pswp, PhotoSwipeUI_Default, arrOption, options).init();
@@ -258,19 +424,22 @@
 	}
 
 	function contentSticky() {
-		// if ('undefined' === typeof stick_in_parent) {
+		var $sticky = $('.product-sticky');
 
-		// }
-
-		// $('.product-sticky').stick_in_parent();
+		if (0 !== $sticky.length) {
+			$sticky.stick_in_parent();
+		}
 	}
 
 	function autocomplete() {
+		if ('undefined' === typeof countries || 'undefined' === typeof autocomplete) {
+			return;
+		}
 
 		var countriesArray = $.map(countries, function (value, key) { return { value: value, data: key }; });
 
 		$.mockjax({
-			url: '*',
+			url: '',
 			responseTime: 2000,
 			response: function (settings) {
 				var query = settings.data.query,
@@ -298,8 +467,6 @@
 				$('.autocomplete-ajax-x').val(hint);
 			}
 		});
-	
-
 	}
 
 	$(document).ready(function() {

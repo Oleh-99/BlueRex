@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Hind:wght@400;500;600&family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<title>About Us</title>
 </head>
@@ -37,7 +38,8 @@
 					</div>
 					<div class="header-col-center">
 						<form class="form-search">
-							<input type="text" placeholder="Search for products">
+							<input type="text" class="autocomplete-ajax-x" disabled="disabled">
+							<input type="text" placeholder="Search for products" class="autocomplete-ajax">
 							<span class="select-wrapper">
 								<select>
 									<option>Select Category</option>
@@ -47,13 +49,14 @@
 								</select>
 							</span>
 							<button><i class="fas fa-search"></i></button>
+							<div class="selction-ajax"></div>
 						</form>
 					</div>
 					<div class="header-col-right">
 						<div class="header-link">
-							<a href="#"><i class="far fa-user"></i>Login / Register</a>
+							<a href=".sing-up" class="btn-popup" data-effect="mfp-move-horizontal-right"><i class="far fa-user"></i>Login / Register</a>
 							<a href="#"><i class="far fa-heart"></i> Wishlist</a>
-							<a href="#"><i class="icons-main-header fal fa-shopping-bag"></i> 2  <span>/ $280.00</span></a>
+							<a href=".shop-card" class="btn-popup" data-effect="mfp-move-horizontal-right"><i class="icons-main-header fal fa-shopping-bag"></i> 2  <span>/ $280.00</span></a>
 						</div>
 						<button class="button-burger"><i class="fas fa-bars"></i></button>
 					</div>
@@ -587,9 +590,23 @@
 	<section class="to-top">
 		<a href="#" class="link-hover"><i class="fas fa-arrow-up"></i><span>To top</span> </a>
 	</section>
+	<div class="sing-up mfp-with-anim mfp-hide">
+		<h4><strong>SIGN IN</strong></h4>
+		<form>
+			<input type="text" placeholder="Login">
+			<input type="password" placeholder="Password">
+			<button>Sing up</button>
+			<button>Register</button>
+		</form>
+	</div>
+	<div class="shop-card mfp-with-anim mfp-hide">
+		<h4><strong>SHOPPING CART</strong></h4>
+		<a href="#" class="button button-medium">Add product</a>
+	</div>
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
 	<script src="../js/jquery.waypoints.js"></script>
+	<script src="../js/magnific-popup.js"></script>
 	<script src="../js/main.js"></script>
 </body>
 </html>
