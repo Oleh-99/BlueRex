@@ -1,4 +1,6 @@
 (function($) {
+	$.noConflict();
+
 	function productTabs() {
 		$('.product-main').each(function() {
 			var $productWrapper = $(this);
@@ -42,27 +44,18 @@
 
 	function slider() {
 		var $swipers = $('.swiper-container');
-		var $galleryThumbs;
 
-		if ($swipers.length === 0) {
+		if (0 === $swipers.length || 'undefined' === typeof Swiper || 0 !== $(".gallery-thumbs").length) {
 			return;
-		};
-
-		if ('undefined' === typeof Swiper) {
-			return;
-		};
+		}
 
 		$swipers.each(function(e) {
 			var $this = $(this);
 			var $thisData = $this .data('option');
-			new Swiper(this, renderSlider($thisData, $this));
-			console.log(renderSlider($thisData, $this));
-			if($swipers.hasClass('gallery-thumbs')) {
-				$galleryThumbs = new Swiper(this, renderSlider($thisData, $this));
-			}
-		})
+			new Swiper(this, renderSlider($thisData));
+		});
 
-		function renderSlider(data, thisSlider) {
+		function renderSlider(data) {
 			var config = {
 				loop : data.loop,
 				slidesPerView : data.slidesPerView,
@@ -70,7 +63,7 @@
 	
 			if (data.spaceBetween) {
 				config.spaceBetween = data.spaceBetween;
-			};
+			}
 
 			if (data.pagination) {
 				config.pagination = {
@@ -80,16 +73,16 @@
 						return '<span class="' + className + '">' + (index + 1) + '</span>';
 					},
 				};
-			};
+			}
 
 			if (data.navigation) {
 				config.navigation = {
 					nextEl: '.slider-right',
 					prevEl: '.slider-left',
 				  };
-			};
+			}
 
-			if (config.slidesPerView > 1) {
+			if (1 < config.slidesPerView) {
 				config.breakpoints = {
 					993: {
 						slidesPerView: config.slidesPerView,
@@ -98,37 +91,46 @@
 						slidesPerView: 1,
 					},
 				};
-			};
+			}
 
 			if (data.loopedSlides) {
 				config.loopedSlides = data.loopedSlides;
 			}
-
-			if (thisSlider.hasClass('gallery-thumbs')) {
-				config.watchSlidesVisibility = true,
-				config.watchSlidesProgress = true
-			}
-
-			if (thisSlider.hasClass('gallery-top')) {
-				config.thumbs = {
-					swiper: $galleryThumbs
-				};
-			}
 	
 			return config;
-		};
+		}
+	}
+
+	function singleProduct() {
+		if('undefined' === typeof Swiper || 0 === $(".gallery-thumbs").length || 0 === $(".gallery-top").length) {
+			return;
+		}
+
+		var galleryThumbs = new Swiper(".gallery-thumbs", {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			loop: true,
+			freeMode: true,
+			loopedSlides: 5, 
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true
+		});
+			new Swiper(".gallery-top", {
+			spaceBetween: 10,
+			loop: true,
+			loopedSlides: 5,
+			thumbs: {
+				swiper: galleryThumbs
+			}
+			});
 	}
 
 	function quickView() {
 		var $btnSearch = $('.button-search');
 
-		if ('undefined' === typeof $btnSearch.magnificPopup) {
+		if ('undefined' === typeof $btnSearch.magnificPopup || 0 === $btnSearch.length) {
 			return;
-		};
-
-		if ($btnSearch.length === 0) {
-			return;
-		};
+		}
 		
 		$btnSearch.magnificPopup({
 			type: 'inline',
@@ -143,13 +145,9 @@
 	}
 
 	function filterProduct() {
-		if ($('.shop-product-grid').length === 0) {
+		if (0 === $('.shop-product-grid').length || 'undefined' === typeof Isotope) {
 			return;
-		};
-
-		if ('undefined' === typeof Isotope) {
-			return;
-		};
+		}
 
 		let grid = new Isotope('.shop-product-grid', {
 			itemSelector: '.filter-grid',
@@ -174,13 +172,9 @@
 	function waypointer() {
 		var $animated = $('.with-animated');
 
-		if ('undefined' === typeof Waypoint) {
+		if ('undefined' === typeof Waypoint || 0 === $animated.length) {
 			return;
-		};
-
-		if ($animated.length === 0) {
-			return;
-		};
+		}
 
 		$animated.each(function() {
 			var $this = $(this);
@@ -198,25 +192,17 @@
 	function tooltip() {
 		var $btnTooltip = $('[data-toggle="tooltip"]');
 
-		if ('undefined' === typeof tooltip) {
+		if ('undefined' === typeof tooltip || 0 === $btnTooltip.length) {
 			return;
-		};
-
-		if ($btnTooltip.length === 0) {
-			return;
-		};
+		}
 
 		$btnTooltip.tooltip();
 	}
 
 	function maps() {
-		if ('undefined' === typeof Maplace) {
+		if ('undefined' === typeof Maplace || 0 === $('#gmap').length) {
 			return;
-		};
-
-		if ($('#gmap').length === 0) {
-			return;
-		};
+		}
 
 		var data = [{
 			lat: 55.679224,
@@ -240,15 +226,70 @@
 		}).Load();
 	}
 
+	function fotoSwipe() {
+
+		if ('undefined' === typeof PhotoSwipe) {
+			return;
+		}
+
+		var arrOption = [];
+
+		$('.photo-swipe').find('.swiper-slide').each(function(){
+			var $link = $(this).find('a'),
+				item = {
+				  src: $link.attr('href'),
+				  w: $link.data('width'),
+				  h: $link.data('height')
+				};
+			arrOption.push(item);
+		  });
+
+		  $('.photo-swipe').find('a').click(function(e){
+			e.preventDefault();
+	
+			var $pswp = $('.pswp')[0],
+				options = {
+					bgOpacity: 0.85,
+					showHideOpacity: true
+				};
+	
+			new PhotoSwipe($pswp, PhotoSwipeUI_Default, arrOption, options).init();
+		  });
+	}
+
+	function contentSticky() {
+		// if ('undefined' === typeof stick_in_parent) {
+
+		// }
+
+		// $('.product-sticky').stick_in_parent();
+	}
+
+	function autocomplete() {
+
+		$.mockjax({
+			url: 'http://api.openweathermap.org/data/2.5/find?q=lviv&appid=35db184017637f2f4de0b6667c28da23&units=metric',
+			responseTime: 2000,
+			response: function (data) {
+				console.log(data);
+			}
+		});
+
+	}
+
 	$(document).ready(function() {
 		productTabs();
 		toTop();
 		slider();
+		singleProduct();
 		quickView();
 		filterProduct();
 		waypointer();	
 		tooltip();
 		maps();
+		fotoSwipe();
+		contentSticky();
+		autocomplete();
 	});
 
 })(jQuery);
