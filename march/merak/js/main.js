@@ -112,7 +112,7 @@
 			freeMode: true,
 			loopedSlides: 5, 
 			watchSlidesVisibility: true,
-			watchSlidesProgress: true
+			watchSlidesProgress: true,
 		});
 
 		new Swiper('.gallery-top', {
@@ -120,7 +120,7 @@
 			loop: true,
 			loopedSlides: 5,
 			thumbs: {
-				swiper: galleryThumbs
+				swiper: galleryThumbs,
 			}
 		});
 	}
@@ -159,7 +159,7 @@
 		function filterloaded() {
 			var grid = new Isotope('.shop-product-grid', {
 				itemSelector: '.filter-grid',
-				layoutMode: 'fitRows'
+				layoutMode: 'fitRows',
 			});
 	
 			$('.product-menu').on('click', 'li', function(e) {
@@ -172,7 +172,7 @@
 				$this.addClass('active');
 	
 				grid.arrange({
-					filter: filterData
+					filter: filterData,
 				});
 			});
 		}
@@ -492,7 +492,7 @@
 			width: 1000,
 			navigation: true,
 			disableSpin: true,
-			plugins: ['ThreeSixtyFullscreen']
+			plugins: ['ThreeSixtyFullscreen'],
 		});
 	}
 
