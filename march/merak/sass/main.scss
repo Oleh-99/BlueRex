@@ -2398,7 +2398,72 @@ input[type="submit"] {
 	border: 1px solid #E6E6E6;
 	text-align: center;
 	z-index: 100;
+}
 
+.btn-wrapper {
+	position: relative;
+}
+
+.three-sixty {
+	@include block-absolute(none, 20px, 20px, none);
+	z-index: 1;
+	padding: 5px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: #fff;
+	}
+}
+
+.car {
+	background: #fff;
+}
+
+.threesixty .nav_bar {
+	right: auto;
+	left: 15px;
+
+	> a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::after {
+			font-family: "Font Awesome 5 Pro";
+			font-size: 25px;
+			font-weight: 700;
+		}
+	}
+
+	.nav_bar_play {
+		position: relative;
+		&::after {
+			content: "\f04b";
+		}
+	}
+
+	.nav_bar_previous {
+		position: relative;
+		&::after {
+			content: "\f104";
+			font-size: 30px;
+		}
+	}
+
+	.nav_bar_next {
+		position: relative;
+		&::after {
+			content: "\f105";
+			font-size: 30px;
+		}
+	}
+
+	.nav_bar_stop {
+		position: relative;
+		&::after {
+			content: "\f04c";
+		}
+	}
 }
 
 .with-animated {

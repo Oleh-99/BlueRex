@@ -44,7 +44,7 @@
 	function slider() {
 		var $swipers = $('.swiper-container');
 
-		if (0 === $swipers.length || 'undefined' === typeof Swiper || 0 !== $(".gallery-thumbs").length) {
+		if (0 === $swipers.length || 'undefined' === typeof Swiper || 0 !== $('.gallery-thumbs').length) {
 			return;
 		}
 
@@ -114,6 +114,7 @@
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true
 		});
+
 		new Swiper('.gallery-top', {
 			spaceBetween: 10,
 			loop: true,
@@ -144,28 +145,37 @@
 	}
 
 	function filterProduct() {
-		if (0 === $('.shop-product-grid').length || 'undefined' === typeof Isotope) {
+		var $shopGrid = $('.shop-product-grid');
+
+		if (0 === $shopGrid.length || 'undefined' === typeof Isotope) {
 			return;
 		}
 
-		let grid = new Isotope('.shop-product-grid', {
-			itemSelector: '.filter-grid',
-			layoutMode: 'fitRows'
-		});
-
-		$('.product-menu').on('click', 'li', function(e) {
-			e.preventDefault();
-
-			let $this = $(this);
-			let filterData = $this.data('filter');
-
-			$this.siblings().removeClass('active');
-			$this.addClass('active');
-			
-			grid.arrange({
-				filter: filterData
+		$shopGrid.imagesLoaded()
+			.done(function(instance) {
+				filterloaded();
 			});
-		});
+
+		function filterloaded() {
+			var grid = new Isotope('.shop-product-grid', {
+				itemSelector: '.filter-grid',
+				layoutMode: 'fitRows'
+			});
+	
+			$('.product-menu').on('click', 'li', function(e) {
+				e.preventDefault();
+	
+				let $this = $(this);
+				let filterData = $this.data('filter');
+	
+				$this.siblings().removeClass('active');
+				$this.addClass('active');
+	
+				grid.arrange({
+					filter: filterData
+				});
+			});
+		}
 	}
 
 	function waypointer() {
@@ -393,8 +403,9 @@
 		}
 
 		var arrOption = [];
+		var $photoSwipe = $('.photo-swipe');
 
-		$('.photo-swipe').find('.swiper-slide').each(function(){
+		$photoSwipe.find('.swiper-slide').each(function(){
 			var $link = $(this).find('a');
 			var item = {
 				src: $link.attr('href'),
@@ -402,11 +413,11 @@
 				h: $link.data('height'),
 			};
 			arrOption.push(item);
-		  });
+		});
 
-		$('.photo-swipe').find('a').on('click', function(e){
+		$photoSwipe.find('a').on('click', function(e){
 			e.preventDefault();
-	
+
 			var $pswp = $('.pswp')[0];
 			var options = {
 				bgOpacity: 0.85,
@@ -463,6 +474,28 @@
 		});
 	}
 
+	function init360(){
+		if('undefined' === typeof $.fn.ThreeSixty) {
+			return;
+		}
+
+		$('.car').ThreeSixty({
+			totalFrames: 52, 
+			endFrame: 52, 
+			currentFrame: 1,
+			imgList: '.threesixty_images',
+			progress: '.spinner',
+			imagePath:'../img/360/',
+			filePrefix: '', 
+			ext: '.png', 
+			height: 500,
+			width: 1000,
+			navigation: true,
+			disableSpin: true,
+			plugins: ['ThreeSixtyFullscreen']
+		});
+	}
+
 	$(document).ready(function() {
 		productTabs();
 		toTop();
@@ -476,6 +509,7 @@
 		fotoSwipe();
 		contentSticky();
 		autocomplete();
+		init360();
 	});
 
 })(jQuery);

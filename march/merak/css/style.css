@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -4112,6 +4113,67 @@ input[type=submit] {
   border: 1px solid #E6E6E6;
   text-align: center;
   z-index: 100;
+}
+
+.btn-wrapper {
+  position: relative;
+}
+
+.three-sixty {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+.three-sixty:hover {
+  background: #fff;
+}
+
+.car {
+  background: #fff;
+}
+
+.threesixty .nav_bar {
+  right: auto;
+  left: 15px;
+}
+.threesixty .nav_bar > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.threesixty .nav_bar > a::after {
+  font-family: "Font Awesome 5 Pro";
+  font-size: 25px;
+  font-weight: 700;
+}
+.threesixty .nav_bar .nav_bar_play {
+  position: relative;
+}
+.threesixty .nav_bar .nav_bar_play::after {
+  content: "";
+}
+.threesixty .nav_bar .nav_bar_previous {
+  position: relative;
+}
+.threesixty .nav_bar .nav_bar_previous::after {
+  content: "";
+  font-size: 30px;
+}
+.threesixty .nav_bar .nav_bar_next {
+  position: relative;
+}
+.threesixty .nav_bar .nav_bar_next::after {
+  content: "";
+  font-size: 30px;
+}
+.threesixty .nav_bar .nav_bar_stop {
+  position: relative;
+}
+.threesixty .nav_bar .nav_bar_stop::after {
+  content: "";
 }
 
 .with-animated {

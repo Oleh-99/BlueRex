@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> <!--fontawesome 5-->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/><!--fontawesome 5-->
 	<script src="https://use.fontawesome.com/24f5e681bf.js"></script>  <!--fontawesome 4.7-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Hind:wght@400;500;600&family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../css/photoswipe.min.css">
 	<link rel="stylesheet" href="../css/default-skin.min.css">
 	<link rel="stylesheet" href="../css/magnific-popup.css">
+	<link rel="stylesheet" href="../css/threesixty.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<title>Dress with a floral print</title>
 </head>
@@ -465,13 +466,14 @@
 		<div class="container">
 			<div class="row product-main-page-inner">
 				<div class="col-md-12 col-lg-8">
-					<div class="swiper-container gallery-top" >
+					<div class="swiper-container gallery-top btn-wrapper" >
 						<div class="swiper-wrapper photo-swipe">
 							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-0-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-0-min.jpg" alt=""></a></div>
 							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-1-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-1-min.jpg" alt=""></a></div>
 							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-2-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-2-min.jpg" alt=""></a></div>
 							<div class="swiper-slide"><a href="../img/products(compressed)/merak-product-3-3-min.jpg" data-width="890" data-height="1080"><img src="../img/products(compressed)/merak-product-3-3-min.jpg" alt=""></a></div>
 						</div>
+						<a href=".car" class="three-sixty btn-popup" data-effect="mfp-move-horizontal"><img src="../img/360_icon.png" alt=""></a>
 					</div>
 					<div class="swiper-container gallery-thumbs" >
 						<div class="swiper-wrapper">
@@ -782,6 +784,7 @@
 			</div>
 		</div>
 	</footer>
+	<div class="test"></div>
 	<section class="to-top">
 		<a href="#" class="link-hover"><i class="fas fa-arrow-up"></i><span>To top</span> </a>
 	</section>
@@ -834,13 +837,21 @@
 		<h4><strong>SHOPPING CART</strong></h4>
 		<a href="#" class="button button-medium">Add product</a>
 	</div>
-	<script src="../js/jquery-3.6.0.min.js"></script>
-	<script src="../js/swiper-bundle.min.js"></script>
-	<script src="../js/magnific-popup.js"></script>
-	<script src="../js/photoswipe.min.js"></script>
-	<script src="../js/photoswipe-ui-default.min.js"></script>
-	<script src="../js/swiper-bundle.min.js"></script>
-	<script src="../js/jquery.sticky-kit.min.js"></script>
+	<div class="threesixty car mfp-with-anim mfp-hide" id="container">
+		<div class="spinner">
+			<span>0%</span>
+		</div>
+		<ol class="threesixty_images"></ol>
+	</div>
+	<script src="../lib/jquery-1.10.2.min.js"></script>
+	<script src="../lib/swiper-bundle.min.js"></script>
+	<script src="../lib/magnific-popup.js"></script>
+	<script src="../lib/photoswipe.min.js"></script>
+	<script src="../lib/photoswipe-ui-default.min.js"></script>
+	<script src="../lib/swiper-bundle.min.js"></script>
+	<script src="../lib/jquery.sticky-kit.min.js"></script>
+	<script src="../lib/threesixty.min.js"></script>
+	<script src="../lib/threesixty.fullscreen.js"></script>
 	<script src="../js/main.js"></script>
 </body>
 </html>
